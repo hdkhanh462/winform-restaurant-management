@@ -1,0 +1,562 @@
+﻿namespace TripleX.v2.Table
+{
+    partial class OrderTable
+    {
+        /// <summary>
+        /// Required designer variable.
+        /// </summary>
+        private System.ComponentModel.IContainer components = null;
+
+        /// <summary>
+        /// Clean up any resources being used.
+        /// </summary>
+        /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        protected override void Dispose(bool disposing)
+        {
+            if (disposing && (components != null))
+            {
+                components.Dispose();
+            }
+            base.Dispose(disposing);
+        }
+
+        #region Windows Form Designer generated code
+
+        /// <summary>
+        /// Required method for Designer support - do not modify
+        /// the contents of this method with the code editor.
+        /// </summary>
+        private void InitializeComponent()
+        {
+            this.components = new System.ComponentModel.Container();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.label7 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.cDatePicker4 = new CustomControl.CDatePicker();
+            this.cDatePicker3 = new CustomControl.CDatePicker();
+            this.cDatePicker2 = new CustomControl.CDatePicker();
+            this.cDatePicker1 = new CustomControl.CDatePicker();
+            this.pnCustomer = new System.Windows.Forms.Panel();
+            this.panel13 = new System.Windows.Forms.Panel();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.label1 = new System.Windows.Forms.Label();
+            this.panel4 = new System.Windows.Forms.Panel();
+            this.panel5 = new System.Windows.Forms.Panel();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.panel12 = new System.Windows.Forms.Panel();
+            this.panel6 = new System.Windows.Forms.Panel();
+            this.panel10 = new System.Windows.Forms.Panel();
+            this.panel11 = new System.Windows.Forms.Panel();
+            this.panel7 = new System.Windows.Forms.Panel();
+            this.panel8 = new System.Windows.Forms.Panel();
+            this.siticoneBorderlessForm1 = new Siticone.Desktop.UI.WinForms.SiticoneBorderlessForm(this.components);
+            this.label5 = new System.Windows.Forms.Label();
+            this.btnDelete = new CustomControl.CButton();
+            this.btnSave = new CustomControl.CButton();
+            this.btnClose = new CustomControl.CButton();
+            this.panel9 = new System.Windows.Forms.Panel();
+            this.panel14 = new System.Windows.Forms.Panel();
+            this.cCustomer1 = new TripleX.v2.Customer.CCustomer();
+            this.panel2.SuspendLayout();
+            this.pnCustomer.SuspendLayout();
+            this.panel13.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.panel1.SuspendLayout();
+            this.panel3.SuspendLayout();
+            this.SuspendLayout();
+            // 
+            // panel2
+            // 
+            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(230)))), ((int)(((byte)(230)))));
+            this.panel2.Controls.Add(this.label7);
+            this.panel2.Controls.Add(this.label6);
+            this.panel2.Controls.Add(this.cDatePicker4);
+            this.panel2.Controls.Add(this.cDatePicker3);
+            this.panel2.Controls.Add(this.cDatePicker2);
+            this.panel2.Controls.Add(this.cDatePicker1);
+            this.panel2.Controls.Add(this.pnCustomer);
+            this.panel2.Controls.Add(this.panel4);
+            this.panel2.Controls.Add(this.panel5);
+            this.panel2.Controls.Add(this.panel9);
+            this.panel2.Controls.Add(this.panel1);
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel2.Location = new System.Drawing.Point(10, 10);
+            this.panel2.Margin = new System.Windows.Forms.Padding(0);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(826, 388);
+            this.panel2.TabIndex = 3;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.Location = new System.Drawing.Point(548, 187);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(110, 22);
+            this.label7.TabIndex = 15;
+            this.label7.Text = "Ngày Nhận";
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Location = new System.Drawing.Point(548, 90);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(93, 22);
+            this.label6.TabIndex = 14;
+            this.label6.Text = "Ngày Đặt";
+            // 
+            // cDatePicker4
+            // 
+            this.cDatePicker4.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(249)))), ((int)(((byte)(110)))), ((int)(((byte)(48)))));
+            this.cDatePicker4.BorderSize = 2;
+            this.cDatePicker4.CalendarForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(249)))), ((int)(((byte)(110)))), ((int)(((byte)(48)))));
+            this.cDatePicker4.CalendarMonthBackground = System.Drawing.Color.FromArgb(((int)(((byte)(249)))), ((int)(((byte)(110)))), ((int)(((byte)(48)))));
+            this.cDatePicker4.CalendarTitleBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(249)))), ((int)(((byte)(110)))), ((int)(((byte)(48)))));
+            this.cDatePicker4.CalendarTitleForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(249)))), ((int)(((byte)(110)))), ((int)(((byte)(48)))));
+            this.cDatePicker4.CalendarTrailingForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(249)))), ((int)(((byte)(110)))), ((int)(((byte)(48)))));
+            this.cDatePicker4.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.cDatePicker4.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cDatePicker4.Format = System.Windows.Forms.DateTimePickerFormat.Time;
+            this.cDatePicker4.Location = new System.Drawing.Point(678, 223);
+            this.cDatePicker4.MinimumSize = new System.Drawing.Size(4, 35);
+            this.cDatePicker4.Name = "cDatePicker4";
+            this.cDatePicker4.ShowUpDown = true;
+            this.cDatePicker4.Size = new System.Drawing.Size(97, 35);
+            this.cDatePicker4.SkinColor = System.Drawing.Color.White;
+            this.cDatePicker4.TabIndex = 11;
+            this.cDatePicker4.TextColor = System.Drawing.Color.Black;
+            // 
+            // cDatePicker3
+            // 
+            this.cDatePicker3.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(249)))), ((int)(((byte)(110)))), ((int)(((byte)(48)))));
+            this.cDatePicker3.BorderSize = 2;
+            this.cDatePicker3.CalendarForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(249)))), ((int)(((byte)(110)))), ((int)(((byte)(48)))));
+            this.cDatePicker3.CalendarMonthBackground = System.Drawing.Color.FromArgb(((int)(((byte)(249)))), ((int)(((byte)(110)))), ((int)(((byte)(48)))));
+            this.cDatePicker3.CalendarTitleBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(249)))), ((int)(((byte)(110)))), ((int)(((byte)(48)))));
+            this.cDatePicker3.CalendarTitleForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(249)))), ((int)(((byte)(110)))), ((int)(((byte)(48)))));
+            this.cDatePicker3.CalendarTrailingForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(249)))), ((int)(((byte)(110)))), ((int)(((byte)(48)))));
+            this.cDatePicker3.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.cDatePicker3.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cDatePicker3.Format = System.Windows.Forms.DateTimePickerFormat.Time;
+            this.cDatePicker3.Location = new System.Drawing.Point(678, 129);
+            this.cDatePicker3.MinimumSize = new System.Drawing.Size(4, 35);
+            this.cDatePicker3.Name = "cDatePicker3";
+            this.cDatePicker3.ShowUpDown = true;
+            this.cDatePicker3.Size = new System.Drawing.Size(97, 35);
+            this.cDatePicker3.SkinColor = System.Drawing.Color.White;
+            this.cDatePicker3.TabIndex = 10;
+            this.cDatePicker3.TextColor = System.Drawing.Color.Black;
+            // 
+            // cDatePicker2
+            // 
+            this.cDatePicker2.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(249)))), ((int)(((byte)(110)))), ((int)(((byte)(48)))));
+            this.cDatePicker2.BorderSize = 2;
+            this.cDatePicker2.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cDatePicker2.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.cDatePicker2.Location = new System.Drawing.Point(552, 223);
+            this.cDatePicker2.MinimumSize = new System.Drawing.Size(4, 35);
+            this.cDatePicker2.Name = "cDatePicker2";
+            this.cDatePicker2.Size = new System.Drawing.Size(114, 35);
+            this.cDatePicker2.SkinColor = System.Drawing.Color.White;
+            this.cDatePicker2.TabIndex = 9;
+            this.cDatePicker2.TextColor = System.Drawing.Color.Black;
+            // 
+            // cDatePicker1
+            // 
+            this.cDatePicker1.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(249)))), ((int)(((byte)(110)))), ((int)(((byte)(48)))));
+            this.cDatePicker1.BorderSize = 2;
+            this.cDatePicker1.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cDatePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.cDatePicker1.Location = new System.Drawing.Point(552, 129);
+            this.cDatePicker1.MinimumSize = new System.Drawing.Size(4, 35);
+            this.cDatePicker1.Name = "cDatePicker1";
+            this.cDatePicker1.Size = new System.Drawing.Size(114, 35);
+            this.cDatePicker1.SkinColor = System.Drawing.Color.White;
+            this.cDatePicker1.TabIndex = 8;
+            this.cDatePicker1.TextColor = System.Drawing.Color.Black;
+            // 
+            // pnCustomer
+            // 
+            this.pnCustomer.Controls.Add(this.panel14);
+            this.pnCustomer.Controls.Add(this.cCustomer1);
+            this.pnCustomer.Controls.Add(this.panel13);
+            this.pnCustomer.Controls.Add(this.dataGridView1);
+            this.pnCustomer.Dock = System.Windows.Forms.DockStyle.Left;
+            this.pnCustomer.Location = new System.Drawing.Point(10, 50);
+            this.pnCustomer.Name = "pnCustomer";
+            this.pnCustomer.Size = new System.Drawing.Size(507, 338);
+            this.pnCustomer.TabIndex = 7;
+            this.pnCustomer.Paint += new System.Windows.Forms.PaintEventHandler(this.pnCustomer_Paint);
+            // 
+            // panel13
+            // 
+            this.panel13.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(249)))), ((int)(((byte)(110)))), ((int)(((byte)(48)))));
+            this.panel13.Controls.Add(this.label4);
+            this.panel13.Controls.Add(this.label3);
+            this.panel13.Controls.Add(this.label2);
+            this.panel13.Controls.Add(this.label5);
+            this.panel13.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel13.Location = new System.Drawing.Point(0, 0);
+            this.panel13.Name = "panel13";
+            this.panel13.Size = new System.Drawing.Size(507, 40);
+            this.panel13.TabIndex = 11;
+            // 
+            // label4
+            // 
+            this.label4.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.label4.ForeColor = System.Drawing.Color.White;
+            this.label4.Location = new System.Drawing.Point(0, 0);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(225, 40);
+            this.label4.TabIndex = 3;
+            this.label4.Text = "Tên Khách Hàng";
+            this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label3
+            // 
+            this.label3.Dock = System.Windows.Forms.DockStyle.Right;
+            this.label3.ForeColor = System.Drawing.Color.White;
+            this.label3.Location = new System.Drawing.Point(225, 0);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(139, 40);
+            this.label3.TabIndex = 2;
+            this.label3.Text = "CCCD";
+            this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label2
+            // 
+            this.label2.Dock = System.Windows.Forms.DockStyle.Right;
+            this.label2.ForeColor = System.Drawing.Color.White;
+            this.label2.Location = new System.Drawing.Point(364, 0);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(103, 40);
+            this.label2.TabIndex = 1;
+            this.label2.Text = "Điện Thoại";
+            this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // dataGridView1
+            // 
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.dataGridView1.Location = new System.Drawing.Point(0, 261);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.Size = new System.Drawing.Size(507, 77);
+            this.dataGridView1.TabIndex = 9;
+            this.dataGridView1.Visible = false;
+            // 
+            // panel1
+            // 
+            this.panel1.Controls.Add(this.label1);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(826, 40);
+            this.panel1.TabIndex = 6;
+            // 
+            // label1
+            // 
+            this.label1.BackColor = System.Drawing.Color.Gainsboro;
+            this.label1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.label1.Font = new System.Drawing.Font("Arial", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(249)))), ((int)(((byte)(110)))), ((int)(((byte)(48)))));
+            this.label1.Location = new System.Drawing.Point(0, 0);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(826, 40);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "B101";
+            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // panel4
+            // 
+            this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(230)))), ((int)(((byte)(230)))));
+            this.panel4.Dock = System.Windows.Forms.DockStyle.Left;
+            this.panel4.Location = new System.Drawing.Point(0, 50);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(10, 338);
+            this.panel4.TabIndex = 12;
+            // 
+            // panel5
+            // 
+            this.panel5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(230)))), ((int)(((byte)(230)))));
+            this.panel5.Dock = System.Windows.Forms.DockStyle.Right;
+            this.panel5.Location = new System.Drawing.Point(816, 50);
+            this.panel5.Name = "panel5";
+            this.panel5.Size = new System.Drawing.Size(10, 338);
+            this.panel5.TabIndex = 13;
+            // 
+            // panel3
+            // 
+            this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(230)))), ((int)(((byte)(230)))));
+            this.panel3.Controls.Add(this.btnDelete);
+            this.panel3.Controls.Add(this.btnSave);
+            this.panel3.Controls.Add(this.btnClose);
+            this.panel3.Controls.Add(this.panel12);
+            this.panel3.Controls.Add(this.panel6);
+            this.panel3.Controls.Add(this.panel10);
+            this.panel3.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.panel3.Location = new System.Drawing.Point(10, 398);
+            this.panel3.Margin = new System.Windows.Forms.Padding(0);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(826, 60);
+            this.panel3.TabIndex = 4;
+            // 
+            // panel12
+            // 
+            this.panel12.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(230)))), ((int)(((byte)(230)))));
+            this.panel12.Dock = System.Windows.Forms.DockStyle.Right;
+            this.panel12.Location = new System.Drawing.Point(816, 10);
+            this.panel12.Name = "panel12";
+            this.panel12.Size = new System.Drawing.Size(10, 40);
+            this.panel12.TabIndex = 15;
+            // 
+            // panel6
+            // 
+            this.panel6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(242)))), ((int)(((byte)(242)))));
+            this.panel6.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.panel6.Location = new System.Drawing.Point(0, 50);
+            this.panel6.Name = "panel6";
+            this.panel6.Size = new System.Drawing.Size(826, 10);
+            this.panel6.TabIndex = 3;
+            // 
+            // panel10
+            // 
+            this.panel10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(242)))), ((int)(((byte)(242)))));
+            this.panel10.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel10.Location = new System.Drawing.Point(0, 0);
+            this.panel10.Name = "panel10";
+            this.panel10.Size = new System.Drawing.Size(826, 10);
+            this.panel10.TabIndex = 2;
+            // 
+            // panel11
+            // 
+            this.panel11.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(242)))), ((int)(((byte)(242)))));
+            this.panel11.Dock = System.Windows.Forms.DockStyle.Left;
+            this.panel11.Location = new System.Drawing.Point(0, 0);
+            this.panel11.Name = "panel11";
+            this.panel11.Size = new System.Drawing.Size(10, 458);
+            this.panel11.TabIndex = 6;
+            // 
+            // panel7
+            // 
+            this.panel7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(242)))), ((int)(((byte)(242)))));
+            this.panel7.Dock = System.Windows.Forms.DockStyle.Right;
+            this.panel7.Location = new System.Drawing.Point(836, 0);
+            this.panel7.Name = "panel7";
+            this.panel7.Size = new System.Drawing.Size(10, 458);
+            this.panel7.TabIndex = 7;
+            // 
+            // panel8
+            // 
+            this.panel8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(242)))), ((int)(((byte)(242)))));
+            this.panel8.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel8.Location = new System.Drawing.Point(10, 0);
+            this.panel8.Name = "panel8";
+            this.panel8.Size = new System.Drawing.Size(826, 10);
+            this.panel8.TabIndex = 8;
+            // 
+            // siticoneBorderlessForm1
+            // 
+            this.siticoneBorderlessForm1.ContainerControl = this;
+            this.siticoneBorderlessForm1.DockIndicatorTransparencyValue = 0.6D;
+            this.siticoneBorderlessForm1.DragForm = false;
+            this.siticoneBorderlessForm1.ResizeForm = false;
+            this.siticoneBorderlessForm1.TransparentWhileDrag = true;
+            // 
+            // label5
+            // 
+            this.label5.Dock = System.Windows.Forms.DockStyle.Right;
+            this.label5.ForeColor = System.Drawing.Color.White;
+            this.label5.Image = global::TripleX.v2.Properties.Resources.male_and_female_26px;
+            this.label5.Location = new System.Drawing.Point(467, 0);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(40, 40);
+            this.label5.TabIndex = 0;
+            this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // btnDelete
+            // 
+            this.btnDelete.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(230)))), ((int)(((byte)(230)))));
+            this.btnDelete.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(230)))), ((int)(((byte)(230)))));
+            this.btnDelete.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.btnDelete.BorderRadius = 0;
+            this.btnDelete.BorderSize = 0;
+            this.btnDelete.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnDelete.CustomTag = "";
+            this.btnDelete.Dock = System.Windows.Forms.DockStyle.Right;
+            this.btnDelete.FlatAppearance.BorderSize = 0;
+            this.btnDelete.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnDelete.ForeColor = System.Drawing.Color.White;
+            this.btnDelete.HoverBorderColor = System.Drawing.Color.Empty;
+            this.btnDelete.HoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(242)))), ((int)(((byte)(242)))));
+            this.btnDelete.HoverImage = null;
+            this.btnDelete.Image = global::TripleX.v2.Properties.Resources.trash_can_26px;
+            this.btnDelete.LeaveBorderColor = System.Drawing.Color.Empty;
+            this.btnDelete.LeaveColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(230)))), ((int)(((byte)(230)))));
+            this.btnDelete.LeaveImage = null;
+            this.btnDelete.Location = new System.Drawing.Point(666, 10);
+            this.btnDelete.Name = "btnDelete";
+            this.btnDelete.Size = new System.Drawing.Size(50, 40);
+            this.btnDelete.TabIndex = 7;
+            this.btnDelete.TextColor = System.Drawing.Color.White;
+            this.btnDelete.UseVisualStyleBackColor = false;
+            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
+            // 
+            // btnSave
+            // 
+            this.btnSave.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(230)))), ((int)(((byte)(230)))));
+            this.btnSave.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(230)))), ((int)(((byte)(230)))));
+            this.btnSave.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.btnSave.BorderRadius = 0;
+            this.btnSave.BorderSize = 0;
+            this.btnSave.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnSave.CustomTag = "";
+            this.btnSave.Dock = System.Windows.Forms.DockStyle.Right;
+            this.btnSave.FlatAppearance.BorderSize = 0;
+            this.btnSave.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSave.ForeColor = System.Drawing.Color.White;
+            this.btnSave.HoverBorderColor = System.Drawing.Color.Empty;
+            this.btnSave.HoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(242)))), ((int)(((byte)(242)))));
+            this.btnSave.HoverImage = null;
+            this.btnSave.Image = global::TripleX.v2.Properties.Resources.downloading_updates_26px;
+            this.btnSave.LeaveBorderColor = System.Drawing.Color.Empty;
+            this.btnSave.LeaveColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(230)))), ((int)(((byte)(230)))));
+            this.btnSave.LeaveImage = null;
+            this.btnSave.Location = new System.Drawing.Point(716, 10);
+            this.btnSave.Name = "btnSave";
+            this.btnSave.Size = new System.Drawing.Size(50, 40);
+            this.btnSave.TabIndex = 8;
+            this.btnSave.TextColor = System.Drawing.Color.White;
+            this.btnSave.UseVisualStyleBackColor = false;
+            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
+            // 
+            // btnClose
+            // 
+            this.btnClose.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(230)))), ((int)(((byte)(230)))));
+            this.btnClose.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(230)))), ((int)(((byte)(230)))));
+            this.btnClose.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.btnClose.BorderRadius = 0;
+            this.btnClose.BorderSize = 0;
+            this.btnClose.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnClose.CustomTag = "";
+            this.btnClose.Dock = System.Windows.Forms.DockStyle.Right;
+            this.btnClose.FlatAppearance.BorderSize = 0;
+            this.btnClose.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnClose.ForeColor = System.Drawing.Color.White;
+            this.btnClose.HoverBorderColor = System.Drawing.Color.Empty;
+            this.btnClose.HoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(242)))), ((int)(((byte)(242)))));
+            this.btnClose.HoverImage = null;
+            this.btnClose.Image = global::TripleX.v2.Properties.Resources.reply_arrow_26px;
+            this.btnClose.LeaveBorderColor = System.Drawing.Color.Empty;
+            this.btnClose.LeaveColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(230)))), ((int)(((byte)(230)))));
+            this.btnClose.LeaveImage = null;
+            this.btnClose.Location = new System.Drawing.Point(766, 10);
+            this.btnClose.Name = "btnClose";
+            this.btnClose.Size = new System.Drawing.Size(50, 40);
+            this.btnClose.TabIndex = 6;
+            this.btnClose.TextColor = System.Drawing.Color.White;
+            this.btnClose.UseVisualStyleBackColor = false;
+            this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
+            // 
+            // panel9
+            // 
+            this.panel9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(230)))), ((int)(((byte)(230)))));
+            this.panel9.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel9.Location = new System.Drawing.Point(0, 40);
+            this.panel9.Name = "panel9";
+            this.panel9.Size = new System.Drawing.Size(826, 10);
+            this.panel9.TabIndex = 16;
+            // 
+            // panel14
+            // 
+            this.panel14.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(249)))), ((int)(((byte)(110)))), ((int)(((byte)(48)))));
+            this.panel14.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel14.Location = new System.Drawing.Point(0, 81);
+            this.panel14.Name = "panel14";
+            this.panel14.Size = new System.Drawing.Size(507, 2);
+            this.panel14.TabIndex = 17;
+            // 
+            // cCustomer1
+            // 
+            this.cCustomer1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(242)))), ((int)(((byte)(242)))));
+            this.cCustomer1.CCCD = "1234567890123";
+            this.cCustomer1.CName = "hoang";
+            this.cCustomer1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.cCustomer1.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cCustomer1.ID = "1";
+            this.cCustomer1.IsMale = true;
+            this.cCustomer1.Location = new System.Drawing.Point(0, 40);
+            this.cCustomer1.Margin = new System.Windows.Forms.Padding(4);
+            this.cCustomer1.Name = "cCustomer1";
+            this.cCustomer1.Phone = "0123456789";
+            this.cCustomer1.Size = new System.Drawing.Size(507, 41);
+            this.cCustomer1.TabIndex = 8;
+            // 
+            // OrderTable
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(242)))), ((int)(((byte)(242)))));
+            this.ClientSize = new System.Drawing.Size(846, 458);
+            this.Controls.Add(this.panel2);
+            this.Controls.Add(this.panel8);
+            this.Controls.Add(this.panel3);
+            this.Controls.Add(this.panel11);
+            this.Controls.Add(this.panel7);
+            this.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Margin = new System.Windows.Forms.Padding(4);
+            this.Name = "OrderTable";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "OrderTable";
+            this.panel2.ResumeLayout(false);
+            this.panel2.PerformLayout();
+            this.pnCustomer.ResumeLayout(false);
+            this.panel13.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            this.panel1.ResumeLayout(false);
+            this.panel3.ResumeLayout(false);
+            this.ResumeLayout(false);
+
+        }
+
+        #endregion
+
+        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Panel panel3;
+        private CustomControl.CButton btnClose;
+        private System.Windows.Forms.Panel panel6;
+        private System.Windows.Forms.Panel panel10;
+        private System.Windows.Forms.Panel pnCustomer;
+        private Customer.CCustomer cCustomer1;
+        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.Panel panel13;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label5;
+        private CustomControl.CButton btnSave;
+        private CustomControl.CButton btnDelete;
+        private CustomControl.CDatePicker cDatePicker2;
+        private CustomControl.CDatePicker cDatePicker1;
+        private CustomControl.CDatePicker cDatePicker4;
+        private CustomControl.CDatePicker cDatePicker3;
+        private System.Windows.Forms.Panel panel11;
+        private System.Windows.Forms.Panel panel7;
+        private System.Windows.Forms.Panel panel4;
+        private System.Windows.Forms.Panel panel5;
+        private System.Windows.Forms.Panel panel12;
+        private System.Windows.Forms.Panel panel8;
+        private Siticone.Desktop.UI.WinForms.SiticoneBorderlessForm siticoneBorderlessForm1;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Panel panel9;
+        private System.Windows.Forms.Panel panel14;
+    }
+}
