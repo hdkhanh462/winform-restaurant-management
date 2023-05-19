@@ -54,6 +54,7 @@ namespace TripleX.v2.Table
             string sql = "exec PTableAdd '" + txtName.Text + "'," + txtChair.Text + "," + kind;
             SqlClass.RunSql(sql, Connection.conn);
             SharedClass.Alert("Thêm Thành Công!", Form_Alert.enmType.Success);
+            ReLoadTableM();
             //CMessageBox.Show(sql);
         }
 

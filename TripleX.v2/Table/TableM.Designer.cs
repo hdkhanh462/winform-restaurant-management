@@ -114,6 +114,7 @@
             this.rbBig.TabStop = true;
             this.rbBig.Text = "To";
             this.rbBig.UseVisualStyleBackColor = true;
+            this.rbBig.CheckedChanged += new System.EventHandler(this.rbBig_CheckedChanged);
             // 
             // rbAgv
             // 
@@ -132,6 +133,7 @@
             this.rbAgv.TabStop = true;
             this.rbAgv.Text = "Vừa";
             this.rbAgv.UseVisualStyleBackColor = true;
+            this.rbAgv.CheckedChanged += new System.EventHandler(this.rbAgv_CheckedChanged);
             // 
             // rbSmall
             // 
@@ -180,7 +182,7 @@
             this.rbIsOrder.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.rbIsOrder.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(249)))), ((int)(((byte)(110)))), ((int)(((byte)(48)))));
             this.rbIsOrder.Location = new System.Drawing.Point(20, 55);
-            this.rbIsOrder.Margin = new System.Windows.Forms.Padding(10, 0, 10, 10);
+            this.rbIsOrder.Margin = new System.Windows.Forms.Padding(0);
             this.rbIsOrder.MouseLocation = new System.Drawing.Point(-1, -1);
             this.rbIsOrder.MouseState = MaterialSkin.MouseState.HOVER;
             this.rbIsOrder.Name = "rbIsOrder";
@@ -190,6 +192,7 @@
             this.rbIsOrder.TabStop = true;
             this.rbIsOrder.Text = "Đã Đặt";
             this.rbIsOrder.UseVisualStyleBackColor = true;
+            this.rbIsOrder.CheckedChanged += new System.EventHandler(this.rbIsOrder_CheckedChanged);
             // 
             // rbEmpty
             // 
@@ -209,6 +212,7 @@
             this.rbEmpty.TabStop = true;
             this.rbEmpty.Text = "Trống";
             this.rbEmpty.UseVisualStyleBackColor = true;
+            this.rbEmpty.CheckedChanged += new System.EventHandler(this.rbEmpty_CheckedChanged);
             // 
             // panel2
             // 

@@ -67,6 +67,7 @@
             this.lbCCCD.TabIndex = 1;
             this.lbCCCD.Text = "1234567890123";
             this.lbCCCD.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.lbCCCD.Click += new System.EventHandler(this.lbCCCD_Click);
             // 
             // lbPhone
             // 
@@ -81,6 +82,7 @@
             this.lbPhone.TabIndex = 2;
             this.lbPhone.Text = "0123456789";
             this.lbPhone.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.lbPhone.Click += new System.EventHandler(this.lbPhone_Click);
             // 
             // panel1
             // 

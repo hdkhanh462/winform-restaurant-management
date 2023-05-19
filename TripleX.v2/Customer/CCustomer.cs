@@ -17,7 +17,8 @@ namespace TripleX.v2.Customer
         string name;
         string cccd;
         string phone;
-        bool isMale = true;
+        string isMale = "2";
+        bool isSelected = false;
 
         //Events
         public event EventHandler _CClick;
@@ -72,19 +73,59 @@ namespace TripleX.v2.Customer
         }
 
         [Category("CCustomer Setting")]
-        public bool IsMale
+        public string IsMale
         {
             get { return isMale; }
             set
             {
                 isMale = value;
-                if (isMale)
+                if (isMale == "2")
                 {
                     btnSex.Image = Properties.Resources.male_26px;
                 }
-                else
+                else if (isMale == "1")
                 {
                     btnSex.Image = Properties.Resources.female_26px;
+                }
+                Invalidate();
+            }
+        }
+
+        [Category("CCustomer Setting")]
+        public bool IsSelected
+        {
+            get { return isSelected; }
+            set
+            {
+                isSelected = value;
+                foreach(Control c in this.Controls)
+                {
+                    if (isSelected)
+                    {
+                        if (c.GetType() == typeof(Label))
+                        {
+                            c.BackColor = Color.FromArgb(249, 110, 48);
+                            c.ForeColor = Color.FromArgb(242, 242, 242);
+                        }
+                        if (c.GetType() == typeof(Panel))
+                        {
+                            c.BackColor = Color.FromArgb(242, 242, 242);
+                        }
+                        btnSex.BackColor = Color.FromArgb(249, 110, 48);
+                    }
+                    else
+                    {
+                        if (c.GetType() == typeof(Label))
+                        {
+                            c.BackColor = Color.FromArgb(242, 242, 242);
+                            c.ForeColor = Color.FromArgb(249, 110, 48);
+                        }
+                        if (c.GetType() == typeof(Panel))
+                        {
+                            c.BackColor = Color.FromArgb(249, 110, 48);
+                        }
+                        btnSex.BackColor = Color.FromArgb(242, 242, 242);
+                    }
                 }
                 Invalidate();
             }
@@ -107,10 +148,40 @@ namespace TripleX.v2.Customer
         }
 
         //Methods
+
+        void LbClick()
+        {
+            if (IsSelected)
+                IsSelected = false;
+            else
+                IsSelected = true;
+            Invalidate();
+        }
         private void lbName_Click(object sender, EventArgs e)
         {
             if (_CClick != null)
+            {
                 _CClick.Invoke(sender, e);
+                LbClick();
+            }
+        }
+
+        private void lbCCCD_Click(object sender, EventArgs e)
+        {
+            if (_CClick != null)
+            {
+                _CClick.Invoke(sender, e);
+                LbClick();
+            }
+        }
+
+        private void lbPhone_Click(object sender, EventArgs e)
+        {
+            if (_CClick != null)
+            {
+                _CClick.Invoke(sender, e);
+                LbClick();
+            }
         }
     }
 }

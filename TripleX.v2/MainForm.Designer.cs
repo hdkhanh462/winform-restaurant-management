@@ -32,10 +32,11 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
             this.imageList1 = new System.Windows.Forms.ImageList(this.components);
             this.pnMenu = new System.Windows.Forms.Panel();
+            this.pnMain = new System.Windows.Forms.Panel();
+            this.btnCustomer = new CustomControl.CButton();
             this.btnFood = new CustomControl.CButton();
             this.btnTable = new CustomControl.CButton();
             this.btnHome = new CustomControl.CButton();
-            this.pnMain = new System.Windows.Forms.Panel();
             this.pnMenu.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -50,6 +51,7 @@
             // pnMenu
             // 
             this.pnMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(242)))), ((int)(((byte)(242)))));
+            this.pnMenu.Controls.Add(this.btnCustomer);
             this.pnMenu.Controls.Add(this.btnFood);
             this.pnMenu.Controls.Add(this.btnTable);
             this.pnMenu.Controls.Add(this.btnHome);
@@ -58,6 +60,42 @@
             this.pnMenu.Name = "pnMenu";
             this.pnMenu.Size = new System.Drawing.Size(80, 500);
             this.pnMenu.TabIndex = 0;
+            // 
+            // pnMain
+            // 
+            this.pnMain.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pnMain.Location = new System.Drawing.Point(80, 24);
+            this.pnMain.Name = "pnMain";
+            this.pnMain.Size = new System.Drawing.Size(830, 500);
+            this.pnMain.TabIndex = 1;
+            // 
+            // btnCustomer
+            // 
+            this.btnCustomer.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(242)))), ((int)(((byte)(242)))));
+            this.btnCustomer.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(242)))), ((int)(((byte)(242)))));
+            this.btnCustomer.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.btnCustomer.BorderRadius = 0;
+            this.btnCustomer.BorderSize = 0;
+            this.btnCustomer.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnCustomer.CustomTag = "";
+            this.btnCustomer.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnCustomer.FlatAppearance.BorderSize = 0;
+            this.btnCustomer.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCustomer.ForeColor = System.Drawing.Color.White;
+            this.btnCustomer.HoverBorderColor = System.Drawing.Color.Empty;
+            this.btnCustomer.HoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(230)))), ((int)(((byte)(230)))));
+            this.btnCustomer.HoverImage = global::TripleX.v2.Properties.Resources.budget_32px1;
+            this.btnCustomer.Image = global::TripleX.v2.Properties.Resources.budget_32px;
+            this.btnCustomer.LeaveBorderColor = System.Drawing.Color.Empty;
+            this.btnCustomer.LeaveColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(242)))), ((int)(((byte)(242)))));
+            this.btnCustomer.LeaveImage = global::TripleX.v2.Properties.Resources.budget_32px;
+            this.btnCustomer.Location = new System.Drawing.Point(0, 180);
+            this.btnCustomer.Name = "btnCustomer";
+            this.btnCustomer.Size = new System.Drawing.Size(80, 60);
+            this.btnCustomer.TabIndex = 4;
+            this.btnCustomer.TextColor = System.Drawing.Color.White;
+            this.btnCustomer.UseVisualStyleBackColor = false;
+            this.btnCustomer.Click += new System.EventHandler(this.btnCustomer_Click);
             // 
             // btnFood
             // 
@@ -142,14 +180,6 @@
             this.btnHome.TextColor = System.Drawing.Color.White;
             this.btnHome.UseVisualStyleBackColor = false;
             // 
-            // pnMain
-            // 
-            this.pnMain.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pnMain.Location = new System.Drawing.Point(80, 24);
-            this.pnMain.Name = "pnMain";
-            this.pnMain.Size = new System.Drawing.Size(830, 500);
-            this.pnMain.TabIndex = 1;
-            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -179,5 +209,6 @@
         private CustomControl.CButton btnFood;
         private CustomControl.CButton btnTable;
         private System.Windows.Forms.Panel pnMain;
+        private CustomControl.CButton btnCustomer;
     }
 }

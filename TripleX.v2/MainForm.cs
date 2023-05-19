@@ -63,5 +63,10 @@ namespace TripleX.v2
         {
             OpenChildForm(new FoodM(), sender);
         }
+
+        private void btnCustomer_Click(object sender, EventArgs e)
+        {
+            OpenChildForm(new CustomerM(), sender);
+        }
     }
 }

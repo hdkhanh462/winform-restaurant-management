@@ -1,4 +1,5 @@
 ﻿using CustomControl;
+using MaterialSkin.Controls;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -86,6 +87,22 @@ namespace TripleX.v2.Table
             form.ShowDialog();
         }
 
+        void CheckedChange(string kind)
+        {
+            sql = "select * from TTable where TKind = " + kind + " and TStatus = ";
+            if (rbEmpty.Checked == true)
+            {
+                sql = sql + "1";
+                GetEmptyTable(sql);
+            }
+
+            if (rbIsOrder.Checked == true)
+            {
+                sql = sql + "2";
+                GetOrderTable(sql);
+            }
+        }
+
         private void panel2_Paint(object sender, PaintEventArgs e)
         {
             SharedClass.RoundedControl(panel2, 8, e.Graphics, Color.Empty, 0);
@@ -121,15 +138,33 @@ namespace TripleX.v2.Table
 
         private void rbSmall_CheckedChanged(object sender, EventArgs e)
         {
+            CheckedChange("1");
+        }
+
+        private void rbAgv_CheckedChanged(object sender, EventArgs e)
+        {
+            CheckedChange("2");
+        }
+
+        private void rbBig_CheckedChanged(object sender, EventArgs e)
+        {
+            CheckedChange("3");
+        }
+
+        private void rbEmpty_CheckedChanged(object sender, EventArgs e)
+        {
             if (rbEmpty.Checked == true)
             {
-                sql = "select * from TTable where TKind = 1 and TStatus = 1";
+                sql = "select * from TTable where TStatus = 1";
                 GetEmptyTable(sql);
             }
+        }
 
+        private void rbIsOrder_CheckedChanged(object sender, EventArgs e)
+        {
             if (rbIsOrder.Checked == true)
             {
-                sql = "select * from TTable where TKind = 1 and TStatus = 2";
+                sql = "select * from TTable where TStatus = 2";
                 GetOrderTable(sql);
             }
         }

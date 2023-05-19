@@ -32,21 +32,27 @@
             this.panel2 = new System.Windows.Forms.Panel();
             this.label7 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
-            this.cDatePicker4 = new CustomControl.CDatePicker();
-            this.cDatePicker3 = new CustomControl.CDatePicker();
-            this.cDatePicker2 = new CustomControl.CDatePicker();
-            this.cDatePicker1 = new CustomControl.CDatePicker();
+            this.dtpTakeTime = new CustomControl.CDatePicker();
+            this.dtpBookTime = new CustomControl.CDatePicker();
+            this.dtpTakeDate = new CustomControl.CDatePicker();
+            this.dtpBookDate = new CustomControl.CDatePicker();
             this.pnCustomer = new System.Windows.Forms.Panel();
+            this.panel14 = new System.Windows.Forms.Panel();
             this.panel13 = new System.Windows.Forms.Panel();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.label1 = new System.Windows.Forms.Label();
             this.panel4 = new System.Windows.Forms.Panel();
             this.panel5 = new System.Windows.Forms.Panel();
+            this.panel9 = new System.Windows.Forms.Panel();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.label1 = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.btnDelete = new CustomControl.CButton();
+            this.btnSave = new CustomControl.CButton();
+            this.btnClose = new CustomControl.CButton();
             this.panel12 = new System.Windows.Forms.Panel();
             this.panel6 = new System.Windows.Forms.Panel();
             this.panel10 = new System.Windows.Forms.Panel();
@@ -54,12 +60,6 @@
             this.panel7 = new System.Windows.Forms.Panel();
             this.panel8 = new System.Windows.Forms.Panel();
             this.siticoneBorderlessForm1 = new Siticone.Desktop.UI.WinForms.SiticoneBorderlessForm(this.components);
-            this.label5 = new System.Windows.Forms.Label();
-            this.btnDelete = new CustomControl.CButton();
-            this.btnSave = new CustomControl.CButton();
-            this.btnClose = new CustomControl.CButton();
-            this.panel9 = new System.Windows.Forms.Panel();
-            this.panel14 = new System.Windows.Forms.Panel();
             this.cCustomer1 = new TripleX.v2.Customer.CCustomer();
             this.panel2.SuspendLayout();
             this.pnCustomer.SuspendLayout();
@@ -74,10 +74,10 @@
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(230)))), ((int)(((byte)(230)))));
             this.panel2.Controls.Add(this.label7);
             this.panel2.Controls.Add(this.label6);
-            this.panel2.Controls.Add(this.cDatePicker4);
-            this.panel2.Controls.Add(this.cDatePicker3);
-            this.panel2.Controls.Add(this.cDatePicker2);
-            this.panel2.Controls.Add(this.cDatePicker1);
+            this.panel2.Controls.Add(this.dtpTakeTime);
+            this.panel2.Controls.Add(this.dtpBookTime);
+            this.panel2.Controls.Add(this.dtpTakeDate);
+            this.panel2.Controls.Add(this.dtpBookDate);
             this.panel2.Controls.Add(this.pnCustomer);
             this.panel2.Controls.Add(this.panel4);
             this.panel2.Controls.Add(this.panel5);
@@ -110,75 +110,75 @@
             this.label6.TabIndex = 14;
             this.label6.Text = "Ngày Đặt";
             // 
-            // cDatePicker4
+            // dtpTakeTime
             // 
-            this.cDatePicker4.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(249)))), ((int)(((byte)(110)))), ((int)(((byte)(48)))));
-            this.cDatePicker4.BorderSize = 2;
-            this.cDatePicker4.CalendarForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(249)))), ((int)(((byte)(110)))), ((int)(((byte)(48)))));
-            this.cDatePicker4.CalendarMonthBackground = System.Drawing.Color.FromArgb(((int)(((byte)(249)))), ((int)(((byte)(110)))), ((int)(((byte)(48)))));
-            this.cDatePicker4.CalendarTitleBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(249)))), ((int)(((byte)(110)))), ((int)(((byte)(48)))));
-            this.cDatePicker4.CalendarTitleForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(249)))), ((int)(((byte)(110)))), ((int)(((byte)(48)))));
-            this.cDatePicker4.CalendarTrailingForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(249)))), ((int)(((byte)(110)))), ((int)(((byte)(48)))));
-            this.cDatePicker4.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.cDatePicker4.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cDatePicker4.Format = System.Windows.Forms.DateTimePickerFormat.Time;
-            this.cDatePicker4.Location = new System.Drawing.Point(678, 223);
-            this.cDatePicker4.MinimumSize = new System.Drawing.Size(4, 35);
-            this.cDatePicker4.Name = "cDatePicker4";
-            this.cDatePicker4.ShowUpDown = true;
-            this.cDatePicker4.Size = new System.Drawing.Size(97, 35);
-            this.cDatePicker4.SkinColor = System.Drawing.Color.White;
-            this.cDatePicker4.TabIndex = 11;
-            this.cDatePicker4.TextColor = System.Drawing.Color.Black;
+            this.dtpTakeTime.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(249)))), ((int)(((byte)(110)))), ((int)(((byte)(48)))));
+            this.dtpTakeTime.BorderSize = 2;
+            this.dtpTakeTime.CalendarForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(249)))), ((int)(((byte)(110)))), ((int)(((byte)(48)))));
+            this.dtpTakeTime.CalendarMonthBackground = System.Drawing.Color.FromArgb(((int)(((byte)(249)))), ((int)(((byte)(110)))), ((int)(((byte)(48)))));
+            this.dtpTakeTime.CalendarTitleBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(249)))), ((int)(((byte)(110)))), ((int)(((byte)(48)))));
+            this.dtpTakeTime.CalendarTitleForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(249)))), ((int)(((byte)(110)))), ((int)(((byte)(48)))));
+            this.dtpTakeTime.CalendarTrailingForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(249)))), ((int)(((byte)(110)))), ((int)(((byte)(48)))));
+            this.dtpTakeTime.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.dtpTakeTime.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dtpTakeTime.Format = System.Windows.Forms.DateTimePickerFormat.Time;
+            this.dtpTakeTime.Location = new System.Drawing.Point(678, 223);
+            this.dtpTakeTime.MinimumSize = new System.Drawing.Size(4, 35);
+            this.dtpTakeTime.Name = "dtpTakeTime";
+            this.dtpTakeTime.ShowUpDown = true;
+            this.dtpTakeTime.Size = new System.Drawing.Size(97, 35);
+            this.dtpTakeTime.SkinColor = System.Drawing.Color.White;
+            this.dtpTakeTime.TabIndex = 11;
+            this.dtpTakeTime.TextColor = System.Drawing.Color.Black;
             // 
-            // cDatePicker3
+            // dtpBookTime
             // 
-            this.cDatePicker3.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(249)))), ((int)(((byte)(110)))), ((int)(((byte)(48)))));
-            this.cDatePicker3.BorderSize = 2;
-            this.cDatePicker3.CalendarForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(249)))), ((int)(((byte)(110)))), ((int)(((byte)(48)))));
-            this.cDatePicker3.CalendarMonthBackground = System.Drawing.Color.FromArgb(((int)(((byte)(249)))), ((int)(((byte)(110)))), ((int)(((byte)(48)))));
-            this.cDatePicker3.CalendarTitleBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(249)))), ((int)(((byte)(110)))), ((int)(((byte)(48)))));
-            this.cDatePicker3.CalendarTitleForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(249)))), ((int)(((byte)(110)))), ((int)(((byte)(48)))));
-            this.cDatePicker3.CalendarTrailingForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(249)))), ((int)(((byte)(110)))), ((int)(((byte)(48)))));
-            this.cDatePicker3.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.cDatePicker3.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cDatePicker3.Format = System.Windows.Forms.DateTimePickerFormat.Time;
-            this.cDatePicker3.Location = new System.Drawing.Point(678, 129);
-            this.cDatePicker3.MinimumSize = new System.Drawing.Size(4, 35);
-            this.cDatePicker3.Name = "cDatePicker3";
-            this.cDatePicker3.ShowUpDown = true;
-            this.cDatePicker3.Size = new System.Drawing.Size(97, 35);
-            this.cDatePicker3.SkinColor = System.Drawing.Color.White;
-            this.cDatePicker3.TabIndex = 10;
-            this.cDatePicker3.TextColor = System.Drawing.Color.Black;
+            this.dtpBookTime.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(249)))), ((int)(((byte)(110)))), ((int)(((byte)(48)))));
+            this.dtpBookTime.BorderSize = 2;
+            this.dtpBookTime.CalendarForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(249)))), ((int)(((byte)(110)))), ((int)(((byte)(48)))));
+            this.dtpBookTime.CalendarMonthBackground = System.Drawing.Color.FromArgb(((int)(((byte)(249)))), ((int)(((byte)(110)))), ((int)(((byte)(48)))));
+            this.dtpBookTime.CalendarTitleBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(249)))), ((int)(((byte)(110)))), ((int)(((byte)(48)))));
+            this.dtpBookTime.CalendarTitleForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(249)))), ((int)(((byte)(110)))), ((int)(((byte)(48)))));
+            this.dtpBookTime.CalendarTrailingForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(249)))), ((int)(((byte)(110)))), ((int)(((byte)(48)))));
+            this.dtpBookTime.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.dtpBookTime.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dtpBookTime.Format = System.Windows.Forms.DateTimePickerFormat.Time;
+            this.dtpBookTime.Location = new System.Drawing.Point(678, 129);
+            this.dtpBookTime.MinimumSize = new System.Drawing.Size(4, 35);
+            this.dtpBookTime.Name = "dtpBookTime";
+            this.dtpBookTime.ShowUpDown = true;
+            this.dtpBookTime.Size = new System.Drawing.Size(97, 35);
+            this.dtpBookTime.SkinColor = System.Drawing.Color.White;
+            this.dtpBookTime.TabIndex = 10;
+            this.dtpBookTime.TextColor = System.Drawing.Color.Black;
             // 
-            // cDatePicker2
+            // dtpTakeDate
             // 
-            this.cDatePicker2.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(249)))), ((int)(((byte)(110)))), ((int)(((byte)(48)))));
-            this.cDatePicker2.BorderSize = 2;
-            this.cDatePicker2.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cDatePicker2.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.cDatePicker2.Location = new System.Drawing.Point(552, 223);
-            this.cDatePicker2.MinimumSize = new System.Drawing.Size(4, 35);
-            this.cDatePicker2.Name = "cDatePicker2";
-            this.cDatePicker2.Size = new System.Drawing.Size(114, 35);
-            this.cDatePicker2.SkinColor = System.Drawing.Color.White;
-            this.cDatePicker2.TabIndex = 9;
-            this.cDatePicker2.TextColor = System.Drawing.Color.Black;
+            this.dtpTakeDate.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(249)))), ((int)(((byte)(110)))), ((int)(((byte)(48)))));
+            this.dtpTakeDate.BorderSize = 2;
+            this.dtpTakeDate.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dtpTakeDate.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dtpTakeDate.Location = new System.Drawing.Point(552, 223);
+            this.dtpTakeDate.MinimumSize = new System.Drawing.Size(4, 35);
+            this.dtpTakeDate.Name = "dtpTakeDate";
+            this.dtpTakeDate.Size = new System.Drawing.Size(114, 35);
+            this.dtpTakeDate.SkinColor = System.Drawing.Color.White;
+            this.dtpTakeDate.TabIndex = 9;
+            this.dtpTakeDate.TextColor = System.Drawing.Color.Black;
             // 
-            // cDatePicker1
+            // dtpBookDate
             // 
-            this.cDatePicker1.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(249)))), ((int)(((byte)(110)))), ((int)(((byte)(48)))));
-            this.cDatePicker1.BorderSize = 2;
-            this.cDatePicker1.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cDatePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.cDatePicker1.Location = new System.Drawing.Point(552, 129);
-            this.cDatePicker1.MinimumSize = new System.Drawing.Size(4, 35);
-            this.cDatePicker1.Name = "cDatePicker1";
-            this.cDatePicker1.Size = new System.Drawing.Size(114, 35);
-            this.cDatePicker1.SkinColor = System.Drawing.Color.White;
-            this.cDatePicker1.TabIndex = 8;
-            this.cDatePicker1.TextColor = System.Drawing.Color.Black;
+            this.dtpBookDate.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(249)))), ((int)(((byte)(110)))), ((int)(((byte)(48)))));
+            this.dtpBookDate.BorderSize = 2;
+            this.dtpBookDate.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dtpBookDate.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dtpBookDate.Location = new System.Drawing.Point(552, 129);
+            this.dtpBookDate.MinimumSize = new System.Drawing.Size(4, 35);
+            this.dtpBookDate.Name = "dtpBookDate";
+            this.dtpBookDate.Size = new System.Drawing.Size(114, 35);
+            this.dtpBookDate.SkinColor = System.Drawing.Color.White;
+            this.dtpBookDate.TabIndex = 8;
+            this.dtpBookDate.TextColor = System.Drawing.Color.Black;
             // 
             // pnCustomer
             // 
@@ -192,6 +192,15 @@
             this.pnCustomer.Size = new System.Drawing.Size(507, 338);
             this.pnCustomer.TabIndex = 7;
             this.pnCustomer.Paint += new System.Windows.Forms.PaintEventHandler(this.pnCustomer_Paint);
+            // 
+            // panel14
+            // 
+            this.panel14.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(249)))), ((int)(((byte)(110)))), ((int)(((byte)(48)))));
+            this.panel14.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel14.Location = new System.Drawing.Point(0, 81);
+            this.panel14.Name = "panel14";
+            this.panel14.Size = new System.Drawing.Size(507, 2);
+            this.panel14.TabIndex = 17;
             // 
             // panel13
             // 
@@ -239,6 +248,17 @@
             this.label2.Text = "Điện Thoại";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
+            // label5
+            // 
+            this.label5.Dock = System.Windows.Forms.DockStyle.Right;
+            this.label5.ForeColor = System.Drawing.Color.White;
+            this.label5.Image = global::TripleX.v2.Properties.Resources.male_and_female_26px;
+            this.label5.Location = new System.Drawing.Point(467, 0);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(40, 40);
+            this.label5.TabIndex = 0;
+            this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
             // dataGridView1
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
@@ -248,6 +268,33 @@
             this.dataGridView1.Size = new System.Drawing.Size(507, 77);
             this.dataGridView1.TabIndex = 9;
             this.dataGridView1.Visible = false;
+            // 
+            // panel4
+            // 
+            this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(230)))), ((int)(((byte)(230)))));
+            this.panel4.Dock = System.Windows.Forms.DockStyle.Left;
+            this.panel4.Location = new System.Drawing.Point(0, 50);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(10, 338);
+            this.panel4.TabIndex = 12;
+            // 
+            // panel5
+            // 
+            this.panel5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(230)))), ((int)(((byte)(230)))));
+            this.panel5.Dock = System.Windows.Forms.DockStyle.Right;
+            this.panel5.Location = new System.Drawing.Point(816, 50);
+            this.panel5.Name = "panel5";
+            this.panel5.Size = new System.Drawing.Size(10, 338);
+            this.panel5.TabIndex = 13;
+            // 
+            // panel9
+            // 
+            this.panel9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(230)))), ((int)(((byte)(230)))));
+            this.panel9.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel9.Location = new System.Drawing.Point(0, 40);
+            this.panel9.Name = "panel9";
+            this.panel9.Size = new System.Drawing.Size(826, 10);
+            this.panel9.TabIndex = 16;
             // 
             // panel1
             // 
@@ -271,24 +318,6 @@
             this.label1.Text = "B101";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // panel4
-            // 
-            this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(230)))), ((int)(((byte)(230)))));
-            this.panel4.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panel4.Location = new System.Drawing.Point(0, 50);
-            this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(10, 338);
-            this.panel4.TabIndex = 12;
-            // 
-            // panel5
-            // 
-            this.panel5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(230)))), ((int)(((byte)(230)))));
-            this.panel5.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel5.Location = new System.Drawing.Point(816, 50);
-            this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(10, 338);
-            this.panel5.TabIndex = 13;
-            // 
             // panel3
             // 
             this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(230)))), ((int)(((byte)(230)))));
@@ -304,79 +333,6 @@
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(826, 60);
             this.panel3.TabIndex = 4;
-            // 
-            // panel12
-            // 
-            this.panel12.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(230)))), ((int)(((byte)(230)))));
-            this.panel12.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel12.Location = new System.Drawing.Point(816, 10);
-            this.panel12.Name = "panel12";
-            this.panel12.Size = new System.Drawing.Size(10, 40);
-            this.panel12.TabIndex = 15;
-            // 
-            // panel6
-            // 
-            this.panel6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(242)))), ((int)(((byte)(242)))));
-            this.panel6.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel6.Location = new System.Drawing.Point(0, 50);
-            this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(826, 10);
-            this.panel6.TabIndex = 3;
-            // 
-            // panel10
-            // 
-            this.panel10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(242)))), ((int)(((byte)(242)))));
-            this.panel10.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel10.Location = new System.Drawing.Point(0, 0);
-            this.panel10.Name = "panel10";
-            this.panel10.Size = new System.Drawing.Size(826, 10);
-            this.panel10.TabIndex = 2;
-            // 
-            // panel11
-            // 
-            this.panel11.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(242)))), ((int)(((byte)(242)))));
-            this.panel11.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panel11.Location = new System.Drawing.Point(0, 0);
-            this.panel11.Name = "panel11";
-            this.panel11.Size = new System.Drawing.Size(10, 458);
-            this.panel11.TabIndex = 6;
-            // 
-            // panel7
-            // 
-            this.panel7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(242)))), ((int)(((byte)(242)))));
-            this.panel7.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel7.Location = new System.Drawing.Point(836, 0);
-            this.panel7.Name = "panel7";
-            this.panel7.Size = new System.Drawing.Size(10, 458);
-            this.panel7.TabIndex = 7;
-            // 
-            // panel8
-            // 
-            this.panel8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(242)))), ((int)(((byte)(242)))));
-            this.panel8.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel8.Location = new System.Drawing.Point(10, 0);
-            this.panel8.Name = "panel8";
-            this.panel8.Size = new System.Drawing.Size(826, 10);
-            this.panel8.TabIndex = 8;
-            // 
-            // siticoneBorderlessForm1
-            // 
-            this.siticoneBorderlessForm1.ContainerControl = this;
-            this.siticoneBorderlessForm1.DockIndicatorTransparencyValue = 0.6D;
-            this.siticoneBorderlessForm1.DragForm = false;
-            this.siticoneBorderlessForm1.ResizeForm = false;
-            this.siticoneBorderlessForm1.TransparentWhileDrag = true;
-            // 
-            // label5
-            // 
-            this.label5.Dock = System.Windows.Forms.DockStyle.Right;
-            this.label5.ForeColor = System.Drawing.Color.White;
-            this.label5.Image = global::TripleX.v2.Properties.Resources.male_and_female_26px;
-            this.label5.Location = new System.Drawing.Point(467, 0);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(40, 40);
-            this.label5.TabIndex = 0;
-            this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // btnDelete
             // 
@@ -462,23 +418,67 @@
             this.btnClose.UseVisualStyleBackColor = false;
             this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
             // 
-            // panel9
+            // panel12
             // 
-            this.panel9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(230)))), ((int)(((byte)(230)))));
-            this.panel9.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel9.Location = new System.Drawing.Point(0, 40);
-            this.panel9.Name = "panel9";
-            this.panel9.Size = new System.Drawing.Size(826, 10);
-            this.panel9.TabIndex = 16;
+            this.panel12.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(230)))), ((int)(((byte)(230)))));
+            this.panel12.Dock = System.Windows.Forms.DockStyle.Right;
+            this.panel12.Location = new System.Drawing.Point(816, 10);
+            this.panel12.Name = "panel12";
+            this.panel12.Size = new System.Drawing.Size(10, 40);
+            this.panel12.TabIndex = 15;
             // 
-            // panel14
+            // panel6
             // 
-            this.panel14.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(249)))), ((int)(((byte)(110)))), ((int)(((byte)(48)))));
-            this.panel14.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel14.Location = new System.Drawing.Point(0, 81);
-            this.panel14.Name = "panel14";
-            this.panel14.Size = new System.Drawing.Size(507, 2);
-            this.panel14.TabIndex = 17;
+            this.panel6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(242)))), ((int)(((byte)(242)))));
+            this.panel6.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.panel6.Location = new System.Drawing.Point(0, 50);
+            this.panel6.Name = "panel6";
+            this.panel6.Size = new System.Drawing.Size(826, 10);
+            this.panel6.TabIndex = 3;
+            // 
+            // panel10
+            // 
+            this.panel10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(242)))), ((int)(((byte)(242)))));
+            this.panel10.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel10.Location = new System.Drawing.Point(0, 0);
+            this.panel10.Name = "panel10";
+            this.panel10.Size = new System.Drawing.Size(826, 10);
+            this.panel10.TabIndex = 2;
+            // 
+            // panel11
+            // 
+            this.panel11.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(242)))), ((int)(((byte)(242)))));
+            this.panel11.Dock = System.Windows.Forms.DockStyle.Left;
+            this.panel11.Location = new System.Drawing.Point(0, 0);
+            this.panel11.Name = "panel11";
+            this.panel11.Size = new System.Drawing.Size(10, 458);
+            this.panel11.TabIndex = 6;
+            // 
+            // panel7
+            // 
+            this.panel7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(242)))), ((int)(((byte)(242)))));
+            this.panel7.Dock = System.Windows.Forms.DockStyle.Right;
+            this.panel7.Location = new System.Drawing.Point(836, 0);
+            this.panel7.Name = "panel7";
+            this.panel7.Size = new System.Drawing.Size(10, 458);
+            this.panel7.TabIndex = 7;
+            // 
+            // panel8
+            // 
+            this.panel8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(242)))), ((int)(((byte)(242)))));
+            this.panel8.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel8.Location = new System.Drawing.Point(10, 0);
+            this.panel8.Name = "panel8";
+            this.panel8.Size = new System.Drawing.Size(826, 10);
+            this.panel8.TabIndex = 8;
+            // 
+            // siticoneBorderlessForm1
+            // 
+            this.siticoneBorderlessForm1.ContainerControl = this;
+            this.siticoneBorderlessForm1.DockIndicatorTransparencyValue = 0.6D;
+            this.siticoneBorderlessForm1.DragForm = false;
+            this.siticoneBorderlessForm1.ResizeForm = false;
+            this.siticoneBorderlessForm1.TransparentWhileDrag = true;
             // 
             // cCustomer1
             // 
@@ -488,13 +488,15 @@
             this.cCustomer1.Dock = System.Windows.Forms.DockStyle.Top;
             this.cCustomer1.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cCustomer1.ID = "1";
-            this.cCustomer1.IsMale = true;
+            this.cCustomer1.IsMale = "2";
+            this.cCustomer1.IsSelected = false;
             this.cCustomer1.Location = new System.Drawing.Point(0, 40);
             this.cCustomer1.Margin = new System.Windows.Forms.Padding(4);
             this.cCustomer1.Name = "cCustomer1";
             this.cCustomer1.Phone = "0123456789";
             this.cCustomer1.Size = new System.Drawing.Size(507, 41);
             this.cCustomer1.TabIndex = 8;
+            this.cCustomer1._CClick += new System.EventHandler(this.cCustomer1__CClick);
             // 
             // OrderTable
             // 
@@ -543,10 +545,10 @@
         private System.Windows.Forms.Label label5;
         private CustomControl.CButton btnSave;
         private CustomControl.CButton btnDelete;
-        private CustomControl.CDatePicker cDatePicker2;
-        private CustomControl.CDatePicker cDatePicker1;
-        private CustomControl.CDatePicker cDatePicker4;
-        private CustomControl.CDatePicker cDatePicker3;
+        private CustomControl.CDatePicker dtpTakeDate;
+        private CustomControl.CDatePicker dtpBookDate;
+        private CustomControl.CDatePicker dtpTakeTime;
+        private CustomControl.CDatePicker dtpBookTime;
         private System.Windows.Forms.Panel panel11;
         private System.Windows.Forms.Panel panel7;
         private System.Windows.Forms.Panel panel4;
