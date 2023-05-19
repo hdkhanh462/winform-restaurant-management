@@ -18,8 +18,8 @@ namespace TripleX.v2.Customer
         string cccd;
         string phone;
         string isMale = "2";
+        int parentWidth;
         bool isSelected = false;
-
         //Events
         public event EventHandler _CClick;
 

@@ -43,7 +43,6 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.panel4 = new System.Windows.Forms.Panel();
             this.panel5 = new System.Windows.Forms.Panel();
             this.panel9 = new System.Windows.Forms.Panel();
@@ -60,13 +59,14 @@
             this.panel7 = new System.Windows.Forms.Panel();
             this.panel8 = new System.Windows.Forms.Panel();
             this.siticoneBorderlessForm1 = new Siticone.Desktop.UI.WinForms.SiticoneBorderlessForm(this.components);
+            this.flpCustomer = new System.Windows.Forms.FlowLayoutPanel();
             this.cCustomer1 = new TripleX.v2.Customer.CCustomer();
             this.panel2.SuspendLayout();
             this.pnCustomer.SuspendLayout();
             this.panel13.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
+            this.flpCustomer.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel2
@@ -87,7 +87,7 @@
             this.panel2.Location = new System.Drawing.Point(10, 10);
             this.panel2.Margin = new System.Windows.Forms.Padding(0);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(826, 388);
+            this.panel2.Size = new System.Drawing.Size(866, 388);
             this.panel2.TabIndex = 3;
             // 
             // label7
@@ -182,10 +182,9 @@
             // 
             // pnCustomer
             // 
+            this.pnCustomer.Controls.Add(this.flpCustomer);
             this.pnCustomer.Controls.Add(this.panel14);
-            this.pnCustomer.Controls.Add(this.cCustomer1);
             this.pnCustomer.Controls.Add(this.panel13);
-            this.pnCustomer.Controls.Add(this.dataGridView1);
             this.pnCustomer.Dock = System.Windows.Forms.DockStyle.Left;
             this.pnCustomer.Location = new System.Drawing.Point(10, 50);
             this.pnCustomer.Name = "pnCustomer";
@@ -197,7 +196,7 @@
             // 
             this.panel14.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(249)))), ((int)(((byte)(110)))), ((int)(((byte)(48)))));
             this.panel14.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel14.Location = new System.Drawing.Point(0, 81);
+            this.panel14.Location = new System.Drawing.Point(0, 40);
             this.panel14.Name = "panel14";
             this.panel14.Size = new System.Drawing.Size(507, 2);
             this.panel14.TabIndex = 17;
@@ -259,16 +258,6 @@
             this.label5.TabIndex = 0;
             this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // dataGridView1
-            // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.dataGridView1.Location = new System.Drawing.Point(0, 261);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(507, 77);
-            this.dataGridView1.TabIndex = 9;
-            this.dataGridView1.Visible = false;
-            // 
             // panel4
             // 
             this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(230)))), ((int)(((byte)(230)))));
@@ -282,7 +271,7 @@
             // 
             this.panel5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(230)))), ((int)(((byte)(230)))));
             this.panel5.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel5.Location = new System.Drawing.Point(816, 50);
+            this.panel5.Location = new System.Drawing.Point(856, 50);
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(10, 338);
             this.panel5.TabIndex = 13;
@@ -293,7 +282,7 @@
             this.panel9.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel9.Location = new System.Drawing.Point(0, 40);
             this.panel9.Name = "panel9";
-            this.panel9.Size = new System.Drawing.Size(826, 10);
+            this.panel9.Size = new System.Drawing.Size(866, 10);
             this.panel9.TabIndex = 16;
             // 
             // panel1
@@ -302,7 +291,7 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(826, 40);
+            this.panel1.Size = new System.Drawing.Size(866, 40);
             this.panel1.TabIndex = 6;
             // 
             // label1
@@ -313,7 +302,7 @@
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(249)))), ((int)(((byte)(110)))), ((int)(((byte)(48)))));
             this.label1.Location = new System.Drawing.Point(0, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(826, 40);
+            this.label1.Size = new System.Drawing.Size(866, 40);
             this.label1.TabIndex = 0;
             this.label1.Text = "B101";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -331,7 +320,7 @@
             this.panel3.Location = new System.Drawing.Point(10, 398);
             this.panel3.Margin = new System.Windows.Forms.Padding(0);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(826, 60);
+            this.panel3.Size = new System.Drawing.Size(866, 60);
             this.panel3.TabIndex = 4;
             // 
             // btnDelete
@@ -354,7 +343,7 @@
             this.btnDelete.LeaveBorderColor = System.Drawing.Color.Empty;
             this.btnDelete.LeaveColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(230)))), ((int)(((byte)(230)))));
             this.btnDelete.LeaveImage = null;
-            this.btnDelete.Location = new System.Drawing.Point(666, 10);
+            this.btnDelete.Location = new System.Drawing.Point(706, 10);
             this.btnDelete.Name = "btnDelete";
             this.btnDelete.Size = new System.Drawing.Size(50, 40);
             this.btnDelete.TabIndex = 7;
@@ -382,7 +371,7 @@
             this.btnSave.LeaveBorderColor = System.Drawing.Color.Empty;
             this.btnSave.LeaveColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(230)))), ((int)(((byte)(230)))));
             this.btnSave.LeaveImage = null;
-            this.btnSave.Location = new System.Drawing.Point(716, 10);
+            this.btnSave.Location = new System.Drawing.Point(756, 10);
             this.btnSave.Name = "btnSave";
             this.btnSave.Size = new System.Drawing.Size(50, 40);
             this.btnSave.TabIndex = 8;
@@ -410,7 +399,7 @@
             this.btnClose.LeaveBorderColor = System.Drawing.Color.Empty;
             this.btnClose.LeaveColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(230)))), ((int)(((byte)(230)))));
             this.btnClose.LeaveImage = null;
-            this.btnClose.Location = new System.Drawing.Point(766, 10);
+            this.btnClose.Location = new System.Drawing.Point(806, 10);
             this.btnClose.Name = "btnClose";
             this.btnClose.Size = new System.Drawing.Size(50, 40);
             this.btnClose.TabIndex = 6;
@@ -422,7 +411,7 @@
             // 
             this.panel12.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(230)))), ((int)(((byte)(230)))));
             this.panel12.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel12.Location = new System.Drawing.Point(816, 10);
+            this.panel12.Location = new System.Drawing.Point(856, 10);
             this.panel12.Name = "panel12";
             this.panel12.Size = new System.Drawing.Size(10, 40);
             this.panel12.TabIndex = 15;
@@ -433,7 +422,7 @@
             this.panel6.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.panel6.Location = new System.Drawing.Point(0, 50);
             this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(826, 10);
+            this.panel6.Size = new System.Drawing.Size(866, 10);
             this.panel6.TabIndex = 3;
             // 
             // panel10
@@ -442,7 +431,7 @@
             this.panel10.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel10.Location = new System.Drawing.Point(0, 0);
             this.panel10.Name = "panel10";
-            this.panel10.Size = new System.Drawing.Size(826, 10);
+            this.panel10.Size = new System.Drawing.Size(866, 10);
             this.panel10.TabIndex = 2;
             // 
             // panel11
@@ -458,7 +447,7 @@
             // 
             this.panel7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(242)))), ((int)(((byte)(242)))));
             this.panel7.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel7.Location = new System.Drawing.Point(836, 0);
+            this.panel7.Location = new System.Drawing.Point(876, 0);
             this.panel7.Name = "panel7";
             this.panel7.Size = new System.Drawing.Size(10, 458);
             this.panel7.TabIndex = 7;
@@ -469,7 +458,7 @@
             this.panel8.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel8.Location = new System.Drawing.Point(10, 0);
             this.panel8.Name = "panel8";
-            this.panel8.Size = new System.Drawing.Size(826, 10);
+            this.panel8.Size = new System.Drawing.Size(866, 10);
             this.panel8.TabIndex = 8;
             // 
             // siticoneBorderlessForm1
@@ -479,6 +468,15 @@
             this.siticoneBorderlessForm1.DragForm = false;
             this.siticoneBorderlessForm1.ResizeForm = false;
             this.siticoneBorderlessForm1.TransparentWhileDrag = true;
+            // 
+            // flpCustomer
+            // 
+            this.flpCustomer.Controls.Add(this.cCustomer1);
+            this.flpCustomer.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.flpCustomer.Location = new System.Drawing.Point(0, 42);
+            this.flpCustomer.Name = "flpCustomer";
+            this.flpCustomer.Size = new System.Drawing.Size(507, 296);
+            this.flpCustomer.TabIndex = 18;
             // 
             // cCustomer1
             // 
@@ -490,20 +488,19 @@
             this.cCustomer1.ID = "1";
             this.cCustomer1.IsMale = "2";
             this.cCustomer1.IsSelected = false;
-            this.cCustomer1.Location = new System.Drawing.Point(0, 40);
-            this.cCustomer1.Margin = new System.Windows.Forms.Padding(4);
+            this.cCustomer1.Location = new System.Drawing.Point(0, 0);
+            this.cCustomer1.Margin = new System.Windows.Forms.Padding(0);
             this.cCustomer1.Name = "cCustomer1";
             this.cCustomer1.Phone = "0123456789";
             this.cCustomer1.Size = new System.Drawing.Size(507, 41);
-            this.cCustomer1.TabIndex = 8;
-            this.cCustomer1._CClick += new System.EventHandler(this.cCustomer1__CClick);
+            this.cCustomer1.TabIndex = 9;
             // 
             // OrderTable
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(242)))), ((int)(((byte)(242)))));
-            this.ClientSize = new System.Drawing.Size(846, 458);
+            this.ClientSize = new System.Drawing.Size(886, 458);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel8);
             this.Controls.Add(this.panel3);
@@ -519,9 +516,9 @@
             this.panel2.PerformLayout();
             this.pnCustomer.ResumeLayout(false);
             this.panel13.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel3.ResumeLayout(false);
+            this.flpCustomer.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -536,8 +533,6 @@
         private System.Windows.Forms.Panel panel6;
         private System.Windows.Forms.Panel panel10;
         private System.Windows.Forms.Panel pnCustomer;
-        private Customer.CCustomer cCustomer1;
-        private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Panel panel13;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
@@ -560,5 +555,7 @@
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Panel panel9;
         private System.Windows.Forms.Panel panel14;
+        private System.Windows.Forms.FlowLayoutPanel flpCustomer;
+        private Customer.CCustomer cCustomer1;
     }
 }

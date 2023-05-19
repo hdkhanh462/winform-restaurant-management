@@ -17,35 +17,35 @@ namespace TripleX.v2.Customer
         //Fields
         string sql;
         string customerID;
+        Image someImage = Properties.Resources.female_26px;
         public CustomerM()
         {
             InitializeComponent();
+            Connection.Connect();
             GetData();
         }
 
         public void GetData()
         {
-            sql = "select * from TCustomer";
-            SqlDataReader reader = SqlClass.ReadData(sql, Connection.conn);
-            pnCustomer.Controls.Clear();
-            while (reader.Read())
-            {
-                CCustomer cc = new CCustomer();
-                cc.ID = reader["ID"].ToString();
-                cc.CName = reader["CName"].ToString();
-                cc.CCCD = reader["CCCD"].ToString();
-                cc.Phone = reader["CPhone"].ToString();
-                cc.IsMale = reader["IsMale"].ToString();
-
-                cc._CClick += new EventHandler(selectCustomer);
-                pnCustomer.Controls.Add(cc);
-            }
-            reader.Close();
+            siticoneDataGridView1.Rows[0].Cells[4].Value = Properties.Resources.male_26px;
+            sql = "";
+            //SharedClass.FillDGV(siticoneDataGridView1, sql, Connection.conn);
         }
 
-        private void selectCustomer(object sender, EventArgs e)
+        private void siticoneDataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            customerID = ((Label)sender).Tag.ToString();
+            if (e.RowIndex < 0)
+                return;
+
+            //I suposed you want to handle the event for column at index 1
+            if (e.ColumnIndex == 4)
+                MessageBox.Show("Clicked!");
+        }
+
+        private void btnAdd_Click(object sender, EventArgs e)
+        {
+            Form form = new AddCustomer();
+            form.ShowDialog();
         }
     }
 }

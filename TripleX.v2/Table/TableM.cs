@@ -1,4 +1,5 @@
 ﻿using CustomControl;
+using MaterialSkin;
 using MaterialSkin.Controls;
 using System;
 using System.Collections.Generic;
@@ -18,11 +19,17 @@ namespace TripleX.v2.Table
     public partial class TableM : Form
     {
         //Fields
+        readonly MaterialSkinManager materialSkinManager;
         public static string tableID;
         string sql;
         public TableM()
         {
             InitializeComponent();
+            materialSkinManager = MaterialSkin.MaterialSkinManager.Instance;
+            materialSkinManager.EnforceBackcolorOnAllComponents = true;
+            materialSkinManager.Theme = MaterialSkin.MaterialSkinManager.Themes.LIGHT;
+            materialSkinManager.ColorScheme = new MaterialSkin.ColorScheme(MaterialSkin.Primary.DeepOrange400, MaterialSkin.Primary.DeepOrange400, MaterialSkin.Primary.DeepOrange400,
+                MaterialSkin.Accent.DeepOrange400, MaterialSkin.TextShade.WHITE);
             Connection.Connect();
             GetData();
         }

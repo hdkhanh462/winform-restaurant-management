@@ -220,6 +220,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Connection.cs" />
+    <Compile Include="Customer\AddCustomer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Customer\AddCustomer.Designer.cs">
+      <DependentUpon>AddCustomer.cs</DependentUpon>
+    </Compile>
     <Compile Include="Customer\CCustomer.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -282,6 +288,9 @@
     <Compile Include="Table\TableM.Designer.cs">
       <DependentUpon>TableM.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Customer\AddCustomer.resx">
+      <DependentUpon>AddCustomer.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Customer\CCustomer.resx">
       <DependentUpon>CCustomer.cs</DependentUpon>
     </EmbeddedResource>

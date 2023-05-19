@@ -38,7 +38,7 @@ namespace TripleX.v2.Table
         void DataIntoPanel(string sqlTemp)
         {
             SqlDataReader reader = SqlClass.ReadData(sqlTemp, Connection.conn);
-            pnCustomer.Controls.Clear();
+            flpCustomer.Controls.Clear();
             while (reader.Read())
             {
 
@@ -50,7 +50,7 @@ namespace TripleX.v2.Table
                 cc.IsMale = reader["IsMale"].ToString();
 
                 cc._CClick += new EventHandler(selectCustomer);
-                pnCustomer.Controls.Add(cc);
+                flpCustomer.Controls.Add(cc);
             }
             reader.Close();
         }
