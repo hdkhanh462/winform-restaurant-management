@@ -31,28 +31,8 @@ namespace TripleX.v2.Table
         void GetData()
         {
             tableID = TableM.tableID;
-            sql = "";
-            DataIntoPanel(sql);
-        }
-
-        void DataIntoPanel(string sqlTemp)
-        {
-            SqlDataReader reader = SqlClass.ReadData(sqlTemp, Connection.conn);
-            flpCustomer.Controls.Clear();
-            while (reader.Read())
-            {
-
-                CCustomer cc = new CCustomer();
-                cc.ID = reader["ID"].ToString();
-                cc.CName = reader["CName"].ToString();
-                cc.CCCD = reader["CCCD"].ToString();
-                cc.Phone = reader["CPhone"].ToString();
-                cc.IsMale = reader["IsMale"].ToString();
-
-                cc._CClick += new EventHandler(selectCustomer);
-                flpCustomer.Controls.Add(cc);
-            }
-            reader.Close();
+            sql = "select * from TCustomer";
+            SharedClass.FillDGV(siticoneDataGridView1, sql, Connection.conn);
         }
 
         private void selectCustomer(object sender, EventArgs e)

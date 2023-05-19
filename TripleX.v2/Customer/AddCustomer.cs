@@ -37,8 +37,8 @@ namespace TripleX.v2.Customer
         private void btnSave_Click(object sender, EventArgs e)
         {
             string sql = "insert into TCustomer values(N'"+ txtName.Text +"','"+ txtCCCD.Text +"','"+ txtPhone.Text +"'," + isMale +")";
-            //SqlClass.RunSql(sql, Connection.conn);
-            CMessageBox.Show(sql);
+            SqlClass.RunSql(sql, Connection.conn);
+            //CMessageBox.Show(sql);
         }
 
         private void rbMale_CheckedChanged(object sender, EventArgs e)
