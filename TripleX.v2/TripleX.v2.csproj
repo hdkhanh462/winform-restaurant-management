@@ -59,9 +59,6 @@
     <Reference Include="RestSharp, Version=100.0.0.0, Culture=neutral, PublicKeyToken=598062e77f915f75, processorArchitecture=MSIL">
       <HintPath>..\packages\RestSharpSigned.105.2.3\lib\net46\RestSharp.dll</HintPath>
     </Reference>
-    <Reference Include="Siticone.Desktop.UI, Version=2.1.1.0, Culture=neutral, PublicKeyToken=9683591576b7f0b4, processorArchitecture=MSIL">
-      <HintPath>..\packages\Siticone.Desktop.UI.2.1.1\lib\net40\Siticone.Desktop.UI.dll</HintPath>
-    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Buffers, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
       <HintPath>..\packages\System.Buffers.4.5.1\lib\net461\System.Buffers.dll</HintPath>
@@ -226,12 +223,6 @@
     <Compile Include="Customer\AddCustomer.Designer.cs">
       <DependentUpon>AddCustomer.cs</DependentUpon>
     </Compile>
-    <Compile Include="Customer\CCustomer.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="Customer\CCustomer.Designer.cs">
-      <DependentUpon>CCustomer.cs</DependentUpon>
-    </Compile>
     <Compile Include="Customer\CustomerM.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -276,6 +267,12 @@
     <Compile Include="Table\CTable.Designer.cs">
       <DependentUpon>CTable.cs</DependentUpon>
     </Compile>
+    <Compile Include="Table\EditTable.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Table\EditTable.Designer.cs">
+      <DependentUpon>EditTable.cs</DependentUpon>
+    </Compile>
     <Compile Include="Table\OrderTable.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -291,11 +288,11 @@
     <EmbeddedResource Include="Customer\AddCustomer.resx">
       <DependentUpon>AddCustomer.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Customer\CCustomer.resx">
-      <DependentUpon>CCustomer.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Customer\CustomerM.resx">
       <DependentUpon>CustomerM.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MainForm.resx">
       <DependentUpon>MainForm.cs</DependentUpon>
@@ -315,6 +312,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Table\CTable.resx">
       <DependentUpon>CTable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Table\EditTable.resx">
+      <DependentUpon>EditTable.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Table\OrderTable.resx">
       <DependentUpon>OrderTable.cs</DependentUpon>
@@ -425,6 +425,15 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\budget_32px2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\customer_26px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\contact_26px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\time_26px.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -123,6 +123,26 @@ namespace TripleX.v2.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap contact_26px {
+            get {
+                object obj = ResourceManager.GetObject("contact_26px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap customer_26px {
+            get {
+                object obj = ResourceManager.GetObject("customer_26px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap downloading_updates_26px {
             get {
                 object obj = ResourceManager.GetObject("downloading_updates_26px", resourceCulture);
@@ -216,6 +236,16 @@ namespace TripleX.v2.Properties {
         internal static System.Drawing.Bitmap search_26px {
             get {
                 object obj = ResourceManager.GetObject("search_26px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap time_26px {
+            get {
+                object obj = ResourceManager.GetObject("time_26px", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

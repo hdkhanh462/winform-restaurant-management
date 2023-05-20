@@ -30,13 +30,12 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(TableM));
             this.flpTable = new System.Windows.Forms.FlowLayoutPanel();
+            this.cTable1 = new TripleX.v2.Table.CTable();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.grbKind = new System.Windows.Forms.GroupBox();
             this.rbBig = new MaterialSkin.Controls.MaterialRadioButton();
             this.rbAgv = new MaterialSkin.Controls.MaterialRadioButton();
             this.rbSmall = new MaterialSkin.Controls.MaterialRadioButton();
             this.panel12 = new System.Windows.Forms.Panel();
-            this.grbStatus = new System.Windows.Forms.GroupBox();
             this.rbIsOrder = new MaterialSkin.Controls.MaterialRadioButton();
             this.rbEmpty = new MaterialSkin.Controls.MaterialRadioButton();
             this.panel2 = new System.Windows.Forms.Panel();
@@ -51,12 +50,13 @@
             this.panel5 = new System.Windows.Forms.Panel();
             this.panel6 = new System.Windows.Forms.Panel();
             this.panel10 = new System.Windows.Forms.Panel();
-            this.cTable1 = new TripleX.v2.Table.CTable();
+            this.panel13 = new System.Windows.Forms.Panel();
+            this.panel14 = new System.Windows.Forms.Panel();
             this.flpTable.SuspendLayout();
             this.panel1.SuspendLayout();
-            this.grbKind.SuspendLayout();
-            this.grbStatus.SuspendLayout();
             this.panel2.SuspendLayout();
+            this.panel13.SuspendLayout();
+            this.panel14.SuspendLayout();
             this.SuspendLayout();
             // 
             // flpTable
@@ -69,12 +69,31 @@
             this.flpTable.Size = new System.Drawing.Size(594, 361);
             this.flpTable.TabIndex = 0;
             // 
+            // cTable1
+            // 
+            this.cTable1.Chair = null;
+            this.cTable1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.cTable1.Customer = null;
+            this.cTable1.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cTable1.Location = new System.Drawing.Point(8, 8);
+            this.cTable1.Margin = new System.Windows.Forms.Padding(8);
+            this.cTable1.Name = "cTable1";
+            this.cTable1.OrderDate = null;
+            this.cTable1.OrderID = null;
+            this.cTable1.Size = new System.Drawing.Size(250, 150);
+            this.cTable1.TabIndex = 0;
+            this.cTable1.TableID = null;
+            this.cTable1.TableImage = ((System.Drawing.Image)(resources.GetObject("cTable1.TableImage")));
+            this.cTable1.TableName = null;
+            this.cTable1.TableStatus = null;
+            this.cTable1._CClick += new System.EventHandler(this.cTable1__CClick);
+            // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(242)))), ((int)(((byte)(242)))));
-            this.panel1.Controls.Add(this.grbKind);
+            this.panel1.Controls.Add(this.panel14);
             this.panel1.Controls.Add(this.panel12);
-            this.panel1.Controls.Add(this.grbStatus);
+            this.panel1.Controls.Add(this.panel13);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Right;
             this.panel1.Location = new System.Drawing.Point(604, 90);
             this.panel1.Margin = new System.Windows.Forms.Padding(10);
@@ -83,28 +102,14 @@
             this.panel1.TabIndex = 1;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
-            // grbKind
-            // 
-            this.grbKind.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(230)))), ((int)(((byte)(230)))));
-            this.grbKind.Controls.Add(this.rbBig);
-            this.grbKind.Controls.Add(this.rbAgv);
-            this.grbKind.Controls.Add(this.rbSmall);
-            this.grbKind.Dock = System.Windows.Forms.DockStyle.Top;
-            this.grbKind.Location = new System.Drawing.Point(0, 115);
-            this.grbKind.Name = "grbKind";
-            this.grbKind.Size = new System.Drawing.Size(200, 143);
-            this.grbKind.TabIndex = 3;
-            this.grbKind.TabStop = false;
-            this.grbKind.Paint += new System.Windows.Forms.PaintEventHandler(this.grbKind_Paint);
-            // 
             // rbBig
             // 
             this.rbBig.AutoSize = true;
             this.rbBig.Depth = 0;
             this.rbBig.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.rbBig.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(249)))), ((int)(((byte)(110)))), ((int)(((byte)(48)))));
-            this.rbBig.Location = new System.Drawing.Point(18, 92);
-            this.rbBig.Margin = new System.Windows.Forms.Padding(0);
+            this.rbBig.Location = new System.Drawing.Point(40, 87);
+            this.rbBig.Margin = new System.Windows.Forms.Padding(0, 10, 0, 0);
             this.rbBig.MouseLocation = new System.Drawing.Point(-1, -1);
             this.rbBig.MouseState = MaterialSkin.MouseState.HOVER;
             this.rbBig.Name = "rbBig";
@@ -122,8 +127,8 @@
             this.rbAgv.Depth = 0;
             this.rbAgv.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.rbAgv.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(249)))), ((int)(((byte)(110)))), ((int)(((byte)(48)))));
-            this.rbAgv.Location = new System.Drawing.Point(18, 55);
-            this.rbAgv.Margin = new System.Windows.Forms.Padding(0);
+            this.rbAgv.Location = new System.Drawing.Point(40, 50);
+            this.rbAgv.Margin = new System.Windows.Forms.Padding(0, 10, 0, 0);
             this.rbAgv.MouseLocation = new System.Drawing.Point(-1, -1);
             this.rbAgv.MouseState = MaterialSkin.MouseState.HOVER;
             this.rbAgv.Name = "rbAgv";
@@ -141,8 +146,8 @@
             this.rbSmall.Depth = 0;
             this.rbSmall.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.rbSmall.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(249)))), ((int)(((byte)(110)))), ((int)(((byte)(48)))));
-            this.rbSmall.Location = new System.Drawing.Point(18, 18);
-            this.rbSmall.Margin = new System.Windows.Forms.Padding(0);
+            this.rbSmall.Location = new System.Drawing.Point(40, 13);
+            this.rbSmall.Margin = new System.Windows.Forms.Padding(0, 10, 0, 0);
             this.rbSmall.MouseLocation = new System.Drawing.Point(-1, -1);
             this.rbSmall.MouseState = MaterialSkin.MouseState.HOVER;
             this.rbSmall.Name = "rbSmall";
@@ -157,23 +162,10 @@
             // panel12
             // 
             this.panel12.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel12.Location = new System.Drawing.Point(0, 105);
+            this.panel12.Location = new System.Drawing.Point(0, 100);
             this.panel12.Name = "panel12";
             this.panel12.Size = new System.Drawing.Size(200, 10);
             this.panel12.TabIndex = 2;
-            // 
-            // grbStatus
-            // 
-            this.grbStatus.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(230)))), ((int)(((byte)(230)))));
-            this.grbStatus.Controls.Add(this.rbIsOrder);
-            this.grbStatus.Controls.Add(this.rbEmpty);
-            this.grbStatus.Dock = System.Windows.Forms.DockStyle.Top;
-            this.grbStatus.Location = new System.Drawing.Point(0, 0);
-            this.grbStatus.Name = "grbStatus";
-            this.grbStatus.Size = new System.Drawing.Size(200, 105);
-            this.grbStatus.TabIndex = 1;
-            this.grbStatus.TabStop = false;
-            this.grbStatus.Paint += new System.Windows.Forms.PaintEventHandler(this.grbStatus_Paint);
             // 
             // rbIsOrder
             // 
@@ -181,8 +173,8 @@
             this.rbIsOrder.Depth = 0;
             this.rbIsOrder.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.rbIsOrder.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(249)))), ((int)(((byte)(110)))), ((int)(((byte)(48)))));
-            this.rbIsOrder.Location = new System.Drawing.Point(20, 55);
-            this.rbIsOrder.Margin = new System.Windows.Forms.Padding(0);
+            this.rbIsOrder.Location = new System.Drawing.Point(40, 50);
+            this.rbIsOrder.Margin = new System.Windows.Forms.Padding(10, 0, 10, 10);
             this.rbIsOrder.MouseLocation = new System.Drawing.Point(-1, -1);
             this.rbIsOrder.MouseState = MaterialSkin.MouseState.HOVER;
             this.rbIsOrder.Name = "rbIsOrder";
@@ -201,8 +193,8 @@
             this.rbEmpty.Depth = 0;
             this.rbEmpty.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.rbEmpty.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(249)))), ((int)(((byte)(110)))), ((int)(((byte)(48)))));
-            this.rbEmpty.Location = new System.Drawing.Point(20, 18);
-            this.rbEmpty.Margin = new System.Windows.Forms.Padding(0);
+            this.rbEmpty.Location = new System.Drawing.Point(40, 13);
+            this.rbEmpty.Margin = new System.Windows.Forms.Padding(30, 10, 10, 0);
             this.rbEmpty.MouseLocation = new System.Drawing.Point(-1, -1);
             this.rbEmpty.MouseState = MaterialSkin.MouseState.HOVER;
             this.rbEmpty.Name = "rbEmpty";
@@ -274,7 +266,7 @@
             this.materialTextBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.materialTextBox1.Depth = 0;
             this.materialTextBox1.Dock = System.Windows.Forms.DockStyle.Right;
-            this.materialTextBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.materialTextBox1.Font = new System.Drawing.Font("Roboto", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.materialTextBox1.ForeColor = System.Drawing.Color.Black;
             this.materialTextBox1.Hint = "Search";
             this.materialTextBox1.LeadingIcon = null;
@@ -353,24 +345,30 @@
             this.panel10.Size = new System.Drawing.Size(794, 10);
             this.panel10.TabIndex = 5;
             // 
-            // cTable1
+            // panel13
             // 
-            this.cTable1.Chair = null;
-            this.cTable1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.cTable1.Customer = null;
-            this.cTable1.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cTable1.Location = new System.Drawing.Point(8, 8);
-            this.cTable1.Margin = new System.Windows.Forms.Padding(8);
-            this.cTable1.Name = "cTable1";
-            this.cTable1.OrderDate = null;
-            this.cTable1.OrderID = null;
-            this.cTable1.Size = new System.Drawing.Size(250, 150);
-            this.cTable1.TabIndex = 0;
-            this.cTable1.TableID = null;
-            this.cTable1.TableImage = ((System.Drawing.Image)(resources.GetObject("cTable1.TableImage")));
-            this.cTable1.TableName = null;
-            this.cTable1.TableStatus = null;
-            this.cTable1._CClick += new System.EventHandler(this.cTable1__CClick);
+            this.panel13.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(230)))), ((int)(((byte)(230)))));
+            this.panel13.Controls.Add(this.rbIsOrder);
+            this.panel13.Controls.Add(this.rbEmpty);
+            this.panel13.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel13.Location = new System.Drawing.Point(0, 0);
+            this.panel13.Name = "panel13";
+            this.panel13.Size = new System.Drawing.Size(200, 100);
+            this.panel13.TabIndex = 1;
+            this.panel13.Paint += new System.Windows.Forms.PaintEventHandler(this.panel13_Paint);
+            // 
+            // panel14
+            // 
+            this.panel14.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(230)))), ((int)(((byte)(230)))));
+            this.panel14.Controls.Add(this.rbBig);
+            this.panel14.Controls.Add(this.rbAgv);
+            this.panel14.Controls.Add(this.rbSmall);
+            this.panel14.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel14.Location = new System.Drawing.Point(0, 110);
+            this.panel14.Name = "panel14";
+            this.panel14.Size = new System.Drawing.Size(200, 136);
+            this.panel14.TabIndex = 2;
+            this.panel14.Paint += new System.Windows.Forms.PaintEventHandler(this.panel14_Paint);
             // 
             // TableM
             // 
@@ -393,11 +391,11 @@
             this.Text = "TableM";
             this.flpTable.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
-            this.grbKind.ResumeLayout(false);
-            this.grbKind.PerformLayout();
-            this.grbStatus.ResumeLayout(false);
-            this.grbStatus.PerformLayout();
             this.panel2.ResumeLayout(false);
+            this.panel13.ResumeLayout(false);
+            this.panel13.PerformLayout();
+            this.panel14.ResumeLayout(false);
+            this.panel14.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -419,13 +417,13 @@
         private System.Windows.Forms.Panel panel10;
         private CustomControl.CButton btnAddTable;
         private System.Windows.Forms.Panel panel11;
-        private System.Windows.Forms.GroupBox grbKind;
         private MaterialSkin.Controls.MaterialRadioButton rbSmall;
         private System.Windows.Forms.Panel panel12;
-        private System.Windows.Forms.GroupBox grbStatus;
         private MaterialSkin.Controls.MaterialRadioButton rbBig;
         private MaterialSkin.Controls.MaterialRadioButton rbAgv;
         private MaterialSkin.Controls.MaterialRadioButton rbIsOrder;
         private MaterialSkin.Controls.MaterialRadioButton rbEmpty;
+        private System.Windows.Forms.Panel panel14;
+        private System.Windows.Forms.Panel panel13;
     }
 }

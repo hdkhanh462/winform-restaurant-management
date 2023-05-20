@@ -124,6 +124,9 @@
   <data name="coffee_table_32px1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\coffee_table_32px2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="contact_26px" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\contact_26px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="food_32px" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\food_32px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -145,8 +148,8 @@
   <data name="female_26px" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\female_26px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="downloading_updates_26px" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\downloading_updates_26px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="customer_26px" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\customer_26px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="home_page_32px" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\home_page_32px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -166,7 +169,13 @@
   <data name="male_26px" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\male_26px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="downloading_updates_26px" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\downloading_updates_26px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="budget_32px1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\budget_32px2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="time_26px" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\time_26px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

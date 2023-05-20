@@ -47,7 +47,10 @@ namespace TripleX.v2.Table
             set
             {
                 id = value;
-                lbCustomer.Tag = id;
+                foreach (var control in GetControlHierarchy(this))
+                {
+                    control.Tag = id;
+                }
                 Invalidate();
             }
         }
@@ -126,7 +129,7 @@ namespace TripleX.v2.Table
             set
             {
                 image = value;
-                cButton1.Image = image;
+                pictureBox1.Image = image;
                 Invalidate();
             }
         }
@@ -149,10 +152,36 @@ namespace TripleX.v2.Table
             lbCustomer.BackColor = color;
             lbDate.BackColor = Color.LightGray;
             lbChair.BackColor = Color.LightGray;
+
+            foreach (var control in GetControlHierarchy(this))
+            {
+                control.Click += ClickEvent;
+            }
         }
 
         //Methods
-        private void lbCustomer_Click(object sender, EventArgs e)
+        private IEnumerable<Control> GetControlHierarchy(Control root)
+        {
+            var queue = new Queue<Control>();
+
+            queue.Enqueue(root);
+
+            do
+            {
+                var control = queue.Dequeue();
+
+                yield return control;
+
+                foreach (var child in control.Controls.OfType<Control>())
+                    queue.Enqueue(child);
+
+            } while (queue.Count > 0);
+
+        }
+
+
+
+        private void ClickEvent(object sender, EventArgs e)
         {
             if (_CClick != null)
                 _CClick.Invoke(sender, e);

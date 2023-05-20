@@ -36,7 +36,7 @@ namespace TripleX.v2.Table
 
         public void GetData()
         {
-            sql = "select * from TTable";
+            sql = "select * from TTable where ID <> 1 and TStatus = 1";
             GetEmptyTable(sql);
         }
 
@@ -82,21 +82,21 @@ namespace TripleX.v2.Table
 
         private void addOrder(object sender, EventArgs e)
         {
-            tableID = ((Label)sender).Tag.ToString();
+            tableID = ((Control)sender).Tag.ToString();
             Form form = new OrderTable();
             form.ShowDialog();
         }
 
         private void editOrder(object sender, EventArgs e)
         {
-            tableID = ((Label)sender).Tag.ToString();
-            Form form = new OrderTable();
+            tableID = ((Control)sender).Tag.ToString();
+            Form form = new EditTable();
             form.ShowDialog();
         }
 
         void CheckedChange(string kind)
         {
-            sql = "select * from TTable where TKind = " + kind + " and TStatus = ";
+            sql = "select * from TTable where ID <> 1 and TKind = " + kind + " and TStatus = ";
             if (rbEmpty.Checked == true)
             {
                 sql = sql + "1";
@@ -122,19 +122,9 @@ namespace TripleX.v2.Table
 
         private void cTable1__CClick(object sender, EventArgs e)
         {
-            tableID = ((Label)sender).Tag.ToString();
+            tableID = ((Control)sender).Tag.ToString();
             Form form = new OrderTable();
             form.ShowDialog();
-        }
-
-        private void grbStatus_Paint(object sender, PaintEventArgs e)
-        {
-            SharedClass.RoundedControl(grbStatus, 8, e.Graphics, Color.Empty, 0);
-        }
-
-        private void grbKind_Paint(object sender, PaintEventArgs e)
-        {
-            SharedClass.RoundedControl(grbKind, 8, e.Graphics, Color.Empty, 0);
         }
 
         private void btnAddTable_Click(object sender, EventArgs e)
@@ -174,6 +164,17 @@ namespace TripleX.v2.Table
                 sql = "select * from TTable where TStatus = 2";
                 GetOrderTable(sql);
             }
+        }
+
+        private void panel13_Paint(object sender, PaintEventArgs e)
+        {
+            SharedClass.RoundedControl(panel13, 8, e.Graphics, Color.Empty, 0);
+        }
+
+        private void panel14_Paint(object sender, PaintEventArgs e)
+        {
+
+            SharedClass.RoundedControl(panel14, 8, e.Graphics, Color.Empty, 0);
         }
     }
 }

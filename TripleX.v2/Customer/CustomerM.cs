@@ -28,8 +28,31 @@ namespace TripleX.v2.Customer
 
         public void GetData()
         {
-            sql = "select * from TCustomer";
-            SharedClass.FillDGV(dgvCustomer, sql, Connection.conn);
+            sql = "select * from TCustomer where ID <> 1";
+            SharedClass.FillDGV(dataGridView1, sql, Connection.conn);
+            int rcount = dataGridView1.RowCount;
+            dgvCustomer.Rows.Add(rcount);
+            for (int i = 0; i < rcount; i++)
+            {
+                dgvCustomer.Rows[i].Cells[0].Value = dataGridView1.Rows[i].Cells[0].Value;
+                dgvCustomer.Rows[i].Cells[1].Value = dataGridView1.Rows[i].Cells[4].Value;
+                dgvCustomer.Rows[i].Cells[2].Value = CheckSex(i);
+                dgvCustomer.Rows[i].Cells[3].Value = dataGridView1.Rows[i].Cells[1].Value;
+                dgvCustomer.Rows[i].Cells[4].Value = dataGridView1.Rows[i].Cells[2].Value;
+                dgvCustomer.Rows[i].Cells[5].Value = dataGridView1.Rows[i].Cells[3].Value;
+            }
+        }
+
+        public Image CheckSex(int row)
+        {
+            if (dgvCustomer.Rows[row].Cells[1].Value.ToString() == "1")
+            {
+                return female;
+            }
+            else
+            {
+                return male;
+            }
         }
 
         private void btnAdd_Click(object sender, EventArgs e)
@@ -44,7 +67,7 @@ namespace TripleX.v2.Customer
                 return;
 
             //I suposed you want to handle the event for column at index 1
-            if (e.ColumnIndex == 6)
+            if (e.ColumnIndex == 2)
                 MessageBox.Show("Clicked!");
         }
     }

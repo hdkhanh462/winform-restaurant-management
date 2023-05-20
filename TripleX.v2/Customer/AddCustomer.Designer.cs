@@ -51,7 +51,6 @@
             this.panel12 = new System.Windows.Forms.Panel();
             this.panel13 = new System.Windows.Forms.Panel();
             this.panel14 = new System.Windows.Forms.Panel();
-            this.siticoneBorderlessForm1 = new Siticone.Desktop.UI.WinForms.SiticoneBorderlessForm(this.components);
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel10.SuspendLayout();
@@ -367,12 +366,6 @@
             this.panel14.Size = new System.Drawing.Size(424, 10);
             this.panel14.TabIndex = 2;
             // 
-            // siticoneBorderlessForm1
-            // 
-            this.siticoneBorderlessForm1.ContainerControl = this;
-            this.siticoneBorderlessForm1.DockIndicatorTransparencyValue = 0.6D;
-            this.siticoneBorderlessForm1.TransparentWhileDrag = true;
-            // 
             // AddCustomer
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -423,6 +416,5 @@
         private System.Windows.Forms.Panel panel12;
         private System.Windows.Forms.Panel panel13;
         private System.Windows.Forms.Panel panel14;
-        private Siticone.Desktop.UI.WinForms.SiticoneBorderlessForm siticoneBorderlessForm1;
     }
 }
