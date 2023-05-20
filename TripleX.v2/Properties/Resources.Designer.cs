@@ -63,6 +63,16 @@ namespace TripleX.v2.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap account_26px {
+            get {
+                object obj = ResourceManager.GetObject("account_26px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Add_properties_26px {
             get {
                 object obj = ResourceManager.GetObject("Add properties_26px", resourceCulture);
@@ -103,6 +113,26 @@ namespace TripleX.v2.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap bull_26px {
+            get {
+                object obj = ResourceManager.GetObject("bull_26px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap chicken_26px {
+            get {
+                object obj = ResourceManager.GetObject("chicken_26px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap coffee_table_32px {
             get {
                 object obj = ResourceManager.GetObject("coffee_table_32px", resourceCulture);
@@ -126,6 +156,16 @@ namespace TripleX.v2.Properties {
         internal static System.Drawing.Bitmap contact_26px {
             get {
                 object obj = ResourceManager.GetObject("contact_26px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap crab_26px {
+            get {
+                object obj = ResourceManager.GetObject("crab_26px", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -176,6 +216,16 @@ namespace TripleX.v2.Properties {
         internal static System.Drawing.Bitmap food_32px1 {
             get {
                 object obj = ResourceManager.GetObject("food_32px1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap future_26px {
+            get {
+                object obj = ResourceManager.GetObject("future_26px", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -243,6 +293,16 @@ namespace TripleX.v2.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap stopwatch_26px {
+            get {
+                object obj = ResourceManager.GetObject("stopwatch_26px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap time_26px {
             get {
                 object obj = ResourceManager.GetObject("time_26px", resourceCulture);
@@ -256,6 +316,16 @@ namespace TripleX.v2.Properties {
         internal static System.Drawing.Bitmap trash_can_26px {
             get {
                 object obj = ResourceManager.GetObject("trash_can_26px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap wine_bottle_26px {
+            get {
+                object obj = ResourceManager.GetObject("wine_bottle_26px", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

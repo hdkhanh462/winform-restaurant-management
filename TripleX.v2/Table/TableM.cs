@@ -21,6 +21,7 @@ namespace TripleX.v2.Table
         //Fields
         readonly MaterialSkinManager materialSkinManager;
         public static string tableID;
+        public static string oTableID;
         string sql;
         public TableM()
         {
@@ -31,11 +32,16 @@ namespace TripleX.v2.Table
             materialSkinManager.ColorScheme = new MaterialSkin.ColorScheme(MaterialSkin.Primary.DeepOrange400, MaterialSkin.Primary.DeepOrange400, MaterialSkin.Primary.DeepOrange400,
                 MaterialSkin.Accent.DeepOrange400, MaterialSkin.TextShade.WHITE);
             Connection.Connect();
+            SetScroll();
             GetData();
         }
 
         public void GetData()
         {
+            rbEmpty.Checked = true;
+            rbSmall.Checked = false;
+            rbAgv.Checked = false;
+            rbBig.Checked = false;
             sql = "select * from TTable where ID <> 1 and TStatus = 1";
             GetEmptyTable(sql);
         }
@@ -69,9 +75,10 @@ namespace TripleX.v2.Table
 
                 CTable ct = new CTable();
                 ct.TableID = reader["ID"].ToString();
+                ct.OTableID = reader["OID"].ToString();
                 ct.TableName = reader["TName"].ToString();
                 ct.TableStatus = reader["TStatus"].ToString();
-                ct.Customer = reader["TStatus"].ToString();
+                ct.Customer = reader["CName"].ToString();
                 ct.Chair = "Số Ghế: " + reader["TChair"].ToString();
 
                 ct._CClick += new EventHandler(editOrder);
@@ -89,9 +96,13 @@ namespace TripleX.v2.Table
 
         private void editOrder(object sender, EventArgs e)
         {
-            tableID = ((Control)sender).Tag.ToString();
+            string temp = ((Control)sender).Tag.ToString();
+            int pos = temp.IndexOf(",");
+            tableID = temp.Substring(0, pos);
+            oTableID = temp.Substring(pos + 1);
             Form form = new EditTable();
             form.ShowDialog();
+            //CMessageBox.Show(temp);
         }
 
         void CheckedChange(string kind)
@@ -105,12 +116,23 @@ namespace TripleX.v2.Table
 
             if (rbIsOrder.Checked == true)
             {
-                sql = sql + "2";
+                sql = "select * from VOTable where TKind = " + kind;
                 GetOrderTable(sql);
             }
         }
 
-        private void panel2_Paint(object sender, PaintEventArgs e)
+        private void SetScroll()
+        {
+            flpTable.AutoScroll = false;
+            flpTable.VerticalScroll.Maximum = 0;
+            flpTable.VerticalScroll.Visible = false;
+            flpTable.HorizontalScroll.Maximum = 0;
+            flpTable.HorizontalScroll.Visible = false;
+            flpTable.AutoScroll = true;
+        }
+
+            //Events
+            private void panel2_Paint(object sender, PaintEventArgs e)
         {
             SharedClass.RoundedControl(panel2, 8, e.Graphics, Color.Empty, 0);
         }
@@ -161,7 +183,7 @@ namespace TripleX.v2.Table
         {
             if (rbIsOrder.Checked == true)
             {
-                sql = "select * from TTable where TStatus = 2";
+                sql = "select * from VOTable";
                 GetOrderTable(sql);
             }
         }

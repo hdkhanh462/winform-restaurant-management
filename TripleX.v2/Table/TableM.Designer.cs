@@ -79,7 +79,6 @@
             this.cTable1.Margin = new System.Windows.Forms.Padding(8);
             this.cTable1.Name = "cTable1";
             this.cTable1.OrderDate = null;
-            this.cTable1.OrderID = null;
             this.cTable1.Size = new System.Drawing.Size(250, 150);
             this.cTable1.TabIndex = 0;
             this.cTable1.TableID = null;

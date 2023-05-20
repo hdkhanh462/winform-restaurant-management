@@ -121,14 +121,20 @@
   <data name="male_and_female_26px" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\male_and_female_26px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="coffee_table_32px1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\coffee_table_32px2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="reply_arrow_26px" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\reply_arrow_26px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="future_26px" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\future_26px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="contact_26px" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\contact_26px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="food_32px" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\food_32px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="coffee_table_32px1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\coffee_table_32px2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="search_26px" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\search_26px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -139,14 +145,17 @@
   <data name="trash_can_26px" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\trash_can_26px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="account_26px" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\account_26px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="Add properties_26px" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Add properties_26px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="reply_arrow_26px" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\reply_arrow_26px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="female_26px" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\female_26px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="stopwatch_26px" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\stopwatch_26px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="customer_26px" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\customer_26px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -159,6 +168,9 @@
   </data>
   <data name="budget_32px" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\budget_32px1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="time_26px" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\time_26px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="food_32px1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\food_32px1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -175,7 +187,16 @@
   <data name="budget_32px1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\budget_32px2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="time_26px" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\time_26px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="wine_bottle_26px" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\wine_bottle_26px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="crab_26px" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\crab_26px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="chicken_26px" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\chicken_26px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="bull_26px" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\bull_26px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

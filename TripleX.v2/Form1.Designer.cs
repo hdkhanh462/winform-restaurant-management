@@ -34,7 +34,7 @@
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Image = global::TripleX.v2.Properties.Resources.Add_properties_26px;
+            this.pictureBox1.Image = global::TripleX.v2.Properties.Resources.bull_26px;
             this.pictureBox1.Location = new System.Drawing.Point(503, 90);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(100, 50);

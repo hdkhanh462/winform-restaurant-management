@@ -14,6 +14,7 @@ namespace TripleX.v2.Table
     {
         //Fields
         string id;
+        string oTableID = "";
         string name;
         string status;
         string customer;
@@ -26,15 +27,18 @@ namespace TripleX.v2.Table
 
         //Properties
         [Category("CTable Setting")]
-        public string OrderID
+        public string OTableID
         {
-            get { return id; }
+            get { return oTableID; }
             set
             {
-                id = value;
-                if (value != "")
+                oTableID = value;
+                if (oTableID != "")
                 {
-                    lbCustomer.Tag = value;
+                    foreach (var control in GetControlHierarchy(this))
+                    {
+                        control.Tag = id + "," + oTableID;
+                    }
                 }
                 Invalidate();
             }
@@ -143,7 +147,7 @@ namespace TripleX.v2.Table
             lbStatus.Font = font;
             lbDate.Font = font;
             lbName.Font = font;
-            lbCustomer.Font = new Font("Arial", 13F, FontStyle.Bold, GraphicsUnit.Point); ;
+            lbCustomer.Font = new Font("Arial", 12F, FontStyle.Bold, GraphicsUnit.Point); ;
             lbChair.Font = font;
             lbDate.TextAlign = ContentAlignment.MiddleLeft;
 

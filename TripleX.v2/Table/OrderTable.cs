@@ -107,6 +107,7 @@ namespace TripleX.v2.Table
             else
             {
                 SqlClass.RunSql(sql, Connection.conn);
+                ReLoadTableM();
                 //CMessageBox.Show(sql);
             }
         }
