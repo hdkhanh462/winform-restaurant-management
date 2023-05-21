@@ -112,5 +112,10 @@ namespace TripleX.v2
         {
             OpenChildForm(new StaffM(), sender);
         }
+
+        private void MainForm_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }
