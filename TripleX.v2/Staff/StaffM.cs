@@ -8,11 +8,11 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace TripleX.v2.Home
+namespace TripleX.v2.Staff
 {
-    public partial class Home : Form
+    public partial class StaffM : Form
     {
-        public Home()
+        public StaffM()
         {
             InitializeComponent();
         }

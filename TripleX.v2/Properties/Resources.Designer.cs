@@ -123,9 +123,49 @@ namespace TripleX.v2.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap bull_32px {
+            get {
+                object obj = ResourceManager.GetObject("bull_32px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap bull_32px1 {
+            get {
+                object obj = ResourceManager.GetObject("bull_32px1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap chicken_26px {
             get {
                 object obj = ResourceManager.GetObject("chicken_26px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap chicken_32px {
+            get {
+                object obj = ResourceManager.GetObject("chicken_32px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap chicken_32px1 {
+            get {
+                object obj = ResourceManager.GetObject("chicken_32px1", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -166,6 +206,26 @@ namespace TripleX.v2.Properties {
         internal static System.Drawing.Bitmap crab_26px {
             get {
                 object obj = ResourceManager.GetObject("crab_26px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap crab_32px {
+            get {
+                object obj = ResourceManager.GetObject("crab_32px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap crab_32px1 {
+            get {
+                object obj = ResourceManager.GetObject("crab_32px1", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -326,6 +386,26 @@ namespace TripleX.v2.Properties {
         internal static System.Drawing.Bitmap wine_bottle_26px {
             get {
                 object obj = ResourceManager.GetObject("wine_bottle_26px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap wine_bottle_32px {
+            get {
+                object obj = ResourceManager.GetObject("wine_bottle_32px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap wine_bottle_32px1 {
+            get {
+                object obj = ResourceManager.GetObject("wine_bottle_32px1", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

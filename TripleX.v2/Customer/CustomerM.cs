@@ -31,6 +31,7 @@ namespace TripleX.v2.Customer
             sql = "select * from TCustomer where ID <> 1";
             SharedClass.FillDGV(dataGridView1, sql, Connection.conn);
             int rcount = dataGridView1.RowCount;
+            dgvCustomer.Rows.Clear();
             dgvCustomer.Rows.Add(rcount);
             for (int i = 0; i < rcount; i++)
             {
@@ -55,20 +56,20 @@ namespace TripleX.v2.Customer
             }
         }
 
-        private void btnAdd_Click(object sender, EventArgs e)
-        {
-            Form form = new AddCustomer();
-            form.ShowDialog();
-        }
-
         private void dgvCustomer_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             if (e.RowIndex < 0)
                 return;
+            else
+            {
+                customerID = e.RowIndex.ToString();
+            }
+        }
 
-            //I suposed you want to handle the event for column at index 1
-            if (e.ColumnIndex == 2)
-                MessageBox.Show("Clicked!");
+        private void btnAddCustomer_Click(object sender, EventArgs e)
+        {
+            Form form = new AddCustomer();
+            form.ShowDialog();
         }
     }
 }

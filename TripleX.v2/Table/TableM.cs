@@ -1,4 +1,5 @@
 ﻿using CustomControl;
+using FontAwesome.Sharp;
 using MaterialSkin;
 using MaterialSkin.Controls;
 using System;
@@ -20,20 +21,25 @@ namespace TripleX.v2.Table
     {
         //Fields
         readonly MaterialSkinManager materialSkinManager;
+        string sql;
         public static string tableID;
         public static string oTableID;
-        string sql;
+        private CButton currentBtn;
+        private Panel leftPn;
         public TableM()
         {
             InitializeComponent();
             materialSkinManager = MaterialSkin.MaterialSkinManager.Instance;
             materialSkinManager.EnforceBackcolorOnAllComponents = true;
-            materialSkinManager.Theme = MaterialSkin.MaterialSkinManager.Themes.LIGHT;
-            materialSkinManager.ColorScheme = new MaterialSkin.ColorScheme(MaterialSkin.Primary.DeepOrange400, MaterialSkin.Primary.DeepOrange400, MaterialSkin.Primary.DeepOrange400,
-                MaterialSkin.Accent.DeepOrange400, MaterialSkin.TextShade.WHITE);
+            materialSkinManager.Theme = MaterialSkinManager.Themes.LIGHT;
+            materialSkinManager.ColorScheme = new ColorScheme(Primary.DeepOrange500, Primary.DeepOrange500, Primary.DeepOrange500,
+                Accent.DeepOrange400, TextShade.WHITE);
             Connection.Connect();
             SetScroll();
             GetData();
+            leftPn = new Panel();
+            leftPn.Size = new Size(60, 7);
+            pnTop.Controls.Add(leftPn);
         }
 
         public void GetData()
@@ -79,6 +85,7 @@ namespace TripleX.v2.Table
                 ct.TableName = reader["TName"].ToString();
                 ct.TableStatus = reader["TStatus"].ToString();
                 ct.Customer = reader["CName"].ToString();
+                ct.OrderDate = DateToString(reader["OTake"].ToString());
                 ct.Chair = "Số Ghế: " + reader["TChair"].ToString();
 
                 ct._CClick += new EventHandler(editOrder);
@@ -131,10 +138,84 @@ namespace TripleX.v2.Table
             flpTable.AutoScroll = true;
         }
 
-            //Events
-            private void panel2_Paint(object sender, PaintEventArgs e)
+        private string DateToString(string date)
         {
-            SharedClass.RoundedControl(panel2, 8, e.Graphics, Color.Empty, 0);
+            DateTime dtOrederDate = DateTime.ParseExact(date, "dd/MM/yyyy HH:mm:ss", SharedClass.cultureVN);
+            string dateTime = dtOrederDate.ToString("dd/MM/yyyy HH:mm", SharedClass.cultureVN);
+            return dateTime;
+        }
+
+        void ActivateButton(object senderBtn)
+        {
+            if (senderBtn != null)
+            {
+                DisableButton();
+                currentBtn = (CButton)senderBtn;
+                currentBtn.Image = CheckButton(true);
+                currentBtn.BackColor = Color.FromArgb(242, 242, 242);
+
+                leftPn.BackColor = Color.FromArgb(255, 87, 34);
+                leftPn.Location = new Point(currentBtn.Location.X, 0);
+                leftPn.Visible = true;
+                leftPn.BringToFront();
+            }
+        }
+
+        void DisableButton()
+        {
+            if (currentBtn != null)
+            {
+                currentBtn.Image = CheckButton(false);
+                currentBtn.BackColor = Color.FromArgb(230, 230, 230);
+            }
+        }
+
+        Image CheckButton(bool isSelect)
+        {
+            if (isSelect)
+            {
+                if (currentBtn.Name == "btnGiaSuc")
+                {
+                    return Properties.Resources.bull_32px1;
+                }
+                else if (currentBtn.Name == "btnGiaCam")
+                {
+                    return Properties.Resources.chicken_32px1;
+                }
+                else if (currentBtn.Name == "btnHaiSna")
+                {
+                    return Properties.Resources.crab_32px1;
+                }
+                else
+                {
+                    return Properties.Resources.wine_bottle_32px1;
+                }
+            }
+            else
+            {
+                if (currentBtn.Name == "btnGiaSuc")
+                {
+                    return Properties.Resources.bull_32px;
+                }
+                else if (currentBtn.Name == "btnGiaCam")
+                {
+                    return Properties.Resources.chicken_32px;
+                }
+                else if (currentBtn.Name == "btnHaiSna")
+                {
+                    return Properties.Resources.crab_32px;
+                }
+                else
+                {
+                    return Properties.Resources.wine_bottle_32px;
+                }
+            }
+        }
+
+        //Events
+        private void panel2_Paint(object sender, PaintEventArgs e)
+        {
+            SharedClass.RoundedControl(pnTop, 8, e.Graphics, Color.Empty, 0);
         }
 
         private void panel1_Paint(object sender, PaintEventArgs e)
@@ -197,6 +278,26 @@ namespace TripleX.v2.Table
         {
 
             SharedClass.RoundedControl(panel14, 8, e.Graphics, Color.Empty, 0);
+        }
+
+        private void btnGiaSuc_Click(object sender, EventArgs e)
+        {
+            ActivateButton(sender);
+        }
+
+        private void btnGiaCam_Click(object sender, EventArgs e)
+        {
+            ActivateButton(sender);
+        }
+
+        private void btnHaiSan_Click(object sender, EventArgs e)
+        {
+            ActivateButton(sender);
+        }
+
+        private void btnThucUong_Click(object sender, EventArgs e)
+        {
+            ActivateButton(sender);
         }
     }
 }

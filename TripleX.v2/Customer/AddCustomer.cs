@@ -9,6 +9,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using TripleX.v2.Table;
 
 namespace TripleX.v2.Customer
 {
@@ -21,12 +22,13 @@ namespace TripleX.v2.Customer
         public AddCustomer()
         {
             InitializeComponent();
-            materialSkinManager = MaterialSkin.MaterialSkinManager.Instance;
-            materialSkinManager.EnforceBackcolorOnAllComponents = true;
-            materialSkinManager.Theme = MaterialSkin.MaterialSkinManager.Themes.LIGHT;
-            materialSkinManager.ColorScheme = new MaterialSkin.ColorScheme(MaterialSkin.Primary.DeepOrange400, MaterialSkin.Primary.DeepOrange400, MaterialSkin.Primary.DeepOrange400,
-                MaterialSkin.Accent.DeepOrange400, MaterialSkin.TextShade.WHITE);
             Connection.Connect();
+        }
+
+        void ReLoadTableM()
+        {
+            var mainForm = Application.OpenForms.OfType<CustomerM>().Single();
+            mainForm.GetData();
         }
 
         private void btnClose_Click(object sender, EventArgs e)
@@ -38,6 +40,8 @@ namespace TripleX.v2.Customer
         {
             string sql = "insert into TCustomer values(N'"+ txtName.Text +"','"+ txtCCCD.Text +"','"+ txtPhone.Text +"'," + isMale +")";
             SqlClass.RunSql(sql, Connection.conn);
+            ReLoadTableM();
+            SharedClass.Alert("Thêm Thành Công!", Form_Alert.enmType.Success);
             //CMessageBox.Show(sql);
         }
 

@@ -29,17 +29,20 @@ namespace TripleX.v2.Food
 
         public void GetData()
         {
-            sql = "select * from TFood";
+            sql = "select * from TFood where ID <> 1";
             SharedClass.FillDGV(dataGridView1, sql, Connection.conn);
             int rcount = dataGridView1.RowCount;
-            dgvFood.Rows.Add(rcount);
-            for (int i = 0; i < rcount; i++)
+            if(rcount > 0)
             {
-                dgvFood.Rows[i].Cells[0].Value = dataGridView1.Rows[i].Cells[0].Value;
-                dgvFood.Rows[i].Cells[1].Value = dataGridView1.Rows[i].Cells[1].Value;
-                dgvFood.Rows[i].Cells[2].Value = dataGridView1.Rows[i].Cells[2].Value;
-                dgvFood.Rows[i].Cells[3].Value = CheckKind(i);
-                dgvFood.Rows[i].Cells[4].Value = dataGridView1.Rows[i].Cells[3].Value;
+                dgvFood.Rows.Add(rcount);
+                for (int i = 0; i < rcount; i++)
+                {
+                    dgvFood.Rows[i].Cells[0].Value = dataGridView1.Rows[i].Cells[0].Value;
+                    dgvFood.Rows[i].Cells[1].Value = dataGridView1.Rows[i].Cells[1].Value;
+                    dgvFood.Rows[i].Cells[2].Value = dataGridView1.Rows[i].Cells[2].Value;
+                    dgvFood.Rows[i].Cells[3].Value = CheckKind(i);
+                    dgvFood.Rows[i].Cells[4].Value = dataGridView1.Rows[i].Cells[3].Value;
+                }
             }
         }
 
@@ -61,6 +64,12 @@ namespace TripleX.v2.Food
             {
                 return drink;
             }
+        }
+
+        private void btnAdd_Click(object sender, EventArgs e)
+        {
+            Form form = new AddFood();
+            form.ShowDialog();
         }
     }
 }

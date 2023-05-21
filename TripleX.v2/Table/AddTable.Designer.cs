@@ -34,8 +34,8 @@
             this.panel2 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.panel10 = new System.Windows.Forms.Panel();
-            this.btnSave = new CustomControl.CButton();
-            this.btnClose = new CustomControl.CButton();
+            this.btnSave = new FontAwesome.Sharp.IconButton();
+            this.btnClose = new FontAwesome.Sharp.IconButton();
             this.panel12 = new System.Windows.Forms.Panel();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -109,7 +109,7 @@
             this.label1.BackColor = System.Drawing.Color.Gainsboro;
             this.label1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.label1.Font = new System.Drawing.Font("Arial", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(249)))), ((int)(((byte)(110)))), ((int)(((byte)(48)))));
+            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(87)))), ((int)(((byte)(34)))));
             this.label1.Location = new System.Drawing.Point(0, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(406, 40);
@@ -131,58 +131,36 @@
             // 
             // btnSave
             // 
-            this.btnSave.BackColor = System.Drawing.Color.Gainsboro;
-            this.btnSave.BackgroundColor = System.Drawing.Color.Gainsboro;
-            this.btnSave.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.btnSave.BorderRadius = 0;
-            this.btnSave.BorderSize = 0;
             this.btnSave.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnSave.CustomTag = "";
             this.btnSave.Dock = System.Windows.Forms.DockStyle.Right;
             this.btnSave.FlatAppearance.BorderSize = 0;
             this.btnSave.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSave.ForeColor = System.Drawing.Color.White;
-            this.btnSave.HoverBorderColor = System.Drawing.Color.Empty;
-            this.btnSave.HoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(242)))), ((int)(((byte)(242)))));
-            this.btnSave.HoverImage = null;
-            this.btnSave.Image = global::TripleX.v2.Properties.Resources.downloading_updates_26px;
-            this.btnSave.LeaveBorderColor = System.Drawing.Color.Empty;
-            this.btnSave.LeaveColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(230)))), ((int)(((byte)(230)))));
-            this.btnSave.LeaveImage = null;
+            this.btnSave.IconChar = FontAwesome.Sharp.IconChar.Download;
+            this.btnSave.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(87)))), ((int)(((byte)(34)))));
+            this.btnSave.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnSave.IconSize = 28;
             this.btnSave.Location = new System.Drawing.Point(296, 0);
             this.btnSave.Name = "btnSave";
             this.btnSave.Size = new System.Drawing.Size(50, 40);
-            this.btnSave.TabIndex = 8;
-            this.btnSave.TextColor = System.Drawing.Color.White;
-            this.btnSave.UseVisualStyleBackColor = false;
+            this.btnSave.TabIndex = 19;
+            this.btnSave.UseVisualStyleBackColor = true;
             this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
             // 
             // btnClose
             // 
-            this.btnClose.BackColor = System.Drawing.Color.Gainsboro;
-            this.btnClose.BackgroundColor = System.Drawing.Color.Gainsboro;
-            this.btnClose.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.btnClose.BorderRadius = 0;
-            this.btnClose.BorderSize = 0;
             this.btnClose.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnClose.CustomTag = "";
             this.btnClose.Dock = System.Windows.Forms.DockStyle.Right;
             this.btnClose.FlatAppearance.BorderSize = 0;
             this.btnClose.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnClose.ForeColor = System.Drawing.Color.White;
-            this.btnClose.HoverBorderColor = System.Drawing.Color.Empty;
-            this.btnClose.HoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(242)))), ((int)(((byte)(242)))));
-            this.btnClose.HoverImage = null;
-            this.btnClose.Image = global::TripleX.v2.Properties.Resources.reply_arrow_26px;
-            this.btnClose.LeaveBorderColor = System.Drawing.Color.Empty;
-            this.btnClose.LeaveColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(230)))), ((int)(((byte)(230)))));
-            this.btnClose.LeaveImage = null;
+            this.btnClose.IconChar = FontAwesome.Sharp.IconChar.LongArrowAltLeft;
+            this.btnClose.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(87)))), ((int)(((byte)(34)))));
+            this.btnClose.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnClose.IconSize = 28;
             this.btnClose.Location = new System.Drawing.Point(346, 0);
             this.btnClose.Name = "btnClose";
             this.btnClose.Size = new System.Drawing.Size(50, 40);
-            this.btnClose.TabIndex = 6;
-            this.btnClose.TextColor = System.Drawing.Color.White;
-            this.btnClose.UseVisualStyleBackColor = false;
+            this.btnClose.TabIndex = 18;
+            this.btnClose.UseVisualStyleBackColor = true;
             this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
             // 
             // panel12
@@ -222,8 +200,8 @@
         private System.Windows.Forms.Label label1;
         private MaterialSkin.Controls.MaterialTextBox txtChair;
         private System.Windows.Forms.Panel panel10;
-        private CustomControl.CButton btnSave;
-        private CustomControl.CButton btnClose;
         private System.Windows.Forms.Panel panel12;
+        private FontAwesome.Sharp.IconButton btnSave;
+        private FontAwesome.Sharp.IconButton btnClose;
     }
 }

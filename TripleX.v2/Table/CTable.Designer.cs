@@ -53,7 +53,7 @@
             // 
             // lbStatus
             // 
-            this.lbStatus.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(249)))), ((int)(((byte)(110)))), ((int)(((byte)(48)))));
+            this.lbStatus.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(87)))), ((int)(((byte)(34)))));
             this.lbStatus.Dock = System.Windows.Forms.DockStyle.Fill;
             this.lbStatus.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbStatus.ForeColor = System.Drawing.Color.White;
@@ -67,7 +67,7 @@
             // 
             // lbName
             // 
-            this.lbName.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(249)))), ((int)(((byte)(110)))), ((int)(((byte)(48)))));
+            this.lbName.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(87)))), ((int)(((byte)(34)))));
             this.lbName.Dock = System.Windows.Forms.DockStyle.Left;
             this.lbName.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbName.ForeColor = System.Drawing.Color.White;
@@ -98,7 +98,7 @@
             this.lbDate.Location = new System.Drawing.Point(0, 0);
             this.lbDate.Name = "lbDate";
             this.lbDate.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.lbDate.Size = new System.Drawing.Size(160, 30);
+            this.lbDate.Size = new System.Drawing.Size(150, 30);
             this.lbDate.TabIndex = 5;
             this.lbDate.Text = "Ngày: 01/01/2001";
             this.lbDate.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -110,17 +110,17 @@
             this.lbChair.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbChair.ForeColor = System.Drawing.Color.Black;
             this.lbChair.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.lbChair.Location = new System.Drawing.Point(160, 0);
+            this.lbChair.Location = new System.Drawing.Point(150, 0);
             this.lbChair.Name = "lbChair";
             this.lbChair.Padding = new System.Windows.Forms.Padding(0, 0, 10, 0);
-            this.lbChair.Size = new System.Drawing.Size(90, 30);
+            this.lbChair.Size = new System.Drawing.Size(100, 30);
             this.lbChair.TabIndex = 6;
             this.lbChair.Text = "Số Ghế: ";
             this.lbChair.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // lbCustomer
             // 
-            this.lbCustomer.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(249)))), ((int)(((byte)(110)))), ((int)(((byte)(48)))));
+            this.lbCustomer.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(87)))), ((int)(((byte)(34)))));
             this.lbCustomer.Dock = System.Windows.Forms.DockStyle.Fill;
             this.lbCustomer.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbCustomer.ForeColor = System.Drawing.Color.White;
@@ -133,7 +133,7 @@
             // 
             // pictureBox1
             // 
-            this.pictureBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(249)))), ((int)(((byte)(110)))), ((int)(((byte)(48)))));
+            this.pictureBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(87)))), ((int)(((byte)(34)))));
             this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Left;
             this.pictureBox1.Image = global::TripleX.v2.Properties.Resources.coffee_table_32px1;
             this.pictureBox1.Location = new System.Drawing.Point(0, 30);

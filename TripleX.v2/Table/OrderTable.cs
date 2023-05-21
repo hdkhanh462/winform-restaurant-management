@@ -31,6 +31,7 @@ namespace TripleX.v2.Table
         {
             sql = "select TName from TTable where ID = " + tableID;
             lbName.Text = SqlClass.GetOneValue(sql, Connection.conn);
+
             sql = "select * from TCustomer where ID <> 1";
             SharedClass.FillDGV(dataGridView1, sql, Connection.conn);
             int rcount = dataGridView1.RowCount;
@@ -107,7 +108,9 @@ namespace TripleX.v2.Table
             else
             {
                 SqlClass.RunSql(sql, Connection.conn);
+                CMessageBox.Show("Thêm Thành Công!","Thông Báo!", MessageBoxButtons.OK,MessageBoxIcon.Information);
                 ReLoadTableM();
+                this.Close();
                 //CMessageBox.Show(sql);
             }
         }

@@ -28,157 +28,132 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
-            this.imageList1 = new System.Windows.Forms.ImageList(this.components);
             this.pnMenu = new System.Windows.Forms.Panel();
+            this.btnStaff = new FontAwesome.Sharp.IconButton();
+            this.btnCustomer = new FontAwesome.Sharp.IconButton();
+            this.btnFood = new FontAwesome.Sharp.IconButton();
+            this.btnTable = new FontAwesome.Sharp.IconButton();
+            this.btnDashboard = new FontAwesome.Sharp.IconButton();
+            this.panel1 = new System.Windows.Forms.Panel();
             this.pnMain = new System.Windows.Forms.Panel();
-            this.btnCustomer = new CustomControl.CButton();
-            this.btnFood = new CustomControl.CButton();
-            this.btnTable = new CustomControl.CButton();
-            this.btnHome = new CustomControl.CButton();
             this.pnMenu.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // imageList1
-            // 
-            this.imageList1.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("imageList1.ImageStream")));
-            this.imageList1.TransparentColor = System.Drawing.Color.Transparent;
-            this.imageList1.Images.SetKeyName(0, "coffee_table_32px.png");
-            this.imageList1.Images.SetKeyName(1, "food_32px.png");
-            this.imageList1.Images.SetKeyName(2, "home_page_32px.png");
             // 
             // pnMenu
             // 
             this.pnMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(242)))), ((int)(((byte)(242)))));
+            this.pnMenu.Controls.Add(this.btnStaff);
             this.pnMenu.Controls.Add(this.btnCustomer);
             this.pnMenu.Controls.Add(this.btnFood);
             this.pnMenu.Controls.Add(this.btnTable);
-            this.pnMenu.Controls.Add(this.btnHome);
+            this.pnMenu.Controls.Add(this.btnDashboard);
+            this.pnMenu.Controls.Add(this.panel1);
             this.pnMenu.Dock = System.Windows.Forms.DockStyle.Left;
             this.pnMenu.Location = new System.Drawing.Point(0, 24);
             this.pnMenu.Name = "pnMenu";
-            this.pnMenu.Size = new System.Drawing.Size(80, 500);
+            this.pnMenu.Size = new System.Drawing.Size(70, 500);
             this.pnMenu.TabIndex = 0;
             // 
-            // pnMain
+            // btnStaff
             // 
-            this.pnMain.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pnMain.Location = new System.Drawing.Point(80, 24);
-            this.pnMain.Name = "pnMain";
-            this.pnMain.Size = new System.Drawing.Size(830, 500);
-            this.pnMain.TabIndex = 1;
+            this.btnStaff.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnStaff.FlatAppearance.BorderSize = 0;
+            this.btnStaff.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnStaff.Flip = FontAwesome.Sharp.FlipOrientation.Normal;
+            this.btnStaff.IconChar = FontAwesome.Sharp.IconChar.UserFriends;
+            this.btnStaff.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btnStaff.IconSize = 32;
+            this.btnStaff.Location = new System.Drawing.Point(0, 250);
+            this.btnStaff.Name = "btnStaff";
+            this.btnStaff.Rotation = 0D;
+            this.btnStaff.Size = new System.Drawing.Size(70, 50);
+            this.btnStaff.TabIndex = 8;
+            this.btnStaff.UseVisualStyleBackColor = true;
+            this.btnStaff.Click += new System.EventHandler(this.btnStaff_Click);
             // 
             // btnCustomer
             // 
-            this.btnCustomer.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(242)))), ((int)(((byte)(242)))));
-            this.btnCustomer.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(242)))), ((int)(((byte)(242)))));
-            this.btnCustomer.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.btnCustomer.BorderRadius = 0;
-            this.btnCustomer.BorderSize = 0;
-            this.btnCustomer.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnCustomer.CustomTag = "";
             this.btnCustomer.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnCustomer.FlatAppearance.BorderSize = 0;
             this.btnCustomer.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCustomer.ForeColor = System.Drawing.Color.White;
-            this.btnCustomer.HoverBorderColor = System.Drawing.Color.Empty;
-            this.btnCustomer.HoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(230)))), ((int)(((byte)(230)))));
-            this.btnCustomer.HoverImage = global::TripleX.v2.Properties.Resources.budget_32px1;
-            this.btnCustomer.Image = global::TripleX.v2.Properties.Resources.budget_32px;
-            this.btnCustomer.LeaveBorderColor = System.Drawing.Color.Empty;
-            this.btnCustomer.LeaveColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(242)))), ((int)(((byte)(242)))));
-            this.btnCustomer.LeaveImage = global::TripleX.v2.Properties.Resources.budget_32px;
-            this.btnCustomer.Location = new System.Drawing.Point(0, 180);
+            this.btnCustomer.Flip = FontAwesome.Sharp.FlipOrientation.Normal;
+            this.btnCustomer.IconChar = FontAwesome.Sharp.IconChar.AddressBook;
+            this.btnCustomer.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btnCustomer.IconSize = 32;
+            this.btnCustomer.Location = new System.Drawing.Point(0, 200);
             this.btnCustomer.Name = "btnCustomer";
-            this.btnCustomer.Size = new System.Drawing.Size(80, 60);
-            this.btnCustomer.TabIndex = 4;
-            this.btnCustomer.TextColor = System.Drawing.Color.White;
-            this.btnCustomer.UseVisualStyleBackColor = false;
+            this.btnCustomer.Rotation = 0D;
+            this.btnCustomer.Size = new System.Drawing.Size(70, 50);
+            this.btnCustomer.TabIndex = 7;
+            this.btnCustomer.UseVisualStyleBackColor = true;
             this.btnCustomer.Click += new System.EventHandler(this.btnCustomer_Click);
             // 
             // btnFood
             // 
-            this.btnFood.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(242)))), ((int)(((byte)(242)))));
-            this.btnFood.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(242)))), ((int)(((byte)(242)))));
-            this.btnFood.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.btnFood.BorderRadius = 0;
-            this.btnFood.BorderSize = 0;
-            this.btnFood.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnFood.CustomTag = "";
             this.btnFood.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnFood.FlatAppearance.BorderSize = 0;
             this.btnFood.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnFood.ForeColor = System.Drawing.Color.White;
-            this.btnFood.HoverBorderColor = System.Drawing.Color.Empty;
-            this.btnFood.HoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(230)))), ((int)(((byte)(230)))));
-            this.btnFood.HoverImage = global::TripleX.v2.Properties.Resources.food_32px1;
-            this.btnFood.Image = global::TripleX.v2.Properties.Resources.food_32px;
-            this.btnFood.LeaveBorderColor = System.Drawing.Color.Empty;
-            this.btnFood.LeaveColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(242)))), ((int)(((byte)(242)))));
-            this.btnFood.LeaveImage = global::TripleX.v2.Properties.Resources.food_32px;
-            this.btnFood.Location = new System.Drawing.Point(0, 120);
+            this.btnFood.Flip = FontAwesome.Sharp.FlipOrientation.Normal;
+            this.btnFood.IconChar = FontAwesome.Sharp.IconChar.Utensils;
+            this.btnFood.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btnFood.IconSize = 32;
+            this.btnFood.Location = new System.Drawing.Point(0, 150);
             this.btnFood.Name = "btnFood";
-            this.btnFood.Size = new System.Drawing.Size(80, 60);
-            this.btnFood.TabIndex = 3;
-            this.btnFood.TextColor = System.Drawing.Color.White;
-            this.btnFood.UseVisualStyleBackColor = false;
+            this.btnFood.Rotation = 0D;
+            this.btnFood.Size = new System.Drawing.Size(70, 50);
+            this.btnFood.TabIndex = 6;
+            this.btnFood.UseVisualStyleBackColor = true;
             this.btnFood.Click += new System.EventHandler(this.btnFood_Click);
             // 
             // btnTable
             // 
-            this.btnTable.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(242)))), ((int)(((byte)(242)))));
-            this.btnTable.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(242)))), ((int)(((byte)(242)))));
-            this.btnTable.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.btnTable.BorderRadius = 0;
-            this.btnTable.BorderSize = 0;
-            this.btnTable.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnTable.CustomTag = "";
             this.btnTable.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnTable.FlatAppearance.BorderSize = 0;
             this.btnTable.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnTable.ForeColor = System.Drawing.Color.White;
-            this.btnTable.HoverBorderColor = System.Drawing.Color.Empty;
-            this.btnTable.HoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(230)))), ((int)(((byte)(230)))));
-            this.btnTable.HoverImage = global::TripleX.v2.Properties.Resources.coffee_table_32px1;
-            this.btnTable.Image = global::TripleX.v2.Properties.Resources.coffee_table_32px;
-            this.btnTable.LeaveBorderColor = System.Drawing.Color.Empty;
-            this.btnTable.LeaveColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(242)))), ((int)(((byte)(242)))));
-            this.btnTable.LeaveImage = global::TripleX.v2.Properties.Resources.coffee_table_32px;
-            this.btnTable.Location = new System.Drawing.Point(0, 60);
+            this.btnTable.Flip = FontAwesome.Sharp.FlipOrientation.Normal;
+            this.btnTable.IconChar = FontAwesome.Sharp.IconChar.Table;
+            this.btnTable.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btnTable.IconSize = 32;
+            this.btnTable.Location = new System.Drawing.Point(0, 100);
             this.btnTable.Name = "btnTable";
-            this.btnTable.Size = new System.Drawing.Size(80, 60);
-            this.btnTable.TabIndex = 2;
-            this.btnTable.TextColor = System.Drawing.Color.White;
-            this.btnTable.UseVisualStyleBackColor = false;
+            this.btnTable.Rotation = 0D;
+            this.btnTable.Size = new System.Drawing.Size(70, 50);
+            this.btnTable.TabIndex = 5;
+            this.btnTable.UseVisualStyleBackColor = true;
             this.btnTable.Click += new System.EventHandler(this.btnTable_Click);
             // 
-            // btnHome
+            // btnDashboard
             // 
-            this.btnHome.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(242)))), ((int)(((byte)(242)))));
-            this.btnHome.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(242)))), ((int)(((byte)(242)))));
-            this.btnHome.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.btnHome.BorderRadius = 0;
-            this.btnHome.BorderSize = 0;
-            this.btnHome.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnHome.CustomTag = "";
-            this.btnHome.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnHome.FlatAppearance.BorderSize = 0;
-            this.btnHome.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnHome.ForeColor = System.Drawing.Color.White;
-            this.btnHome.HoverBorderColor = System.Drawing.Color.Empty;
-            this.btnHome.HoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(230)))), ((int)(((byte)(230)))));
-            this.btnHome.HoverImage = global::TripleX.v2.Properties.Resources.home_page_32px1;
-            this.btnHome.Image = global::TripleX.v2.Properties.Resources.home_page_32px;
-            this.btnHome.LeaveBorderColor = System.Drawing.Color.Empty;
-            this.btnHome.LeaveColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(242)))), ((int)(((byte)(242)))));
-            this.btnHome.LeaveImage = global::TripleX.v2.Properties.Resources.home_page_32px;
-            this.btnHome.Location = new System.Drawing.Point(0, 0);
-            this.btnHome.Name = "btnHome";
-            this.btnHome.Size = new System.Drawing.Size(80, 60);
-            this.btnHome.TabIndex = 1;
-            this.btnHome.TextColor = System.Drawing.Color.White;
-            this.btnHome.UseVisualStyleBackColor = false;
+            this.btnDashboard.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnDashboard.FlatAppearance.BorderSize = 0;
+            this.btnDashboard.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnDashboard.Flip = FontAwesome.Sharp.FlipOrientation.Normal;
+            this.btnDashboard.IconChar = FontAwesome.Sharp.IconChar.ChartLine;
+            this.btnDashboard.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btnDashboard.IconSize = 32;
+            this.btnDashboard.Location = new System.Drawing.Point(0, 50);
+            this.btnDashboard.Name = "btnDashboard";
+            this.btnDashboard.Rotation = 0D;
+            this.btnDashboard.Size = new System.Drawing.Size(70, 50);
+            this.btnDashboard.TabIndex = 0;
+            this.btnDashboard.UseVisualStyleBackColor = true;
+            this.btnDashboard.Click += new System.EventHandler(this.btnDashboard_Click);
+            // 
+            // panel1
+            // 
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(70, 50);
+            this.panel1.TabIndex = 0;
+            // 
+            // pnMain
+            // 
+            this.pnMain.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pnMain.Location = new System.Drawing.Point(70, 24);
+            this.pnMain.Name = "pnMain";
+            this.pnMain.Size = new System.Drawing.Size(840, 500);
+            this.pnMain.TabIndex = 1;
             // 
             // MainForm
             // 
@@ -203,12 +178,13 @@
         }
 
         #endregion
-        private System.Windows.Forms.ImageList imageList1;
         private System.Windows.Forms.Panel pnMenu;
-        private CustomControl.CButton btnHome;
-        private CustomControl.CButton btnFood;
-        private CustomControl.CButton btnTable;
         private System.Windows.Forms.Panel pnMain;
-        private CustomControl.CButton btnCustomer;
+        private FontAwesome.Sharp.IconButton btnDashboard;
+        private FontAwesome.Sharp.IconButton btnCustomer;
+        private FontAwesome.Sharp.IconButton btnFood;
+        private FontAwesome.Sharp.IconButton btnTable;
+        private System.Windows.Forms.Panel panel1;
+        private FontAwesome.Sharp.IconButton btnStaff;
     }
 }

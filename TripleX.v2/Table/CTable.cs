@@ -143,7 +143,7 @@ namespace TripleX.v2.Table
         {
             InitializeComponent();
             Font font = new Font("Arial", 10F, FontStyle.Bold, GraphicsUnit.Point);
-            Color color = Color.FromArgb(249, 110, 48);
+            Color color = Color.FromArgb(255, 87, 34);
             lbStatus.Font = font;
             lbDate.Font = font;
             lbName.Font = font;

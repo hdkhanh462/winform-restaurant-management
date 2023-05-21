@@ -3,6 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -23,15 +24,35 @@ namespace TripleX.v2.Table
         {
             InitializeComponent();
             Connection.Connect();
+            tableID = TableM.tableID;
+            oTableID = TableM.oTableID;
             GetData();
         }
 
         public void GetData()
         {
-            tableID = TableM.tableID;
-            oTableID = TableM.oTableID;
             sql = "select TName from TTable where ID = " + tableID;
-            lbName.Text =  SqlClass.GetOneValue(sql, Connection.conn);
+            lbTName.Text =  SqlClass.GetOneValue(sql, Connection.conn);
+
+            sql = "exec PShowCustomerByOTableID " + oTableID;
+            SqlDataReader reader = SqlClass.ReadData(sql, Connection.conn);
+            while (reader.Read())
+            {
+                lbCName.Text = reader["CName"].ToString();
+                lbCCCD.Text = reader["CCCD"].ToString();
+                break;
+            }
+            reader.Close();
+
+            sql = "select OBook,OTake from TOTable where ID = " + oTableID;
+            SqlDataReader reader1 = SqlClass.ReadData(sql, Connection.conn);
+            while (reader1.Read())
+            {
+                lbBook.Text = DateToString(reader1["OBook"].ToString());
+                lbTake.Text = DateToString(reader1["OTake"].ToString());
+                break;
+            }
+            reader1.Close();
             GetOFood();
         }
 
@@ -40,6 +61,13 @@ namespace TripleX.v2.Table
             sql = "select * from TOFood where ID <> 1";
             SharedClass.FillDGV(dgvOFood,sql, Connection.conn);
             //CMessageBox.Show(sql);
+        }
+
+        private string DateToString(string date)
+        {
+            DateTime dtOrederDate = DateTime.ParseExact(date, "dd/MM/yyyy HH:mm:ss", SharedClass.cultureVN);
+            string dateTime = dtOrederDate.ToString("dd/MM/yyyy HH:mm", SharedClass.cultureVN);
+            return dateTime;
         }
 
         private void cbIsPay_CheckedChanged(object sender, EventArgs e)

@@ -43,10 +43,9 @@
             this.panel2 = new System.Windows.Forms.Panel();
             this.lbName = new System.Windows.Forms.Label();
             this.panel10 = new System.Windows.Forms.Panel();
-            this.btnDelete = new CustomControl.CButton();
-            this.btnSave = new CustomControl.CButton();
-            this.btnClose = new CustomControl.CButton();
-            this.panel12 = new System.Windows.Forms.Panel();
+            this.btnDelete = new FontAwesome.Sharp.IconButton();
+            this.bltnSave = new FontAwesome.Sharp.IconButton();
+            this.btnClose = new FontAwesome.Sharp.IconButton();
             this.panel3 = new System.Windows.Forms.Panel();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.dgvCustomer = new System.Windows.Forms.DataGridView();
@@ -235,9 +234,8 @@
             // 
             this.panel10.BackColor = System.Drawing.Color.Gainsboro;
             this.panel10.Controls.Add(this.btnDelete);
-            this.panel10.Controls.Add(this.btnSave);
+            this.panel10.Controls.Add(this.bltnSave);
             this.panel10.Controls.Add(this.btnClose);
-            this.panel10.Controls.Add(this.panel12);
             this.panel10.Location = new System.Drawing.Point(19, 356);
             this.panel10.Margin = new System.Windows.Forms.Padding(10, 0, 10, 10);
             this.panel10.Name = "panel10";
@@ -246,96 +244,54 @@
             // 
             // btnDelete
             // 
-            this.btnDelete.BackColor = System.Drawing.Color.Gainsboro;
-            this.btnDelete.BackgroundColor = System.Drawing.Color.Gainsboro;
-            this.btnDelete.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.btnDelete.BorderRadius = 0;
-            this.btnDelete.BorderSize = 0;
             this.btnDelete.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnDelete.CustomTag = "";
             this.btnDelete.Dock = System.Windows.Forms.DockStyle.Right;
             this.btnDelete.FlatAppearance.BorderSize = 0;
             this.btnDelete.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnDelete.ForeColor = System.Drawing.Color.White;
-            this.btnDelete.HoverBorderColor = System.Drawing.Color.Empty;
-            this.btnDelete.HoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(242)))), ((int)(((byte)(242)))));
-            this.btnDelete.HoverImage = null;
-            this.btnDelete.Image = global::TripleX.v2.Properties.Resources.trash_can_26px;
-            this.btnDelete.LeaveBorderColor = System.Drawing.Color.Empty;
-            this.btnDelete.LeaveColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(230)))), ((int)(((byte)(230)))));
-            this.btnDelete.LeaveImage = null;
-            this.btnDelete.Location = new System.Drawing.Point(528, 0);
+            this.btnDelete.IconChar = FontAwesome.Sharp.IconChar.TrashAlt;
+            this.btnDelete.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(87)))), ((int)(((byte)(34)))));
+            this.btnDelete.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnDelete.IconSize = 28;
+            this.btnDelete.Location = new System.Drawing.Point(538, 0);
             this.btnDelete.Name = "btnDelete";
             this.btnDelete.Size = new System.Drawing.Size(50, 40);
-            this.btnDelete.TabIndex = 16;
-            this.btnDelete.TextColor = System.Drawing.Color.White;
-            this.btnDelete.UseVisualStyleBackColor = false;
+            this.btnDelete.TabIndex = 20;
+            this.btnDelete.UseVisualStyleBackColor = true;
             this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
             // 
-            // btnSave
+            // bltnSave
             // 
-            this.btnSave.BackColor = System.Drawing.Color.Gainsboro;
-            this.btnSave.BackgroundColor = System.Drawing.Color.Gainsboro;
-            this.btnSave.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.btnSave.BorderRadius = 0;
-            this.btnSave.BorderSize = 0;
-            this.btnSave.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnSave.CustomTag = "";
-            this.btnSave.Dock = System.Windows.Forms.DockStyle.Right;
-            this.btnSave.FlatAppearance.BorderSize = 0;
-            this.btnSave.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSave.ForeColor = System.Drawing.Color.White;
-            this.btnSave.HoverBorderColor = System.Drawing.Color.Empty;
-            this.btnSave.HoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(242)))), ((int)(((byte)(242)))));
-            this.btnSave.HoverImage = null;
-            this.btnSave.Image = global::TripleX.v2.Properties.Resources.downloading_updates_26px;
-            this.btnSave.LeaveBorderColor = System.Drawing.Color.Empty;
-            this.btnSave.LeaveColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(230)))), ((int)(((byte)(230)))));
-            this.btnSave.LeaveImage = null;
-            this.btnSave.Location = new System.Drawing.Point(578, 0);
-            this.btnSave.Name = "btnSave";
-            this.btnSave.Size = new System.Drawing.Size(50, 40);
-            this.btnSave.TabIndex = 8;
-            this.btnSave.TextColor = System.Drawing.Color.White;
-            this.btnSave.UseVisualStyleBackColor = false;
-            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
+            this.bltnSave.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.bltnSave.Dock = System.Windows.Forms.DockStyle.Right;
+            this.bltnSave.FlatAppearance.BorderSize = 0;
+            this.bltnSave.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.bltnSave.IconChar = FontAwesome.Sharp.IconChar.Download;
+            this.bltnSave.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(87)))), ((int)(((byte)(34)))));
+            this.bltnSave.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.bltnSave.IconSize = 28;
+            this.bltnSave.Location = new System.Drawing.Point(588, 0);
+            this.bltnSave.Name = "bltnSave";
+            this.bltnSave.Size = new System.Drawing.Size(50, 40);
+            this.bltnSave.TabIndex = 19;
+            this.bltnSave.UseVisualStyleBackColor = true;
+            this.bltnSave.Click += new System.EventHandler(this.btnSave_Click);
             // 
             // btnClose
             // 
-            this.btnClose.BackColor = System.Drawing.Color.Gainsboro;
-            this.btnClose.BackgroundColor = System.Drawing.Color.Gainsboro;
-            this.btnClose.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.btnClose.BorderRadius = 0;
-            this.btnClose.BorderSize = 0;
             this.btnClose.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnClose.CustomTag = "";
             this.btnClose.Dock = System.Windows.Forms.DockStyle.Right;
             this.btnClose.FlatAppearance.BorderSize = 0;
             this.btnClose.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnClose.ForeColor = System.Drawing.Color.White;
-            this.btnClose.HoverBorderColor = System.Drawing.Color.Empty;
-            this.btnClose.HoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(242)))), ((int)(((byte)(242)))));
-            this.btnClose.HoverImage = null;
-            this.btnClose.Image = global::TripleX.v2.Properties.Resources.reply_arrow_26px;
-            this.btnClose.LeaveBorderColor = System.Drawing.Color.Empty;
-            this.btnClose.LeaveColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(230)))), ((int)(((byte)(230)))));
-            this.btnClose.LeaveImage = null;
-            this.btnClose.Location = new System.Drawing.Point(628, 0);
+            this.btnClose.IconChar = FontAwesome.Sharp.IconChar.LongArrowAltLeft;
+            this.btnClose.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(87)))), ((int)(((byte)(34)))));
+            this.btnClose.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnClose.IconSize = 28;
+            this.btnClose.Location = new System.Drawing.Point(638, 0);
             this.btnClose.Name = "btnClose";
             this.btnClose.Size = new System.Drawing.Size(50, 40);
-            this.btnClose.TabIndex = 6;
-            this.btnClose.TextColor = System.Drawing.Color.White;
-            this.btnClose.UseVisualStyleBackColor = false;
+            this.btnClose.TabIndex = 18;
+            this.btnClose.UseVisualStyleBackColor = true;
             this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
-            // 
-            // panel12
-            // 
-            this.panel12.BackColor = System.Drawing.Color.Gainsboro;
-            this.panel12.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel12.Location = new System.Drawing.Point(678, 0);
-            this.panel12.Name = "panel12";
-            this.panel12.Size = new System.Drawing.Size(10, 40);
-            this.panel12.TabIndex = 15;
             // 
             // panel3
             // 
@@ -373,10 +329,10 @@
             this.dgvCustomer.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
             this.dgvCustomer.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(249)))), ((int)(((byte)(110)))), ((int)(((byte)(48)))));
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(87)))), ((int)(((byte)(34)))));
             dataGridViewCellStyle1.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             dataGridViewCellStyle1.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(249)))), ((int)(((byte)(110)))), ((int)(((byte)(48)))));
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(87)))), ((int)(((byte)(34)))));
             dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.White;
             dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.dgvCustomer.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
@@ -392,9 +348,9 @@
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(242)))), ((int)(((byte)(242)))));
             dataGridViewCellStyle2.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(249)))), ((int)(((byte)(110)))), ((int)(((byte)(48)))));
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(254)))), ((int)(((byte)(221)))), ((int)(((byte)(211)))));
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.dgvCustomer.DefaultCellStyle = dataGridViewCellStyle2;
             this.dgvCustomer.EnableHeadersVisualStyles = false;
@@ -500,9 +456,6 @@
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Label lbName;
         private System.Windows.Forms.Panel panel10;
-        private CustomControl.CButton btnSave;
-        private CustomControl.CButton btnClose;
-        private System.Windows.Forms.Panel panel12;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
@@ -520,6 +473,8 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
-        private CustomControl.CButton btnDelete;
+        private FontAwesome.Sharp.IconButton btnDelete;
+        private FontAwesome.Sharp.IconButton bltnSave;
+        private FontAwesome.Sharp.IconButton btnClose;
     }
 }
