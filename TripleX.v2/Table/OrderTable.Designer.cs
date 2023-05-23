@@ -65,7 +65,7 @@
             // 
             // panel1
             // 
-            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(230)))), ((int)(((byte)(230)))));
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(242)))), ((int)(((byte)(242)))));
             this.panel1.Controls.Add(this.txtCName);
             this.panel1.Controls.Add(this.label4);
             this.panel1.Controls.Add(this.label3);
@@ -82,7 +82,7 @@
             // 
             // txtCName
             // 
-            this.txtCName.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(230)))), ((int)(((byte)(230)))));
+            this.txtCName.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(242)))), ((int)(((byte)(242)))));
             this.txtCName.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(249)))), ((int)(((byte)(110)))), ((int)(((byte)(48)))));
             this.txtCName.BorderFocusColor = System.Drawing.Color.FromArgb(((int)(((byte)(249)))), ((int)(((byte)(110)))), ((int)(((byte)(48)))));
             this.txtCName.BorderRadius = 0;
@@ -109,9 +109,9 @@
             this.label4.Location = new System.Drawing.Point(16, 30);
             this.label4.Margin = new System.Windows.Forms.Padding(0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(79, 19);
+            this.label4.Size = new System.Drawing.Size(104, 19);
             this.label4.TabIndex = 6;
-            this.label4.Text = "Ngày Đặt";
+            this.label4.Text = "Khách Hàng";
             // 
             // label3
             // 
@@ -254,6 +254,7 @@
             this.btnDelete.IconSize = 28;
             this.btnDelete.Location = new System.Drawing.Point(538, 0);
             this.btnDelete.Name = "btnDelete";
+            this.btnDelete.Padding = new System.Windows.Forms.Padding(0, 5, 0, 0);
             this.btnDelete.Size = new System.Drawing.Size(50, 40);
             this.btnDelete.TabIndex = 20;
             this.btnDelete.UseVisualStyleBackColor = true;
@@ -271,6 +272,7 @@
             this.bltnSave.IconSize = 28;
             this.bltnSave.Location = new System.Drawing.Point(588, 0);
             this.bltnSave.Name = "bltnSave";
+            this.bltnSave.Padding = new System.Windows.Forms.Padding(0, 5, 0, 0);
             this.bltnSave.Size = new System.Drawing.Size(50, 40);
             this.bltnSave.TabIndex = 19;
             this.bltnSave.UseVisualStyleBackColor = true;
@@ -288,6 +290,7 @@
             this.btnClose.IconSize = 28;
             this.btnClose.Location = new System.Drawing.Point(638, 0);
             this.btnClose.Name = "btnClose";
+            this.btnClose.Padding = new System.Windows.Forms.Padding(0, 5, 0, 0);
             this.btnClose.Size = new System.Drawing.Size(50, 40);
             this.btnClose.TabIndex = 18;
             this.btnClose.UseVisualStyleBackColor = true;

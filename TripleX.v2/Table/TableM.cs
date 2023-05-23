@@ -24,8 +24,6 @@ namespace TripleX.v2.Table
         string sql;
         public static string tableID;
         public static string oTableID;
-        private CButton currentBtn;
-        private Panel leftPn;
         public TableM()
         {
             InitializeComponent();
@@ -37,9 +35,6 @@ namespace TripleX.v2.Table
             Connection.Connect();
             SetScroll();
             GetData();
-            leftPn = new Panel();
-            leftPn.Size = new Size(60, 7);
-            pnTop.Controls.Add(leftPn);
         }
 
         public void GetData()
@@ -65,6 +60,7 @@ namespace TripleX.v2.Table
                 ct.TableStatus = "1";
                 ct.Customer = "Bàn Trống";
                 ct.Chair = "Số Ghế: " + reader["TChair"].ToString();
+                ct.Margin = new Padding(10);
 
                 ct._CClick += new EventHandler(addOrder);
                 flpTable.Controls.Add(ct);
@@ -87,6 +83,7 @@ namespace TripleX.v2.Table
                 ct.Customer = reader["CName"].ToString();
                 ct.OrderDate = DateToString(reader["OTake"].ToString());
                 ct.Chair = "Số Ghế: " + reader["TChair"].ToString();
+                ct.Margin = new Padding(10);
 
                 ct._CClick += new EventHandler(editOrder);
                 flpTable.Controls.Add(ct);
@@ -145,73 +142,6 @@ namespace TripleX.v2.Table
             return dateTime;
         }
 
-        void ActivateButton(object senderBtn)
-        {
-            if (senderBtn != null)
-            {
-                DisableButton();
-                currentBtn = (CButton)senderBtn;
-                currentBtn.Image = CheckButton(true);
-                currentBtn.BackColor = Color.FromArgb(242, 242, 242);
-
-                leftPn.BackColor = Color.FromArgb(255, 87, 34);
-                leftPn.Location = new Point(currentBtn.Location.X, 0);
-                leftPn.Visible = true;
-                leftPn.BringToFront();
-            }
-        }
-
-        void DisableButton()
-        {
-            if (currentBtn != null)
-            {
-                currentBtn.Image = CheckButton(false);
-                currentBtn.BackColor = Color.FromArgb(230, 230, 230);
-            }
-        }
-
-        Image CheckButton(bool isSelect)
-        {
-            if (isSelect)
-            {
-                if (currentBtn.Name == "btnGiaSuc")
-                {
-                    return Properties.Resources.bull_32px1;
-                }
-                else if (currentBtn.Name == "btnGiaCam")
-                {
-                    return Properties.Resources.chicken_32px1;
-                }
-                else if (currentBtn.Name == "btnHaiSna")
-                {
-                    return Properties.Resources.crab_32px1;
-                }
-                else
-                {
-                    return Properties.Resources.wine_bottle_32px1;
-                }
-            }
-            else
-            {
-                if (currentBtn.Name == "btnGiaSuc")
-                {
-                    return Properties.Resources.bull_32px;
-                }
-                else if (currentBtn.Name == "btnGiaCam")
-                {
-                    return Properties.Resources.chicken_32px;
-                }
-                else if (currentBtn.Name == "btnHaiSna")
-                {
-                    return Properties.Resources.crab_32px;
-                }
-                else
-                {
-                    return Properties.Resources.wine_bottle_32px;
-                }
-            }
-        }
-
         //Events
         private void panel2_Paint(object sender, PaintEventArgs e)
         {
@@ -257,6 +187,9 @@ namespace TripleX.v2.Table
             {
                 sql = "select * from TTable where TStatus = 1";
                 GetEmptyTable(sql);
+                rbSmall.Checked = false;
+                rbAgv.Checked = false;
+                rbBig.Checked = false;
             }
         }
 
@@ -266,6 +199,9 @@ namespace TripleX.v2.Table
             {
                 sql = "select * from VOTable";
                 GetOrderTable(sql);
+                rbSmall.Checked = false;
+                rbAgv.Checked = false;
+                rbBig.Checked = false;
             }
         }
 
@@ -280,24 +216,10 @@ namespace TripleX.v2.Table
             SharedClass.RoundedControl(panel14, 8, e.Graphics, Color.Empty, 0);
         }
 
-        private void btnGiaSuc_Click(object sender, EventArgs e)
+        private void flpTable_Paint(object sender, PaintEventArgs e)
         {
-            ActivateButton(sender);
+            SharedClass.RoundedControl(flpTable, 8, e.Graphics, Color.Empty, 0);
         }
 
-        private void btnGiaCam_Click(object sender, EventArgs e)
-        {
-            ActivateButton(sender);
-        }
-
-        private void btnHaiSan_Click(object sender, EventArgs e)
-        {
-            ActivateButton(sender);
-        }
-
-        private void btnThucUong_Click(object sender, EventArgs e)
-        {
-            ActivateButton(sender);
-        }
     }
 }

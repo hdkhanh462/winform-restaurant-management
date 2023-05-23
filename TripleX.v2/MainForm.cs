@@ -16,6 +16,7 @@ using CustomControl;
 using FontAwesome.Sharp;
 using TripleX.v2.Home;
 using TripleX.v2.Staff;
+using TripleX.v2.Bill;
 
 namespace TripleX.v2
 {
@@ -116,6 +117,16 @@ namespace TripleX.v2
         private void MainForm_FormClosing(object sender, FormClosingEventArgs e)
         {
             Application.Exit();
+        }
+
+        private void btnOrderFood_Click(object sender, EventArgs e)
+        {
+            OpenChildForm(new OrderFood(), sender);
+        }
+
+        private void btnBill_Click(object sender, EventArgs e)
+        {
+            OpenChildForm(new BillM(), sender);
         }
     }
 }

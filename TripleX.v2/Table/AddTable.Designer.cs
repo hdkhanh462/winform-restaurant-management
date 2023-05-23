@@ -36,7 +36,6 @@
             this.panel10 = new System.Windows.Forms.Panel();
             this.btnSave = new FontAwesome.Sharp.IconButton();
             this.btnClose = new FontAwesome.Sharp.IconButton();
-            this.panel12 = new System.Windows.Forms.Panel();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel10.SuspendLayout();
@@ -122,7 +121,6 @@
             this.panel10.BackColor = System.Drawing.Color.Gainsboro;
             this.panel10.Controls.Add(this.btnSave);
             this.panel10.Controls.Add(this.btnClose);
-            this.panel10.Controls.Add(this.panel12);
             this.panel10.Location = new System.Drawing.Point(19, 199);
             this.panel10.Margin = new System.Windows.Forms.Padding(10, 0, 10, 10);
             this.panel10.Name = "panel10";
@@ -139,8 +137,9 @@
             this.btnSave.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(87)))), ((int)(((byte)(34)))));
             this.btnSave.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnSave.IconSize = 28;
-            this.btnSave.Location = new System.Drawing.Point(296, 0);
+            this.btnSave.Location = new System.Drawing.Point(306, 0);
             this.btnSave.Name = "btnSave";
+            this.btnSave.Padding = new System.Windows.Forms.Padding(0, 4, 0, 0);
             this.btnSave.Size = new System.Drawing.Size(50, 40);
             this.btnSave.TabIndex = 19;
             this.btnSave.UseVisualStyleBackColor = true;
@@ -156,21 +155,13 @@
             this.btnClose.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(87)))), ((int)(((byte)(34)))));
             this.btnClose.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnClose.IconSize = 28;
-            this.btnClose.Location = new System.Drawing.Point(346, 0);
+            this.btnClose.Location = new System.Drawing.Point(356, 0);
             this.btnClose.Name = "btnClose";
+            this.btnClose.Padding = new System.Windows.Forms.Padding(0, 5, 0, 0);
             this.btnClose.Size = new System.Drawing.Size(50, 40);
             this.btnClose.TabIndex = 18;
             this.btnClose.UseVisualStyleBackColor = true;
             this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
-            // 
-            // panel12
-            // 
-            this.panel12.BackColor = System.Drawing.Color.Gainsboro;
-            this.panel12.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel12.Location = new System.Drawing.Point(396, 0);
-            this.panel12.Name = "panel12";
-            this.panel12.Size = new System.Drawing.Size(10, 40);
-            this.panel12.TabIndex = 15;
             // 
             // AddTable
             // 
@@ -180,6 +171,7 @@
             this.ClientSize = new System.Drawing.Size(444, 258);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.panel10);
+            this.DoubleBuffered = true;
             this.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(4);
@@ -200,7 +192,6 @@
         private System.Windows.Forms.Label label1;
         private MaterialSkin.Controls.MaterialTextBox txtChair;
         private System.Windows.Forms.Panel panel10;
-        private System.Windows.Forms.Panel panel12;
         private FontAwesome.Sharp.IconButton btnSave;
         private FontAwesome.Sharp.IconButton btnClose;
     }

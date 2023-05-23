@@ -29,9 +29,11 @@
         private void InitializeComponent()
         {
             this.pnMenu = new System.Windows.Forms.Panel();
+            this.btnBill = new FontAwesome.Sharp.IconButton();
             this.btnStaff = new FontAwesome.Sharp.IconButton();
             this.btnCustomer = new FontAwesome.Sharp.IconButton();
             this.btnFood = new FontAwesome.Sharp.IconButton();
+            this.btnOrderFood = new FontAwesome.Sharp.IconButton();
             this.btnTable = new FontAwesome.Sharp.IconButton();
             this.btnDashboard = new FontAwesome.Sharp.IconButton();
             this.panel1 = new System.Windows.Forms.Panel();
@@ -45,14 +47,32 @@
             this.pnMenu.Controls.Add(this.btnStaff);
             this.pnMenu.Controls.Add(this.btnCustomer);
             this.pnMenu.Controls.Add(this.btnFood);
+            this.pnMenu.Controls.Add(this.btnBill);
+            this.pnMenu.Controls.Add(this.btnOrderFood);
             this.pnMenu.Controls.Add(this.btnTable);
             this.pnMenu.Controls.Add(this.btnDashboard);
             this.pnMenu.Controls.Add(this.panel1);
             this.pnMenu.Dock = System.Windows.Forms.DockStyle.Left;
             this.pnMenu.Location = new System.Drawing.Point(0, 24);
             this.pnMenu.Name = "pnMenu";
-            this.pnMenu.Size = new System.Drawing.Size(70, 500);
+            this.pnMenu.Size = new System.Drawing.Size(70, 573);
             this.pnMenu.TabIndex = 0;
+            // 
+            // btnBill
+            // 
+            this.btnBill.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnBill.FlatAppearance.BorderSize = 0;
+            this.btnBill.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnBill.IconChar = FontAwesome.Sharp.IconChar.CommentsDollar;
+            this.btnBill.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btnBill.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnBill.IconSize = 32;
+            this.btnBill.Location = new System.Drawing.Point(0, 200);
+            this.btnBill.Name = "btnBill";
+            this.btnBill.Size = new System.Drawing.Size(70, 50);
+            this.btnBill.TabIndex = 10;
+            this.btnBill.UseVisualStyleBackColor = true;
+            this.btnBill.Click += new System.EventHandler(this.btnBill_Click);
             // 
             // btnStaff
             // 
@@ -63,7 +83,7 @@
             this.btnStaff.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.btnStaff.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnStaff.IconSize = 32;
-            this.btnStaff.Location = new System.Drawing.Point(0, 250);
+            this.btnStaff.Location = new System.Drawing.Point(0, 350);
             this.btnStaff.Name = "btnStaff";
             this.btnStaff.Size = new System.Drawing.Size(70, 50);
             this.btnStaff.TabIndex = 8;
@@ -79,7 +99,7 @@
             this.btnCustomer.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.btnCustomer.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnCustomer.IconSize = 32;
-            this.btnCustomer.Location = new System.Drawing.Point(0, 200);
+            this.btnCustomer.Location = new System.Drawing.Point(0, 300);
             this.btnCustomer.Name = "btnCustomer";
             this.btnCustomer.Size = new System.Drawing.Size(70, 50);
             this.btnCustomer.TabIndex = 7;
@@ -94,13 +114,31 @@
             this.btnFood.IconChar = FontAwesome.Sharp.IconChar.Utensils;
             this.btnFood.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.btnFood.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnFood.IconSize = 32;
-            this.btnFood.Location = new System.Drawing.Point(0, 150);
+            this.btnFood.IconSize = 28;
+            this.btnFood.Location = new System.Drawing.Point(0, 250);
             this.btnFood.Name = "btnFood";
+            this.btnFood.Padding = new System.Windows.Forms.Padding(0, 0, 2, 0);
             this.btnFood.Size = new System.Drawing.Size(70, 50);
             this.btnFood.TabIndex = 6;
             this.btnFood.UseVisualStyleBackColor = true;
             this.btnFood.Click += new System.EventHandler(this.btnFood_Click);
+            // 
+            // btnOrderFood
+            // 
+            this.btnOrderFood.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnOrderFood.FlatAppearance.BorderSize = 0;
+            this.btnOrderFood.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnOrderFood.IconChar = FontAwesome.Sharp.IconChar.CartArrowDown;
+            this.btnOrderFood.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btnOrderFood.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnOrderFood.IconSize = 34;
+            this.btnOrderFood.Location = new System.Drawing.Point(0, 150);
+            this.btnOrderFood.Name = "btnOrderFood";
+            this.btnOrderFood.Padding = new System.Windows.Forms.Padding(0, 0, 4, 0);
+            this.btnOrderFood.Size = new System.Drawing.Size(70, 50);
+            this.btnOrderFood.TabIndex = 9;
+            this.btnOrderFood.UseVisualStyleBackColor = true;
+            this.btnOrderFood.Click += new System.EventHandler(this.btnOrderFood_Click);
             // 
             // btnTable
             // 
@@ -147,7 +185,7 @@
             this.pnMain.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pnMain.Location = new System.Drawing.Point(70, 24);
             this.pnMain.Name = "pnMain";
-            this.pnMain.Size = new System.Drawing.Size(840, 500);
+            this.pnMain.Size = new System.Drawing.Size(1042, 573);
             this.pnMain.TabIndex = 1;
             // 
             // MainForm
@@ -155,7 +193,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(242)))), ((int)(((byte)(242)))));
-            this.ClientSize = new System.Drawing.Size(913, 527);
+            this.ClientSize = new System.Drawing.Size(1115, 600);
             this.Controls.Add(this.pnMain);
             this.Controls.Add(this.pnMenu);
             this.DrawerShowIconsWhenHidden = true;
@@ -182,5 +220,7 @@
         private FontAwesome.Sharp.IconButton btnTable;
         private System.Windows.Forms.Panel panel1;
         private FontAwesome.Sharp.IconButton btnStaff;
+        private FontAwesome.Sharp.IconButton btnOrderFood;
+        private FontAwesome.Sharp.IconButton btnBill;
     }
 }

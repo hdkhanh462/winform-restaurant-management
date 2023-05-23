@@ -32,7 +32,6 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel8 = new System.Windows.Forms.Panel();
-            this.panel6 = new System.Windows.Forms.Panel();
             this.panel7 = new System.Windows.Forms.Panel();
             this.panel11 = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
@@ -44,13 +43,19 @@
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.btnAddCustomer = new FontAwesome.Sharp.IconButton();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.pnTop = new System.Windows.Forms.Panel();
+            this.btnAddCustomer = new FontAwesome.Sharp.IconButton();
+            this.btnSearch = new FontAwesome.Sharp.IconButton();
+            this.cTextbox1 = new CustomControl.CTextbox();
+            this.panel9 = new System.Windows.Forms.Panel();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.panel5 = new System.Windows.Forms.Panel();
             this.panel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvCustomer)).BeginInit();
-            this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.pnTop.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel8
@@ -60,14 +65,6 @@
             this.panel8.Name = "panel8";
             this.panel8.Size = new System.Drawing.Size(1002, 10);
             this.panel8.TabIndex = 3;
-            // 
-            // panel6
-            // 
-            this.panel6.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel6.Location = new System.Drawing.Point(0, 476);
-            this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(982, 10);
-            this.panel6.TabIndex = 4;
             // 
             // panel7
             // 
@@ -96,8 +93,8 @@
             // panel4
             // 
             this.panel4.Controls.Add(this.dgvCustomer);
-            this.panel4.Controls.Add(this.panel6);
-            this.panel4.Controls.Add(this.panel2);
+            this.panel4.Controls.Add(this.panel5);
+            this.panel4.Controls.Add(this.pnTop);
             this.panel4.Controls.Add(this.dataGridView1);
             this.panel4.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel4.Location = new System.Drawing.Point(10, 10);
@@ -111,7 +108,7 @@
             this.dgvCustomer.AllowUserToDeleteRows = false;
             this.dgvCustomer.AllowUserToResizeColumns = false;
             this.dgvCustomer.AllowUserToResizeRows = false;
-            this.dgvCustomer.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(230)))), ((int)(((byte)(230)))));
+            this.dgvCustomer.BackgroundColor = System.Drawing.Color.WhiteSmoke;
             this.dgvCustomer.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dgvCustomer.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
             this.dgvCustomer.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
@@ -133,7 +130,7 @@
             this.Column3,
             this.Column4});
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(230)))), ((int)(((byte)(230)))));
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.WhiteSmoke;
             dataGridViewCellStyle2.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             dataGridViewCellStyle2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(254)))), ((int)(((byte)(221)))), ((int)(((byte)(211)))));
@@ -143,7 +140,7 @@
             this.dgvCustomer.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgvCustomer.EnableHeadersVisualStyles = false;
             this.dgvCustomer.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(242)))), ((int)(((byte)(242)))));
-            this.dgvCustomer.Location = new System.Drawing.Point(0, 0);
+            this.dgvCustomer.Location = new System.Drawing.Point(0, 61);
             this.dgvCustomer.Name = "dgvCustomer";
             this.dgvCustomer.ReadOnly = true;
             this.dgvCustomer.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
@@ -159,7 +156,7 @@
             this.dgvCustomer.RowHeadersWidth = 50;
             this.dgvCustomer.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
             this.dgvCustomer.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvCustomer.Size = new System.Drawing.Size(982, 476);
+            this.dgvCustomer.Size = new System.Drawing.Size(982, 465);
             this.dgvCustomer.TabIndex = 0;
             this.dgvCustomer.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvCustomer_CellClick);
             // 
@@ -215,34 +212,6 @@
             this.Column4.ReadOnly = true;
             this.Column4.Width = 250;
             // 
-            // panel2
-            // 
-            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(230)))), ((int)(((byte)(230)))));
-            this.panel2.Controls.Add(this.btnAddCustomer);
-            this.panel2.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel2.Location = new System.Drawing.Point(0, 486);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(982, 40);
-            this.panel2.TabIndex = 2;
-            // 
-            // btnAddCustomer
-            // 
-            this.btnAddCustomer.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnAddCustomer.Dock = System.Windows.Forms.DockStyle.Right;
-            this.btnAddCustomer.FlatAppearance.BorderSize = 0;
-            this.btnAddCustomer.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAddCustomer.Flip = FontAwesome.Sharp.FlipOrientation.Normal;
-            this.btnAddCustomer.IconChar = FontAwesome.Sharp.IconChar.UserPlus;
-            this.btnAddCustomer.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(87)))), ((int)(((byte)(34)))));
-            this.btnAddCustomer.IconSize = 32;
-            this.btnAddCustomer.Location = new System.Drawing.Point(932, 0);
-            this.btnAddCustomer.Name = "btnAddCustomer";
-            this.btnAddCustomer.Rotation = 0D;
-            this.btnAddCustomer.Size = new System.Drawing.Size(50, 40);
-            this.btnAddCustomer.TabIndex = 0;
-            this.btnAddCustomer.UseVisualStyleBackColor = true;
-            this.btnAddCustomer.Click += new System.EventHandler(this.btnAddCustomer_Click);
-            // 
             // dataGridView1
             // 
             this.dataGridView1.AllowUserToAddRows = false;
@@ -254,6 +223,110 @@
             this.dataGridView1.Size = new System.Drawing.Size(618, 150);
             this.dataGridView1.TabIndex = 1;
             this.dataGridView1.Visible = false;
+            // 
+            // pnTop
+            // 
+            this.pnTop.BackColor = System.Drawing.Color.Gainsboro;
+            this.pnTop.Controls.Add(this.btnAddCustomer);
+            this.pnTop.Controls.Add(this.btnSearch);
+            this.pnTop.Controls.Add(this.cTextbox1);
+            this.pnTop.Controls.Add(this.panel9);
+            this.pnTop.Controls.Add(this.panel2);
+            this.pnTop.Controls.Add(this.panel3);
+            this.pnTop.Dock = System.Windows.Forms.DockStyle.Top;
+            this.pnTop.Location = new System.Drawing.Point(0, 0);
+            this.pnTop.Margin = new System.Windows.Forms.Padding(0);
+            this.pnTop.Name = "pnTop";
+            this.pnTop.Size = new System.Drawing.Size(982, 51);
+            this.pnTop.TabIndex = 15;
+            // 
+            // btnAddCustomer
+            // 
+            this.btnAddCustomer.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnAddCustomer.Dock = System.Windows.Forms.DockStyle.Right;
+            this.btnAddCustomer.FlatAppearance.BorderSize = 0;
+            this.btnAddCustomer.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAddCustomer.IconChar = FontAwesome.Sharp.IconChar.Plus;
+            this.btnAddCustomer.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(87)))), ((int)(((byte)(34)))));
+            this.btnAddCustomer.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnAddCustomer.IconSize = 22;
+            this.btnAddCustomer.Location = new System.Drawing.Point(640, 10);
+            this.btnAddCustomer.Name = "btnAddCustomer";
+            this.btnAddCustomer.Padding = new System.Windows.Forms.Padding(0, 2, 0, 0);
+            this.btnAddCustomer.Size = new System.Drawing.Size(41, 31);
+            this.btnAddCustomer.TabIndex = 16;
+            this.btnAddCustomer.UseVisualStyleBackColor = true;
+            this.btnAddCustomer.Click += new System.EventHandler(this.btnAddCustomer_Click);
+            // 
+            // btnSearch
+            // 
+            this.btnSearch.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnSearch.Dock = System.Windows.Forms.DockStyle.Right;
+            this.btnSearch.FlatAppearance.BorderSize = 0;
+            this.btnSearch.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSearch.IconChar = FontAwesome.Sharp.IconChar.Search;
+            this.btnSearch.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(87)))), ((int)(((byte)(34)))));
+            this.btnSearch.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnSearch.IconSize = 22;
+            this.btnSearch.Location = new System.Drawing.Point(681, 10);
+            this.btnSearch.Name = "btnSearch";
+            this.btnSearch.Padding = new System.Windows.Forms.Padding(0, 6, 0, 0);
+            this.btnSearch.Size = new System.Drawing.Size(41, 31);
+            this.btnSearch.TabIndex = 10;
+            this.btnSearch.UseVisualStyleBackColor = true;
+            // 
+            // cTextbox1
+            // 
+            this.cTextbox1.BackColor = System.Drawing.Color.Gainsboro;
+            this.cTextbox1.BorderColor = System.Drawing.Color.Gray;
+            this.cTextbox1.BorderFocusColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(87)))), ((int)(((byte)(34)))));
+            this.cTextbox1.BorderRadius = 0;
+            this.cTextbox1.BorderSize = 2;
+            this.cTextbox1.Dock = System.Windows.Forms.DockStyle.Right;
+            this.cTextbox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F);
+            this.cTextbox1.Location = new System.Drawing.Point(722, 10);
+            this.cTextbox1.Multiline = false;
+            this.cTextbox1.Name = "cTextbox1";
+            this.cTextbox1.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
+            this.cTextbox1.PasswordChar = false;
+            this.cTextbox1.PlaceholderColor = System.Drawing.Color.DarkGray;
+            this.cTextbox1.PlaceholderText = "";
+            this.cTextbox1.Size = new System.Drawing.Size(250, 31);
+            this.cTextbox1.TabIndex = 17;
+            this.cTextbox1.Texts = "";
+            this.cTextbox1.UnderlinedStyle = true;
+            // 
+            // panel9
+            // 
+            this.panel9.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.panel9.Location = new System.Drawing.Point(0, 41);
+            this.panel9.Name = "panel9";
+            this.panel9.Size = new System.Drawing.Size(972, 10);
+            this.panel9.TabIndex = 3;
+            // 
+            // panel2
+            // 
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel2.Location = new System.Drawing.Point(0, 0);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(972, 10);
+            this.panel2.TabIndex = 2;
+            // 
+            // panel3
+            // 
+            this.panel3.Dock = System.Windows.Forms.DockStyle.Right;
+            this.panel3.Location = new System.Drawing.Point(972, 0);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(10, 51);
+            this.panel3.TabIndex = 1;
+            // 
+            // panel5
+            // 
+            this.panel5.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel5.Location = new System.Drawing.Point(0, 51);
+            this.panel5.Name = "panel5";
+            this.panel5.Size = new System.Drawing.Size(982, 10);
+            this.panel5.TabIndex = 16;
             // 
             // CustomerM
             // 
@@ -273,8 +346,8 @@
             this.Text = "CustomerM";
             this.panel4.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvCustomer)).EndInit();
-            this.panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            this.pnTop.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -282,7 +355,6 @@
         #endregion
 
         private System.Windows.Forms.Panel panel8;
-        private System.Windows.Forms.Panel panel6;
         private System.Windows.Forms.Panel panel7;
         private System.Windows.Forms.Panel panel11;
         private System.Windows.Forms.Panel panel1;
@@ -295,7 +367,13 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
-        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Panel panel5;
+        private System.Windows.Forms.Panel pnTop;
         private FontAwesome.Sharp.IconButton btnAddCustomer;
+        private FontAwesome.Sharp.IconButton btnSearch;
+        private CustomControl.CTextbox cTextbox1;
+        private System.Windows.Forms.Panel panel9;
+        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Panel panel3;
     }
 }

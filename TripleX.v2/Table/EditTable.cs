@@ -19,76 +19,6 @@ namespace TripleX.v2.Table
         string tableID;
         string oTableID;
         string isPay = "1";
-        
-        public EditTable()
-        {
-            InitializeComponent();
-            Connection.Connect();
-            tableID = TableM.tableID;
-            oTableID = TableM.oTableID;
-            GetData();
-        }
-
-        public void GetData()
-        {
-            sql = "select TName from TTable where ID = " + tableID;
-            lbTName.Text =  SqlClass.GetOneValue(sql, Connection.conn);
-
-            sql = "exec PShowCustomerByOTableID " + oTableID;
-            SqlDataReader reader = SqlClass.ReadData(sql, Connection.conn);
-            while (reader.Read())
-            {
-                lbCName.Text = reader["CName"].ToString();
-                lbCCCD.Text = reader["CCCD"].ToString();
-                break;
-            }
-            reader.Close();
-
-            sql = "select OBook,OTake from TOTable where ID = " + oTableID;
-            SqlDataReader reader1 = SqlClass.ReadData(sql, Connection.conn);
-            while (reader1.Read())
-            {
-                lbBook.Text = DateToString(reader1["OBook"].ToString());
-                lbTake.Text = DateToString(reader1["OTake"].ToString());
-                break;
-            }
-            reader1.Close();
-            GetOFood();
-        }
-
-        void GetOFood()
-        {
-            sql = "select * from TOFood where ID <> 1";
-            SharedClass.FillDGV(dgvOFood,sql, Connection.conn);
-            //CMessageBox.Show(sql);
-        }
-
-        private string DateToString(string date)
-        {
-            DateTime dtOrederDate = DateTime.ParseExact(date, "dd/MM/yyyy HH:mm:ss", SharedClass.cultureVN);
-            string dateTime = dtOrederDate.ToString("dd/MM/yyyy HH:mm", SharedClass.cultureVN);
-            return dateTime;
-        }
-
-        private void cbIsPay_CheckedChanged(object sender, EventArgs e)
-        {
-            if (cbIsPay.Checked)
-                isPay = "2";
-            else
-                isPay = "1";
-        }
-
-        private void btnClose_Click(object sender, EventArgs e)
-        {
-            this.Close();
-        }
-
-        private void btnSave_Click(object sender, EventArgs e)
-        {
-            sql = "update TOTable set OIsTakeOrCancel = " + isPay + " where ID = " + oTableID;
-            //SqlClass.RunSql(sql, Connection.conn);
-            CMessageBox.Show(sql);
-        }
 
         #region Shadown
         private const int WM_NCHITTEST = 0x84;
@@ -156,5 +86,87 @@ namespace TripleX.v2.Table
             if (m.Msg == WM_NCHITTEST && (int)m.Result == HTCLIENT) m.Result = (IntPtr)HTCAPTION;
         }
         #endregion
+
+        public EditTable()
+        {
+            InitializeComponent();
+            Connection.Connect();
+            tableID = TableM.tableID;
+            oTableID = TableM.oTableID;
+            GetData();
+        }
+
+        public void GetData()
+        {
+            sql = "select TName from TTable where ID = " + tableID;
+            lbTName.Text =  SqlClass.GetOneValue(sql, Connection.conn);
+
+            sql = "exec PShowCustomerByOTableID " + oTableID;
+            SqlDataReader reader = SqlClass.ReadData(sql, Connection.conn);
+            while (reader.Read())
+            {
+                lbCName.Text = reader["CName"].ToString();
+                lbCCCD.Text = reader["CCCD"].ToString();
+                break;
+            }
+            reader.Close();
+
+            sql = "select OBook,OTake from TOTable where ID = " + oTableID;
+            SqlDataReader reader1 = SqlClass.ReadData(sql, Connection.conn);
+            while (reader1.Read())
+            {
+                lbBook.Text = DateToString(reader1["OBook"].ToString());
+                lbTake.Text = DateToString(reader1["OTake"].ToString());
+                break;
+            }
+            reader1.Close();
+            GetOFood();
+        }
+
+        void GetOFood()
+        {
+            sql = "select * from TOFood where ID <> 1";
+            SharedClass.FillDGV(dgvOFood,sql, Connection.conn);
+            //CMessageBox.Show(sql);
+        }
+
+        private string DateToString(string date)
+        {
+            DateTime dtOrederDate = DateTime.ParseExact(date, "dd/MM/yyyy HH:mm:ss", SharedClass.cultureVN);
+            string dateTime = dtOrederDate.ToString("dd/MM/yyyy HH:mm", SharedClass.cultureVN);
+            return dateTime;
+        }
+
+        private void cbIsPay_CheckedChanged(object sender, EventArgs e)
+        {
+            if (cbIsPay.Checked)
+            {
+                isPay = "2";
+                cbIsEmpty.Checked = true;
+            }
+            else
+            {
+                isPay = "1";
+                cbIsEmpty.Checked = false;
+            }
+        }
+
+        private void btnClose_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void btnSave_Click(object sender, EventArgs e)
+        {
+            sql = "update TOTable set OIsTakeOrCancel = " + isPay + " where ID = " + oTableID;
+            //SqlClass.RunSql(sql, Connection.conn);
+            CMessageBox.Show(sql);
+        }
+
+        private void btnOrderFood_Click(object sender, EventArgs e)
+        {
+
+            this.Close();
+        }
     }
 }

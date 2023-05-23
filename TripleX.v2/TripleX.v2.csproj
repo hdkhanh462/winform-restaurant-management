@@ -228,6 +228,12 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Bill\BillM.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Bill\BillM.Designer.cs">
+      <DependentUpon>BillM.cs</DependentUpon>
+    </Compile>
     <Compile Include="Connection.cs" />
     <Compile Include="Customer\AddCustomer.cs">
       <SubType>Form</SubType>
@@ -252,6 +258,12 @@
     </Compile>
     <Compile Include="Food\AddFood.Designer.cs">
       <DependentUpon>AddFood.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Food\EditFood.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Food\EditFood.Designer.cs">
+      <DependentUpon>EditFood.cs</DependentUpon>
     </Compile>
     <Compile Include="Food\FoodM.cs">
       <SubType>Form</SubType>
@@ -327,6 +339,9 @@
     <Compile Include="Table\TableM.Designer.cs">
       <DependentUpon>TableM.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Bill\BillM.resx">
+      <DependentUpon>BillM.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Customer\AddCustomer.resx">
       <DependentUpon>AddCustomer.cs</DependentUpon>
     </EmbeddedResource>
@@ -341,6 +356,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Food\FoodM.resx">
       <DependentUpon>FoodM.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Food\OrderFood.resx">
+      <DependentUpon>OrderFood.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>

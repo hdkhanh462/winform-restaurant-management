@@ -91,7 +91,7 @@
             // 
             // lbDate
             // 
-            this.lbDate.BackColor = System.Drawing.Color.LightGray;
+            this.lbDate.BackColor = System.Drawing.Color.Gainsboro;
             this.lbDate.Dock = System.Windows.Forms.DockStyle.Fill;
             this.lbDate.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbDate.ForeColor = System.Drawing.Color.Black;
@@ -100,12 +100,12 @@
             this.lbDate.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
             this.lbDate.Size = new System.Drawing.Size(150, 30);
             this.lbDate.TabIndex = 5;
-            this.lbDate.Text = "Ngày: 01/01/2001";
+            this.lbDate.Text = "01/01/2001 01:01";
             this.lbDate.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // lbChair
             // 
-            this.lbChair.BackColor = System.Drawing.Color.LightGray;
+            this.lbChair.BackColor = System.Drawing.Color.Gainsboro;
             this.lbChair.Dock = System.Windows.Forms.DockStyle.Right;
             this.lbChair.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbChair.ForeColor = System.Drawing.Color.Black;
