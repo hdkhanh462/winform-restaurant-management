@@ -35,11 +35,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="CircularProgressBar, Version=2.8.0.16, Culture=neutral, PublicKeyToken=310fd07b25df79b3, processorArchitecture=MSIL">
-      <HintPath>..\packages\CircularProgressBar.2.8.0.16\lib\net40\CircularProgressBar.dll</HintPath>
-    </Reference>
-    <Reference Include="CustomControl">
-      <HintPath>..\..\WibuSaver\WibuSaver\bin\Debug\CustomControl.dll</HintPath>
+    <Reference Include="CustomControl, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\CustomControl.dll</HintPath>
     </Reference>
     <Reference Include="FontAwesome.Sharp, Version=5.15.4.0, Culture=neutral, PublicKeyToken=d16d1e4e568ec10f, processorArchitecture=MSIL">
       <HintPath>..\packages\FontAwesome.Sharp.5.15.4\lib\net45\FontAwesome.Sharp.dll</HintPath>
@@ -58,9 +56,6 @@
     </Reference>
     <Reference Include="Microsoft.Win32.SystemEvents, Version=6.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
       <HintPath>..\packages\Microsoft.Win32.SystemEvents.6.0.0\lib\net461\Microsoft.Win32.SystemEvents.dll</HintPath>
-    </Reference>
-    <Reference Include="Newtonsoft.Json, Version=12.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
-      <HintPath>..\packages\Newtonsoft.Json.12.0.2\lib\net45\Newtonsoft.Json.dll</HintPath>
     </Reference>
     <Reference Include="PresentationCore" />
     <Reference Include="PresentationFramework" />
@@ -87,8 +82,8 @@
       <HintPath>..\packages\System.Data.OleDb.6.0.0\lib\net461\System.Data.OleDb.dll</HintPath>
     </Reference>
     <Reference Include="System.Data.OracleClient" />
-    <Reference Include="System.Data.SqlClient, Version=4.6.1.3, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
-      <HintPath>..\packages\System.Data.SqlClient.4.8.3\lib\net461\System.Data.SqlClient.dll</HintPath>
+    <Reference Include="System.Data.SqlClient, Version=4.6.1.5, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Data.SqlClient.4.8.5\lib\net461\System.Data.SqlClient.dll</HintPath>
     </Reference>
     <Reference Include="System.Design" />
     <Reference Include="System.Diagnostics.EventLog, Version=6.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
@@ -283,6 +278,12 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="Form_Main.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_Main.Designer.cs">
+      <DependentUpon>Form_Main.cs</DependentUpon>
+    </Compile>
     <Compile Include="Home\Dashboard.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -297,12 +298,6 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Splash.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Splash.Designer.cs">
-      <DependentUpon>Splash.cs</DependentUpon>
-    </Compile>
     <Compile Include="Staff\StaffM.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -326,6 +321,12 @@
     </Compile>
     <Compile Include="Table\EditTable.Designer.cs">
       <DependentUpon>EditTable.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Table\Form_Table.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Table\Form_Table.Designer.cs">
+      <DependentUpon>Form_Table.cs</DependentUpon>
     </Compile>
     <Compile Include="Table\OrderTable.cs">
       <SubType>Form</SubType>
@@ -363,6 +364,9 @@
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Form_Main.resx">
+      <DependentUpon>Form_Main.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="MainForm.resx">
       <DependentUpon>MainForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -376,9 +380,6 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
-    <EmbeddedResource Include="Splash.resx">
-      <DependentUpon>Splash.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Table\AddTable.resx">
       <DependentUpon>AddTable.cs</DependentUpon>
     </EmbeddedResource>
@@ -387,6 +388,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Table\EditTable.resx">
       <DependentUpon>EditTable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Table\Form_Table.resx">
+      <DependentUpon>Form_Table.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Table\OrderTable.resx">
       <DependentUpon>OrderTable.cs</DependentUpon>
@@ -551,6 +555,84 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\wine_bottle_32px1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\combo_chart_32px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\table_32px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\buy_32px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\initiate_money_transfer_32px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\food_32px_21.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\customer_32px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\user_account_32px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\combo_chart_32px1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\table_32px1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\buy_32px1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\initiate_money_transfer_32px1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\food_32px_2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\customer_32px1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\user_account_32px1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\search_20px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\search_20px1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\back_32px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\back_20px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\back_20px1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\forward_20px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\add_list_20px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\add_list_20px1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\subtract10_20px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\close10_20px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\maximize_button10_18px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\restore_down_17px.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -183,8 +183,6 @@ namespace TripleX.v2.Table
 
         }
 
-
-
         private void ClickEvent(object sender, EventArgs e)
         {
             if (_CClick != null)
