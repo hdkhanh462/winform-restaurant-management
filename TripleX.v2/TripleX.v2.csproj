@@ -322,6 +322,18 @@
     <Compile Include="Table\EditTable.Designer.cs">
       <DependentUpon>EditTable.cs</DependentUpon>
     </Compile>
+    <Compile Include="Table\Form_AddTable.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Table\Form_AddTable.Designer.cs">
+      <DependentUpon>Form_AddTable.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Table\Form_OrederTable.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Table\Form_OrederTable.Designer.cs">
+      <DependentUpon>Form_OrederTable.cs</DependentUpon>
+    </Compile>
     <Compile Include="Table\Form_Table.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -339,6 +351,12 @@
     </Compile>
     <Compile Include="Table\TableM.Designer.cs">
       <DependentUpon>TableM.cs</DependentUpon>
+    </Compile>
+    <Compile Include="User Controls\UC_Table.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="User Controls\UC_Table.Designer.cs">
+      <DependentUpon>UC_Table.cs</DependentUpon>
     </Compile>
     <EmbeddedResource Include="Bill\BillM.resx">
       <DependentUpon>BillM.cs</DependentUpon>
@@ -389,6 +407,12 @@
     <EmbeddedResource Include="Table\EditTable.resx">
       <DependentUpon>EditTable.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Table\Form_AddTable.resx">
+      <DependentUpon>Form_AddTable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Table\Form_OrederTable.resx">
+      <DependentUpon>Form_OrederTable.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Table\Form_Table.resx">
       <DependentUpon>Form_Table.cs</DependentUpon>
     </EmbeddedResource>
@@ -397,6 +421,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Table\TableM.resx">
       <DependentUpon>TableM.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="User Controls\UC_Table.resx">
+      <DependentUpon>UC_Table.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
@@ -633,6 +660,27 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\restore_down_17px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\table_32px2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\registration_32px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\checked_user_male_32px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\right_2_20px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\right_2_20px1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\save_close_20px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\save_close_20px1.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

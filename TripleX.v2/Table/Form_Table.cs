@@ -68,29 +68,6 @@ namespace TripleX.v2.Table
             }
         }
 
-        //Events
-        private void btnAddTable_Click(object sender, EventArgs e)
-        {
-            Form form = new AddTable();
-            form.ShowDialog();
-        }
-        private void btnSearch_Click(object sender, EventArgs e)
-        {
-            if (rbEmpty.Checked)
-            {
-                sql = "select * from TTable where TStatus = 1 and TName like N'%" + txtSearch.Texts + "%'";
-                GetEmptyTable(sql);
-            }
-            else
-            {
-                sql = "select * from VOTable where TName like N'%" + txtSearch.Texts + "%'";
-                GetOrderTable(sql);
-            }
-            rbSmall.Checked = false;
-            rbAvg.Checked = false;
-            rbBig.Checked = false;
-        }
-
         #region <-- Checked Changed Events
         private void rbSmall_CheckedChanged(object sender, EventArgs e)
         {
@@ -136,15 +113,14 @@ namespace TripleX.v2.Table
             while (reader.Read())
             {
 
-                CTable ct = new CTable();
+                UC_Table ct = new UC_Table();
                 ct.TableID = reader["ID"].ToString();
                 ct.TableName = reader["TName"].ToString();
                 ct.TableStatus = "1";
-                ct.Customer = "Bàn Trống";
-                ct.Chair = "Số Ghế: " + reader["TChair"].ToString();
+                ct.Chair = reader["TChair"].ToString();
                 ct.Margin = new Padding(5);
 
-                ct._CClick += new EventHandler(addOrder);
+                ct._Click += new EventHandler(addOrder);
                 flpnTable.Controls.Add(ct);
             }
             reader.Close();
@@ -174,7 +150,7 @@ namespace TripleX.v2.Table
         private void addOrder(object sender, EventArgs e)
         {
             tableID = ((Control)sender).Tag.ToString();
-            Form form = new OrderTable();
+            Form form = new Form_OrederTable();
             form.ShowDialog();
         }
         private void editOrder(object sender, EventArgs e)
@@ -214,6 +190,29 @@ namespace TripleX.v2.Table
             pnSubFilter.Visible = false;
         }
         #endregion
+
+        //Events
+        private void btnAddTable_Click(object sender, EventArgs e)
+        {
+            Form form = new Form_AddTable();
+            form.ShowDialog();
+        }
+        private void btnSearch_Click(object sender, EventArgs e)
+        {
+            if (rbEmpty.Checked)
+            {
+                sql = "select * from TTable where TStatus = 1 and TName like N'%" + txtSearch.Texts + "%'";
+                GetEmptyTable(sql);
+            }
+            else
+            {
+                sql = "select * from VOTable where TName like N'%" + txtSearch.Texts + "%'";
+                GetOrderTable(sql);
+            }
+            rbSmall.Checked = false;
+            rbAvg.Checked = false;
+            rbBig.Checked = false;
+        }
 
     }
 }

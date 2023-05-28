@@ -1,4 +1,4 @@
-﻿insert into TCustomer values(N'Khách Lẻ','','','')
+﻿insert into TCustomer values(N'Khách Lẻ','','',1)
 
 insert into TTable values('EmptyTable','','','')
 
@@ -11,4 +11,4 @@ insert into TFood values('EmptyFood',1,'','')
 
 insert into TOFood values('',1,0,0)
 
-insert into TOTable values(1,1,'01/01/2001 01:01','01/01/2001 01:01',2,1)
+insert into TOTable values(1,1,'01/01/2001 01:01','01/01/2001 01:01',1,1,1)

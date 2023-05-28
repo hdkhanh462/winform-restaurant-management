@@ -28,32 +28,32 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.panel1 = new System.Windows.Forms.Panel();
+            this.pnTop = new System.Windows.Forms.Panel();
             this.lbStatus = new System.Windows.Forms.Label();
             this.lbName = new System.Windows.Forms.Label();
-            this.panel2 = new System.Windows.Forms.Panel();
+            this.pnBot = new System.Windows.Forms.Panel();
             this.lbDate = new System.Windows.Forms.Label();
             this.lbChair = new System.Windows.Forms.Label();
             this.lbCustomer = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.panel1.SuspendLayout();
-            this.panel2.SuspendLayout();
+            this.pnTop.SuspendLayout();
+            this.pnBot.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
-            // panel1
+            // pnTop
             // 
-            this.panel1.Controls.Add(this.lbStatus);
-            this.panel1.Controls.Add(this.lbName);
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(250, 30);
-            this.panel1.TabIndex = 0;
+            this.pnTop.Controls.Add(this.lbStatus);
+            this.pnTop.Controls.Add(this.lbName);
+            this.pnTop.Dock = System.Windows.Forms.DockStyle.Top;
+            this.pnTop.Location = new System.Drawing.Point(0, 0);
+            this.pnTop.Name = "pnTop";
+            this.pnTop.Size = new System.Drawing.Size(250, 30);
+            this.pnTop.TabIndex = 0;
             // 
             // lbStatus
             // 
-            this.lbStatus.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(87)))), ((int)(((byte)(34)))));
+            this.lbStatus.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(252)))), ((int)(((byte)(74)))), ((int)(((byte)(26)))));
             this.lbStatus.Dock = System.Windows.Forms.DockStyle.Fill;
             this.lbStatus.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbStatus.ForeColor = System.Drawing.Color.White;
@@ -67,7 +67,7 @@
             // 
             // lbName
             // 
-            this.lbName.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(87)))), ((int)(((byte)(34)))));
+            this.lbName.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(252)))), ((int)(((byte)(74)))), ((int)(((byte)(26)))));
             this.lbName.Dock = System.Windows.Forms.DockStyle.Left;
             this.lbName.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbName.ForeColor = System.Drawing.Color.White;
@@ -79,15 +79,15 @@
             this.lbName.Text = "B101";
             this.lbName.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
-            // panel2
+            // pnBot
             // 
-            this.panel2.Controls.Add(this.lbDate);
-            this.panel2.Controls.Add(this.lbChair);
-            this.panel2.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel2.Location = new System.Drawing.Point(0, 120);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(250, 30);
-            this.panel2.TabIndex = 1;
+            this.pnBot.Controls.Add(this.lbDate);
+            this.pnBot.Controls.Add(this.lbChair);
+            this.pnBot.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.pnBot.Location = new System.Drawing.Point(0, 120);
+            this.pnBot.Name = "pnBot";
+            this.pnBot.Size = new System.Drawing.Size(250, 30);
+            this.pnBot.TabIndex = 1;
             // 
             // lbDate
             // 
@@ -120,7 +120,7 @@
             // 
             // lbCustomer
             // 
-            this.lbCustomer.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(87)))), ((int)(((byte)(34)))));
+            this.lbCustomer.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(252)))), ((int)(((byte)(74)))), ((int)(((byte)(26)))));
             this.lbCustomer.Dock = System.Windows.Forms.DockStyle.Fill;
             this.lbCustomer.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbCustomer.ForeColor = System.Drawing.Color.White;
@@ -133,7 +133,7 @@
             // 
             // pictureBox1
             // 
-            this.pictureBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(87)))), ((int)(((byte)(34)))));
+            this.pictureBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(252)))), ((int)(((byte)(74)))), ((int)(((byte)(26)))));
             this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Left;
             this.pictureBox1.Image = global::TripleX.v2.Properties.Resources.coffee_table_32px1;
             this.pictureBox1.Location = new System.Drawing.Point(0, 30);
@@ -149,15 +149,15 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.lbCustomer);
             this.Controls.Add(this.pictureBox1);
-            this.Controls.Add(this.panel2);
-            this.Controls.Add(this.panel1);
+            this.Controls.Add(this.pnBot);
+            this.Controls.Add(this.pnTop);
             this.Cursor = System.Windows.Forms.Cursors.Hand;
             this.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "CTable";
             this.Size = new System.Drawing.Size(250, 150);
-            this.panel1.ResumeLayout(false);
-            this.panel2.ResumeLayout(false);
+            this.pnTop.ResumeLayout(false);
+            this.pnBot.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
@@ -165,10 +165,10 @@
 
         #endregion
 
-        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Panel pnTop;
         private System.Windows.Forms.Label lbStatus;
         private System.Windows.Forms.Label lbName;
-        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Panel pnBot;
         private System.Windows.Forms.Label lbDate;
         private System.Windows.Forms.Label lbChair;
         private System.Windows.Forms.Label lbCustomer;
