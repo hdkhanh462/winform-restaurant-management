@@ -29,14 +29,14 @@
         private void InitializeComponent()
         {
             this.pnFilter = new System.Windows.Forms.Panel();
-            this.btnSearch = new CustomControl.CButton();
-            this.btnAddTable = new CustomControl.CButton();
+            this.btnAdd = new CustomControl.CButton();
             this.cGradientPanel2 = new CustomControl.CGradientPanel();
             this.rbBig = new CustomControl.CRadioButton();
             this.rbAvg = new CustomControl.CRadioButton();
             this.rbSmall = new CustomControl.CRadioButton();
             this.txtSearch = new CustomControl.CTextbox();
             this.cGradientPanel1 = new CustomControl.CGradientPanel();
+            this.rbHasCustomer = new CustomControl.CRadioButton();
             this.rbOrdered = new CustomControl.CRadioButton();
             this.rbEmpty = new CustomControl.CRadioButton();
             this.pnSubFilter = new System.Windows.Forms.Panel();
@@ -51,8 +51,7 @@
             // 
             // pnFilter
             // 
-            this.pnFilter.Controls.Add(this.btnSearch);
-            this.pnFilter.Controls.Add(this.btnAddTable);
+            this.pnFilter.Controls.Add(this.btnAdd);
             this.pnFilter.Controls.Add(this.cGradientPanel2);
             this.pnFilter.Controls.Add(this.txtSearch);
             this.pnFilter.Controls.Add(this.cGradientPanel1);
@@ -63,65 +62,35 @@
             this.pnFilter.TabIndex = 1;
             this.pnFilter.Visible = false;
             // 
-            // btnSearch
+            // btnAdd
             // 
-            this.btnSearch.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnSearch.BackColor = System.Drawing.Color.White;
-            this.btnSearch.BackgroundColor = System.Drawing.Color.White;
-            this.btnSearch.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.btnSearch.BorderRadius = 10;
-            this.btnSearch.BorderSize = 0;
-            this.btnSearch.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnSearch.CustomTag = "";
-            this.btnSearch.FlatAppearance.BorderSize = 0;
-            this.btnSearch.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSearch.ForeColor = System.Drawing.Color.White;
-            this.btnSearch.HoverBorderColor = System.Drawing.Color.Empty;
-            this.btnSearch.HoverColor = System.Drawing.Color.Empty;
-            this.btnSearch.HoverImage = global::TripleX.v2.Properties.Resources.search_20px;
-            this.btnSearch.Image = global::TripleX.v2.Properties.Resources.search_20px1;
-            this.btnSearch.LeaveBorderColor = System.Drawing.Color.Empty;
-            this.btnSearch.LeaveColor = System.Drawing.Color.White;
-            this.btnSearch.LeaveImage = global::TripleX.v2.Properties.Resources.search_20px1;
-            this.btnSearch.Location = new System.Drawing.Point(160, 10);
-            this.btnSearch.Margin = new System.Windows.Forms.Padding(5, 10, 10, 10);
-            this.btnSearch.Name = "btnSearch";
-            this.btnSearch.Padding = new System.Windows.Forms.Padding(0, 1, 0, 0);
-            this.btnSearch.Size = new System.Drawing.Size(50, 30);
-            this.btnSearch.TabIndex = 4;
-            this.btnSearch.TextColor = System.Drawing.Color.White;
-            this.btnSearch.UseVisualStyleBackColor = false;
-            this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click);
-            // 
-            // btnAddTable
-            // 
-            this.btnAddTable.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnAddTable.BackColor = System.Drawing.Color.White;
-            this.btnAddTable.BackgroundColor = System.Drawing.Color.White;
-            this.btnAddTable.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.btnAddTable.BorderRadius = 10;
-            this.btnAddTable.BorderSize = 0;
-            this.btnAddTable.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnAddTable.CustomTag = "";
-            this.btnAddTable.FlatAppearance.BorderSize = 0;
-            this.btnAddTable.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAddTable.ForeColor = System.Drawing.Color.White;
-            this.btnAddTable.HoverBorderColor = System.Drawing.Color.Empty;
-            this.btnAddTable.HoverColor = System.Drawing.Color.Empty;
-            this.btnAddTable.HoverImage = global::TripleX.v2.Properties.Resources.add_list_20px1;
-            this.btnAddTable.Image = global::TripleX.v2.Properties.Resources.add_list_20px;
-            this.btnAddTable.LeaveBorderColor = System.Drawing.Color.Empty;
-            this.btnAddTable.LeaveColor = System.Drawing.Color.White;
-            this.btnAddTable.LeaveImage = global::TripleX.v2.Properties.Resources.add_list_20px;
-            this.btnAddTable.Location = new System.Drawing.Point(160, 531);
-            this.btnAddTable.Margin = new System.Windows.Forms.Padding(10);
-            this.btnAddTable.Name = "btnAddTable";
-            this.btnAddTable.Padding = new System.Windows.Forms.Padding(0, 1, 0, 0);
-            this.btnAddTable.Size = new System.Drawing.Size(50, 30);
-            this.btnAddTable.TabIndex = 3;
-            this.btnAddTable.TextColor = System.Drawing.Color.White;
-            this.btnAddTable.UseVisualStyleBackColor = false;
-            this.btnAddTable.Click += new System.EventHandler(this.btnAddTable_Click);
+            this.btnAdd.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnAdd.BackColor = System.Drawing.Color.White;
+            this.btnAdd.BackgroundColor = System.Drawing.Color.White;
+            this.btnAdd.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.btnAdd.BorderRadius = 10;
+            this.btnAdd.BorderSize = 0;
+            this.btnAdd.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnAdd.CustomTag = "";
+            this.btnAdd.FlatAppearance.BorderSize = 0;
+            this.btnAdd.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAdd.ForeColor = System.Drawing.Color.White;
+            this.btnAdd.HoverBorderColor = System.Drawing.Color.Empty;
+            this.btnAdd.HoverColor = System.Drawing.Color.Empty;
+            this.btnAdd.HoverImage = global::TripleX.v2.Properties.Resources.add_list_20px1;
+            this.btnAdd.Image = global::TripleX.v2.Properties.Resources.add_list_20px;
+            this.btnAdd.LeaveBorderColor = System.Drawing.Color.Empty;
+            this.btnAdd.LeaveColor = System.Drawing.Color.White;
+            this.btnAdd.LeaveImage = global::TripleX.v2.Properties.Resources.add_list_20px;
+            this.btnAdd.Location = new System.Drawing.Point(160, 531);
+            this.btnAdd.Margin = new System.Windows.Forms.Padding(10);
+            this.btnAdd.Name = "btnAdd";
+            this.btnAdd.Padding = new System.Windows.Forms.Padding(0, 1, 0, 0);
+            this.btnAdd.Size = new System.Drawing.Size(50, 30);
+            this.btnAdd.TabIndex = 3;
+            this.btnAdd.TextColor = System.Drawing.Color.White;
+            this.btnAdd.UseVisualStyleBackColor = false;
+            this.btnAdd.Click += new System.EventHandler(this.btnAddTable_Click);
             // 
             // cGradientPanel2
             // 
@@ -134,7 +103,7 @@
             this.cGradientPanel2.GradientAngle = 45F;
             this.cGradientPanel2.GradientColor = System.Drawing.Color.FromArgb(((int)(((byte)(252)))), ((int)(((byte)(74)))), ((int)(((byte)(26)))));
             this.cGradientPanel2.GradientColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(158)))), ((int)(((byte)(75)))), ((int)(((byte)(213)))));
-            this.cGradientPanel2.Location = new System.Drawing.Point(10, 157);
+            this.cGradientPanel2.Location = new System.Drawing.Point(10, 190);
             this.cGradientPanel2.Margin = new System.Windows.Forms.Padding(10, 0, 10, 10);
             this.cGradientPanel2.Name = "cGradientPanel2";
             this.cGradientPanel2.Radius = 10;
@@ -145,6 +114,7 @@
             // 
             this.rbBig.AutoSize = true;
             this.rbBig.CheckedColor = System.Drawing.Color.FromArgb(((int)(((byte)(252)))), ((int)(((byte)(74)))), ((int)(((byte)(26)))));
+            this.rbBig.Cursor = System.Windows.Forms.Cursors.Hand;
             this.rbBig.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rbBig.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(14)))), ((int)(((byte)(14)))));
             this.rbBig.Location = new System.Drawing.Point(30, 86);
@@ -152,10 +122,10 @@
             this.rbBig.MinimumSize = new System.Drawing.Size(0, 21);
             this.rbBig.Name = "rbBig";
             this.rbBig.Padding = new System.Windows.Forms.Padding(11, 0, 0, 0);
-            this.rbBig.Size = new System.Drawing.Size(69, 23);
+            this.rbBig.Size = new System.Drawing.Size(104, 23);
             this.rbBig.TabIndex = 2;
             this.rbBig.TabStop = true;
-            this.rbBig.Text = "Lớn";
+            this.rbBig.Text = "Bàn Lớn";
             this.rbBig.UnCheckedColor = System.Drawing.Color.DarkGray;
             this.rbBig.UseVisualStyleBackColor = true;
             this.rbBig.CheckedChanged += new System.EventHandler(this.rbBig_CheckedChanged);
@@ -164,6 +134,7 @@
             // 
             this.rbAvg.AutoSize = true;
             this.rbAvg.CheckedColor = System.Drawing.Color.FromArgb(((int)(((byte)(252)))), ((int)(((byte)(74)))), ((int)(((byte)(26)))));
+            this.rbAvg.Cursor = System.Windows.Forms.Cursors.Hand;
             this.rbAvg.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rbAvg.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(14)))), ((int)(((byte)(14)))));
             this.rbAvg.Location = new System.Drawing.Point(30, 53);
@@ -171,10 +142,10 @@
             this.rbAvg.MinimumSize = new System.Drawing.Size(0, 21);
             this.rbAvg.Name = "rbAvg";
             this.rbAvg.Padding = new System.Windows.Forms.Padding(11, 0, 0, 0);
-            this.rbAvg.Size = new System.Drawing.Size(70, 23);
+            this.rbAvg.Size = new System.Drawing.Size(105, 23);
             this.rbAvg.TabIndex = 1;
             this.rbAvg.TabStop = true;
-            this.rbAvg.Text = "Vừa";
+            this.rbAvg.Text = "Bàn Vừa";
             this.rbAvg.UnCheckedColor = System.Drawing.Color.DarkGray;
             this.rbAvg.UseVisualStyleBackColor = true;
             this.rbAvg.CheckedChanged += new System.EventHandler(this.rbAvg_CheckedChanged);
@@ -183,6 +154,7 @@
             // 
             this.rbSmall.AutoSize = true;
             this.rbSmall.CheckedColor = System.Drawing.Color.FromArgb(((int)(((byte)(252)))), ((int)(((byte)(74)))), ((int)(((byte)(26)))));
+            this.rbSmall.Cursor = System.Windows.Forms.Cursors.Hand;
             this.rbSmall.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rbSmall.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(14)))), ((int)(((byte)(14)))));
             this.rbSmall.Location = new System.Drawing.Point(30, 20);
@@ -190,10 +162,10 @@
             this.rbSmall.MinimumSize = new System.Drawing.Size(0, 21);
             this.rbSmall.Name = "rbSmall";
             this.rbSmall.Padding = new System.Windows.Forms.Padding(11, 0, 0, 0);
-            this.rbSmall.Size = new System.Drawing.Size(70, 23);
+            this.rbSmall.Size = new System.Drawing.Size(105, 23);
             this.rbSmall.TabIndex = 0;
             this.rbSmall.TabStop = true;
-            this.rbSmall.Text = "Nhỏ";
+            this.rbSmall.Text = "Bàn Nhỏ";
             this.rbSmall.UnCheckedColor = System.Drawing.Color.DarkGray;
             this.rbSmall.UseVisualStyleBackColor = true;
             this.rbSmall.CheckedChanged += new System.EventHandler(this.rbSmall_CheckedChanged);
@@ -215,16 +187,18 @@
             this.txtSearch.PasswordChar = false;
             this.txtSearch.PlaceholderColor = System.Drawing.Color.DarkGray;
             this.txtSearch.PlaceholderText = "Tên Bàn...";
-            this.txtSearch.Size = new System.Drawing.Size(145, 31);
+            this.txtSearch.Size = new System.Drawing.Size(200, 31);
             this.txtSearch.TabIndex = 0;
             this.txtSearch.Texts = "";
             this.txtSearch.UnderlinedStyle = false;
+            this.txtSearch.MouseLeave += new System.EventHandler(this.txtSearch_MouseLeave);
             // 
             // cGradientPanel1
             // 
             this.cGradientPanel1.BorderCapStyle = System.Drawing.Drawing2D.DashCap.Flat;
             this.cGradientPanel1.BorderLineStyle = System.Drawing.Drawing2D.DashStyle.Solid;
             this.cGradientPanel1.BorderSize = 2;
+            this.cGradientPanel1.Controls.Add(this.rbHasCustomer);
             this.cGradientPanel1.Controls.Add(this.rbOrdered);
             this.cGradientPanel1.Controls.Add(this.rbEmpty);
             this.cGradientPanel1.GradientAngle = 45F;
@@ -234,23 +208,43 @@
             this.cGradientPanel1.Margin = new System.Windows.Forms.Padding(10, 0, 10, 10);
             this.cGradientPanel1.Name = "cGradientPanel1";
             this.cGradientPanel1.Radius = 10;
-            this.cGradientPanel1.Size = new System.Drawing.Size(200, 96);
+            this.cGradientPanel1.Size = new System.Drawing.Size(200, 129);
             this.cGradientPanel1.TabIndex = 0;
+            // 
+            // rbHasCustomer
+            // 
+            this.rbHasCustomer.AutoSize = true;
+            this.rbHasCustomer.CheckedColor = System.Drawing.Color.FromArgb(((int)(((byte)(252)))), ((int)(((byte)(74)))), ((int)(((byte)(26)))));
+            this.rbHasCustomer.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.rbHasCustomer.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rbHasCustomer.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(14)))), ((int)(((byte)(14)))));
+            this.rbHasCustomer.Location = new System.Drawing.Point(30, 86);
+            this.rbHasCustomer.Margin = new System.Windows.Forms.Padding(30, 0, 30, 20);
+            this.rbHasCustomer.MinimumSize = new System.Drawing.Size(0, 21);
+            this.rbHasCustomer.Name = "rbHasCustomer";
+            this.rbHasCustomer.Padding = new System.Windows.Forms.Padding(11, 0, 0, 0);
+            this.rbHasCustomer.Size = new System.Drawing.Size(139, 23);
+            this.rbHasCustomer.TabIndex = 2;
+            this.rbHasCustomer.Text = "Đã Có Khách";
+            this.rbHasCustomer.UnCheckedColor = System.Drawing.Color.DarkGray;
+            this.rbHasCustomer.UseVisualStyleBackColor = true;
+            this.rbHasCustomer.CheckedChanged += new System.EventHandler(this.rbHasCustomer_CheckedChanged);
             // 
             // rbOrdered
             // 
             this.rbOrdered.AutoSize = true;
             this.rbOrdered.CheckedColor = System.Drawing.Color.FromArgb(((int)(((byte)(252)))), ((int)(((byte)(74)))), ((int)(((byte)(26)))));
+            this.rbOrdered.Cursor = System.Windows.Forms.Cursors.Hand;
             this.rbOrdered.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rbOrdered.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(14)))), ((int)(((byte)(14)))));
             this.rbOrdered.Location = new System.Drawing.Point(30, 53);
-            this.rbOrdered.Margin = new System.Windows.Forms.Padding(30, 0, 30, 20);
+            this.rbOrdered.Margin = new System.Windows.Forms.Padding(30, 0, 30, 10);
             this.rbOrdered.MinimumSize = new System.Drawing.Size(0, 21);
             this.rbOrdered.Name = "rbOrdered";
             this.rbOrdered.Padding = new System.Windows.Forms.Padding(11, 0, 0, 0);
-            this.rbOrdered.Size = new System.Drawing.Size(89, 23);
+            this.rbOrdered.Size = new System.Drawing.Size(137, 23);
             this.rbOrdered.TabIndex = 1;
-            this.rbOrdered.Text = "Đã Đặt";
+            this.rbOrdered.Text = "Đã Được Đặt";
             this.rbOrdered.UnCheckedColor = System.Drawing.Color.DarkGray;
             this.rbOrdered.UseVisualStyleBackColor = true;
             this.rbOrdered.CheckedChanged += new System.EventHandler(this.rbOrdered_CheckedChanged);
@@ -260,6 +254,7 @@
             this.rbEmpty.AutoSize = true;
             this.rbEmpty.Checked = true;
             this.rbEmpty.CheckedColor = System.Drawing.Color.FromArgb(((int)(((byte)(252)))), ((int)(((byte)(74)))), ((int)(((byte)(26)))));
+            this.rbEmpty.Cursor = System.Windows.Forms.Cursors.Hand;
             this.rbEmpty.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rbEmpty.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(14)))), ((int)(((byte)(14)))));
             this.rbEmpty.Location = new System.Drawing.Point(30, 20);
@@ -267,10 +262,10 @@
             this.rbEmpty.MinimumSize = new System.Drawing.Size(0, 21);
             this.rbEmpty.Name = "rbEmpty";
             this.rbEmpty.Padding = new System.Windows.Forms.Padding(11, 0, 0, 0);
-            this.rbEmpty.Size = new System.Drawing.Size(83, 23);
+            this.rbEmpty.Size = new System.Drawing.Size(118, 23);
             this.rbEmpty.TabIndex = 0;
             this.rbEmpty.TabStop = true;
-            this.rbEmpty.Text = "Trống";
+            this.rbEmpty.Text = "Bàn Trống";
             this.rbEmpty.UnCheckedColor = System.Drawing.Color.DarkGray;
             this.rbEmpty.UseVisualStyleBackColor = true;
             this.rbEmpty.CheckedChanged += new System.EventHandler(this.rbEmpty_CheckedChanged);
@@ -287,6 +282,7 @@
             // 
             // pbShow
             // 
+            this.pbShow.BackColor = System.Drawing.Color.Transparent;
             this.pbShow.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pbShow.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pbShow.Image = global::TripleX.v2.Properties.Resources.back_20px1;
@@ -305,7 +301,7 @@
             this.flpnTable.Dock = System.Windows.Forms.DockStyle.Fill;
             this.flpnTable.Location = new System.Drawing.Point(0, 0);
             this.flpnTable.Name = "flpnTable";
-            this.flpnTable.Size = new System.Drawing.Size(854, 571);
+            this.flpnTable.Size = new System.Drawing.Size(1114, 571);
             this.flpnTable.TabIndex = 3;
             this.flpnTable.MouseEnter += new System.EventHandler(this.flpnTable_MouseEnter);
             // 
@@ -315,9 +311,9 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1114, 571);
-            this.Controls.Add(this.flpnTable);
             this.Controls.Add(this.pnSubFilter);
             this.Controls.Add(this.pnFilter);
+            this.Controls.Add(this.flpnTable);
             this.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
@@ -347,7 +343,7 @@
         private System.Windows.Forms.FlowLayoutPanel flpnTable;
         private System.Windows.Forms.PictureBox pbShow;
         private CustomControl.CRadioButton rbBig;
-        private CustomControl.CButton btnAddTable;
-        private CustomControl.CButton btnSearch;
+        private CustomControl.CButton btnAdd;
+        private CustomControl.CRadioButton rbHasCustomer;
     }
 }

@@ -24,7 +24,6 @@ namespace TripleX.v2
         public Form_Main()
         {
             InitializeComponent();
-            this.DoubleBuffered = true;
             this.FormBorderStyle = FormBorderStyle.None;
             this.Padding = new Padding(borderSize);
             this.pnMenu.BackColor = color60;
@@ -151,6 +150,7 @@ namespace TripleX.v2
                 currentBtn = (CButton)senderBtn;
                 currentBtn.Image = ButtonImage(true);
                 currentBtn.LeaveImage = ButtonImage(true);
+                currentBtn.Padding = new Padding(10,0,0,0);
 
                 pnLeft.Location = new Point(0, currentBtn.Location.Y);
                 pnLeft.Visible = true;
@@ -163,6 +163,7 @@ namespace TripleX.v2
             {
                 currentBtn.Image = ButtonImage(false);
                 currentBtn.LeaveImage = ButtonImage(false);
+                currentBtn.Padding = new Padding(0);
             }
         }
         Image ButtonImage(bool isActive)
@@ -256,7 +257,7 @@ namespace TripleX.v2
 
         private void btnCustomerM_Click(object sender, EventArgs e)
         {
-            activateForm = SharedClass.OpenChildForm(new CustomerM(), activateForm, pnMain);
+            activateForm = SharedClass.OpenChildForm(new Form_Customer(), activateForm, pnMain);
             ActivateButton(sender);
         }
 

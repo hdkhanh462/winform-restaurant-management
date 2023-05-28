@@ -32,12 +32,11 @@
             this.pnContainer = new System.Windows.Forms.Panel();
             this.pnMain = new System.Windows.Forms.Panel();
             this.pnTitle = new System.Windows.Forms.Panel();
-            this.pnMenu = new System.Windows.Forms.Panel();
-            this.pnLeft = new System.Windows.Forms.Panel();
-            this.pnLogo = new System.Windows.Forms.Panel();
             this.btnClose = new CustomControl.CButton();
             this.btnMaximize = new CustomControl.CButton();
             this.btnMinimize = new CustomControl.CButton();
+            this.pnMenu = new System.Windows.Forms.Panel();
+            this.pnLeft = new System.Windows.Forms.Panel();
             this.btnStaffM = new CustomControl.CButton();
             this.btnCustomerM = new CustomControl.CButton();
             this.btnFoodM = new CustomControl.CButton();
@@ -45,6 +44,7 @@
             this.btnOrderFood = new CustomControl.CButton();
             this.btnTableM = new CustomControl.CButton();
             this.btnDashboard = new CustomControl.CButton();
+            this.pnLogo = new System.Windows.Forms.Panel();
             this.pbLogo = new System.Windows.Forms.PictureBox();
             this.pnContainer.SuspendLayout();
             this.pnTitle.SuspendLayout();
@@ -84,43 +84,7 @@
             this.pnTitle.Name = "pnTitle";
             this.pnTitle.Size = new System.Drawing.Size(1114, 40);
             this.pnTitle.TabIndex = 2;
-            // 
-            // pnMenu
-            // 
-            this.pnMenu.BackColor = System.Drawing.Color.White;
-            this.pnMenu.Controls.Add(this.pnLeft);
-            this.pnMenu.Controls.Add(this.btnStaffM);
-            this.pnMenu.Controls.Add(this.btnCustomerM);
-            this.pnMenu.Controls.Add(this.btnFoodM);
-            this.pnMenu.Controls.Add(this.btnPayment);
-            this.pnMenu.Controls.Add(this.btnOrderFood);
-            this.pnMenu.Controls.Add(this.btnTableM);
-            this.pnMenu.Controls.Add(this.btnDashboard);
-            this.pnMenu.Controls.Add(this.pnLogo);
-            this.pnMenu.Dock = System.Windows.Forms.DockStyle.Left;
-            this.pnMenu.Location = new System.Drawing.Point(0, 0);
-            this.pnMenu.Name = "pnMenu";
-            this.pnMenu.Size = new System.Drawing.Size(70, 611);
-            this.pnMenu.TabIndex = 1;
-            // 
-            // pnLeft
-            // 
-            this.pnLeft.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(252)))), ((int)(((byte)(74)))), ((int)(((byte)(26)))));
-            this.pnLeft.Location = new System.Drawing.Point(5, 71);
-            this.pnLeft.Name = "pnLeft";
-            this.pnLeft.Size = new System.Drawing.Size(7, 50);
-            this.pnLeft.TabIndex = 0;
-            this.pnLeft.Visible = false;
-            // 
-            // pnLogo
-            // 
-            this.pnLogo.Controls.Add(this.pbLogo);
-            this.pnLogo.Dock = System.Windows.Forms.DockStyle.Top;
-            this.pnLogo.Location = new System.Drawing.Point(0, 0);
-            this.pnLogo.Name = "pnLogo";
-            this.pnLogo.Padding = new System.Windows.Forms.Padding(5);
-            this.pnLogo.Size = new System.Drawing.Size(70, 70);
-            this.pnLogo.TabIndex = 2;
+            this.pnTitle.MouseDown += new System.Windows.Forms.MouseEventHandler(this.pnTitleBar_MouseDown);
             // 
             // btnClose
             // 
@@ -211,6 +175,33 @@
             this.btnMinimize.TextColor = System.Drawing.Color.White;
             this.btnMinimize.UseVisualStyleBackColor = false;
             this.btnMinimize.Click += new System.EventHandler(this.btnMinimize_Click);
+            // 
+            // pnMenu
+            // 
+            this.pnMenu.BackColor = System.Drawing.Color.White;
+            this.pnMenu.Controls.Add(this.pnLeft);
+            this.pnMenu.Controls.Add(this.btnStaffM);
+            this.pnMenu.Controls.Add(this.btnCustomerM);
+            this.pnMenu.Controls.Add(this.btnFoodM);
+            this.pnMenu.Controls.Add(this.btnPayment);
+            this.pnMenu.Controls.Add(this.btnOrderFood);
+            this.pnMenu.Controls.Add(this.btnTableM);
+            this.pnMenu.Controls.Add(this.btnDashboard);
+            this.pnMenu.Controls.Add(this.pnLogo);
+            this.pnMenu.Dock = System.Windows.Forms.DockStyle.Left;
+            this.pnMenu.Location = new System.Drawing.Point(0, 0);
+            this.pnMenu.Name = "pnMenu";
+            this.pnMenu.Size = new System.Drawing.Size(70, 611);
+            this.pnMenu.TabIndex = 1;
+            // 
+            // pnLeft
+            // 
+            this.pnLeft.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(252)))), ((int)(((byte)(74)))), ((int)(((byte)(26)))));
+            this.pnLeft.Location = new System.Drawing.Point(5, 71);
+            this.pnLeft.Name = "pnLeft";
+            this.pnLeft.Size = new System.Drawing.Size(7, 50);
+            this.pnLeft.TabIndex = 0;
+            this.pnLeft.Visible = false;
             // 
             // btnStaffM
             // 
@@ -346,7 +337,6 @@
             this.btnOrderFood.LeaveImage = global::TripleX.v2.Properties.Resources.buy_32px;
             this.btnOrderFood.Location = new System.Drawing.Point(0, 170);
             this.btnOrderFood.Name = "btnOrderFood";
-            this.btnOrderFood.Padding = new System.Windows.Forms.Padding(0, 0, 3, 0);
             this.btnOrderFood.Size = new System.Drawing.Size(70, 50);
             this.btnOrderFood.TabIndex = 4;
             this.btnOrderFood.TextColor = System.Drawing.Color.White;
@@ -408,6 +398,16 @@
             this.btnDashboard.TextColor = System.Drawing.Color.White;
             this.btnDashboard.UseVisualStyleBackColor = false;
             this.btnDashboard.Click += new System.EventHandler(this.btnDashboard_Click);
+            // 
+            // pnLogo
+            // 
+            this.pnLogo.Controls.Add(this.pbLogo);
+            this.pnLogo.Dock = System.Windows.Forms.DockStyle.Top;
+            this.pnLogo.Location = new System.Drawing.Point(0, 0);
+            this.pnLogo.Name = "pnLogo";
+            this.pnLogo.Padding = new System.Windows.Forms.Padding(5);
+            this.pnLogo.Size = new System.Drawing.Size(70, 70);
+            this.pnLogo.TabIndex = 2;
             // 
             // pbLogo
             // 

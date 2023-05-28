@@ -248,6 +248,18 @@
     <Compile Include="Customer\EditCustomer.Designer.cs">
       <DependentUpon>EditCustomer.cs</DependentUpon>
     </Compile>
+    <Compile Include="Customer\Form_AddCustomer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Customer\Form_AddCustomer.Designer.cs">
+      <DependentUpon>Form_AddCustomer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Customer\Form_Customer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Customer\Form_Customer.Designer.cs">
+      <DependentUpon>Form_Customer.cs</DependentUpon>
+    </Compile>
     <Compile Include="Food\AddFood.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -369,6 +381,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Customer\EditCustomer.resx">
       <DependentUpon>EditCustomer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Customer\Form_AddCustomer.resx">
+      <DependentUpon>Form_AddCustomer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Customer\Form_Customer.resx">
+      <DependentUpon>Form_Customer.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Food\AddFood.resx">
       <DependentUpon>AddFood.cs</DependentUpon>

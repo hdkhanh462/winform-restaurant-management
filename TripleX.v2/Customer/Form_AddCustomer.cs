@@ -11,24 +11,33 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Xml.Linq;
 
-namespace TripleX.v2.Table
+namespace TripleX.v2.Customer
 {
-    public partial class Form_AddTable : Form
+    public partial class Form_AddCustomer : Form
     {
-        public Form_AddTable()
+        public Form_AddCustomer()
         {
             InitializeComponent();
             this.FormBorderStyle = FormBorderStyle.None;
             this.Padding = new Padding(borderSize);
             this.BackColor = color60;
+            Connection.Connect();
         }
 
         //Fields
         string sql;
-        string kind = "1";
+        string isMale = "1";
         public static Color color60 = Color.White;
         public static Color color30 = Color.FromArgb(14, 14, 14);
         public static Color color10 = Color.FromArgb(252, 74, 26);
+
+        //Methods
+        void ReLoadTableM()
+        {
+            var mainForm = Application.OpenForms.OfType<Form_Customer>().Single();
+            string sqlTemp = "select * from TCustomer where ID <> 1";
+            mainForm.GetData(sqlTemp);
+        }
 
         #region <-- Smooth Rounded Form -->
         //Fields
@@ -106,40 +115,33 @@ namespace TripleX.v2.Table
         }
         #endregion
 
-        //Methods
-        public static void ReLoadTableM()
-        {
-            var mainForm = Application.OpenForms.OfType<Form_Table>().Single();
-            mainForm.GetData();
-        }
-
         //Events
         private void btnClose_Click(object sender, EventArgs e)
         {
             this.Close();
         }
-
-        private void btnSave_Click(object sender, EventArgs e)
+        /*private void btnSave_Click(object sender, EventArgs e)
         {
-            int chair = int.Parse(txtChair.Texts);
-            if (chair <= 4)
-            {
-                kind = "1";
-            }
-            if (chair >= 5 && chair < 8)
-            {
-                kind = "2";
-            }
-            if (chair >= 8)
-            {
-                kind = "3";
-            }
-
-            sql = "exec PTableAdd '" + txtName.Texts + "'," + txtChair.Texts + "," + kind;
-            SqlClass.RunSql(sql, Connection.conn);
-            SharedClass.Alert("Thêm Thành Công!", Form_Alert.enmType.Success);
-            ReLoadTableM();
-            //CMessageBox.Show(sql);
+            string sql = "insert into TCustomer values(N'" + txtName.Text + "','" + txtCCCD.Text + "','" + txtPhone.Text + "'," + isMale + ")";
+            //SqlClass.RunSql(sql, Connection.conn);
+            //ReLoadTableM();
+            //SharedClass.Alert("Thêm Thành Công!", Form_Alert.enmType.Success);
+            CMessageBox.Show(sql);
         }
+
+        private void rbMale_CheckedChanged(object sender, EventArgs e)
+        {
+            if (rbMale.Checked)
+            {
+                isMale = "1";
+            }
+        }
+        private void rbFemale_CheckedChanged(object sender, EventArgs e)
+        {
+            if (rbFemale.Checked)
+            {
+                isMale = "0";
+            }
+        }*/
     }
 }

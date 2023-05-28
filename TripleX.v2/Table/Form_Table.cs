@@ -103,6 +103,17 @@ namespace TripleX.v2.Table
                 rbBig.Checked = false;
             }
         }
+        private void rbHasCustomer_CheckedChanged(object sender, EventArgs e)
+        {
+            if (rbHasCustomer.Checked == true)
+            {
+                sql = "select * from VOTable";
+                GetHasCustomerTable(sql);
+                rbSmall.Checked = false;
+                rbAvg.Checked = false;
+                rbBig.Checked = false;
+            }
+        }
         #endregion
 
         #region <-- Show Tables -->
@@ -126,6 +137,28 @@ namespace TripleX.v2.Table
             reader.Close();
         }
         void GetOrderTable(string sqlTemp)
+        {
+            SqlDataReader reader = SqlClass.ReadData(sqlTemp, Connection.conn);
+            flpnTable.Controls.Clear();
+            while (reader.Read())
+            {
+
+                CTable ct = new CTable();
+                ct.TableID = reader["ID"].ToString();
+                ct.OTableID = reader["OID"].ToString();
+                ct.TableName = reader["TName"].ToString();
+                ct.TableStatus = reader["TStatus"].ToString();
+                ct.Customer = reader["CName"].ToString();
+                ct.OrderDate = DateToString(reader["OTake"].ToString());
+                ct.Chair = "Số Ghế: " + reader["TChair"].ToString();
+                ct.Margin = new Padding(5);
+
+                ct._CClick += new EventHandler(editOrder);
+                flpnTable.Controls.Add(ct);
+            }
+            reader.Close();
+        }
+        void GetHasCustomerTable(string sqlTemp)
         {
             SqlDataReader reader = SqlClass.ReadData(sqlTemp, Connection.conn);
             flpnTable.Controls.Clear();
@@ -195,24 +228,26 @@ namespace TripleX.v2.Table
         private void btnAddTable_Click(object sender, EventArgs e)
         {
             Form form = new Form_AddTable();
-            form.ShowDialog();
+            form.Show();
         }
-        private void btnSearch_Click(object sender, EventArgs e)
+        private void txtSearch_MouseLeave(object sender, EventArgs e)
         {
-            if (rbEmpty.Checked)
+            if(txtSearch.Texts != "")
             {
-                sql = "select * from TTable where TStatus = 1 and TName like N'%" + txtSearch.Texts + "%'";
-                GetEmptyTable(sql);
+                if (rbEmpty.Checked)
+                {
+                    sql = "select * from TTable where TStatus = 1 and TName like N'%" + txtSearch.Texts + "%'";
+                    GetEmptyTable(sql);
+                }
+                else
+                {
+                    sql = "select * from VOTable where TName like N'%" + txtSearch.Texts + "%'";
+                    GetOrderTable(sql);
+                }
+                rbSmall.Checked = false;
+                rbAvg.Checked = false;
+                rbBig.Checked = false;
             }
-            else
-            {
-                sql = "select * from VOTable where TName like N'%" + txtSearch.Texts + "%'";
-                GetOrderTable(sql);
-            }
-            rbSmall.Checked = false;
-            rbAvg.Checked = false;
-            rbBig.Checked = false;
         }
-
     }
 }

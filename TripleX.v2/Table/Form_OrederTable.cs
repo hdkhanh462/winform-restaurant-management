@@ -23,8 +23,8 @@ namespace TripleX.v2.Table
             this.Padding = new Padding(borderSize);
             this.BackColor = color60;
             Connection.Connect();
-            tableID = TableM.tableID;
-            //GetData();
+            tableID = Form_Table.tableID;
+            GetData();
         }
 
         //Fields
@@ -38,7 +38,7 @@ namespace TripleX.v2.Table
         public static Color color10 = Color.FromArgb(252, 74, 26);
 
         //Methods
-        /*public void GetData()
+        public void GetData()
         {
             sql = "select TName from TTable where ID = " + tableID;
             lbName.Text = SqlClass.GetOneValue(sql, Connection.conn);
@@ -46,21 +46,23 @@ namespace TripleX.v2.Table
             sql = "select * from TCustomer where ID <> 1";
             SharedClass.FillDGV(dataGridView1, sql, Connection.conn);
             int rcount = dataGridView1.RowCount;
-            dgvCustomer.Rows.Add(rcount);
-            for (int i = 0; i < rcount; i++)
+            if(rcount > 0)
             {
-                dgvCustomer.Rows[i].Cells[0].Value = dataGridView1.Rows[i].Cells[0].Value;
-                dgvCustomer.Rows[i].Cells[1].Value = dataGridView1.Rows[i].Cells[4].Value;
-                dgvCustomer.Rows[i].Cells[2].Value = CheckSex(i);
-                dgvCustomer.Rows[i].Cells[3].Value = dataGridView1.Rows[i].Cells[1].Value;
-                dgvCustomer.Rows[i].Cells[4].Value = dataGridView1.Rows[i].Cells[2].Value;
-                dgvCustomer.Rows[i].Cells[5].Value = dataGridView1.Rows[i].Cells[3].Value;
+                dgvCustomer.Rows.Add(rcount);
+                for (int i = 0; i < rcount; i++)
+                {
+                    dgvCustomer.Rows[i].Cells[0].Value = dataGridView1.Rows[i].Cells[0].Value;
+                    dgvCustomer.Rows[i].Cells[1].Value = dataGridView1.Rows[i].Cells[4].Value;
+                    dgvCustomer.Rows[i].Cells[2].Value = CheckSex(i);
+                    dgvCustomer.Rows[i].Cells[3].Value = dataGridView1.Rows[i].Cells[1].Value;
+                    dgvCustomer.Rows[i].Cells[4].Value = dataGridView1.Rows[i].Cells[2].Value;
+                    dgvCustomer.Rows[i].Cells[5].Value = dataGridView1.Rows[i].Cells[3].Value;
+                }
             }
-        }*/
-
-        /*public Image CheckSex(int row)
+        }
+        public Image CheckSex(int row)
         {
-            if (dgvCustomer.Rows[row].Cells[1].Value.ToString() == "1")
+            if (dgvCustomer.Rows[row].Cells[1].Value.ToString() == "0")
             {
                 return female;
             }
@@ -68,8 +70,7 @@ namespace TripleX.v2.Table
             {
                 return male;
             }
-        }*/
-
+        }
         private string DateToString(CDatePicker dtpDate)
         {
             DateTime dtOrederDate = DateTime.ParseExact(dtpDate.Value.ToString(), "dd/MM/yyyy HH:mm:ss", SharedClass.cultureVN);
@@ -160,5 +161,72 @@ namespace TripleX.v2.Table
         #endregion
 
         //Events
+        private void dgvCustomer_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.RowIndex >= 0)
+            {
+                txtCName.Texts = dgvCustomer.Rows[e.RowIndex].Cells[3].Value.ToString();
+                customerID = dgvCustomer.Rows[e.RowIndex].Cells[0].Value.ToString();
+            }
+
+        }
+        private void btnClose_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+        private void btnSave_Click(object sender, EventArgs e)
+        {
+            if (customerID == "")
+            {
+                SharedClass.Alert("Chưa Chọn Khách Hàng!", Form_Alert.enmType.Success);
+            }
+            else if (rbOrder.Checked)
+            {
+                sql = "exec POTable " + tableID + "," + customerID + ",N'"
+                    + lbCurrentTime + "',N'"
+                    + DateToString(dtpTakeDate) + " " + TimeToString(dtpTakeTime) + "'";
+                //SqlClass.RunSql(sql, Connection.conn);
+                //CMessageBox.Show("Thêm Thành Công!", "Thông Báo!", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                //Form_AddTable.ReLoadTableM();
+                //this.Close();
+                CMessageBox.Show(sql);
+            }
+            else if (rbTake.Checked)
+            {
+                sql = "exec PAutoOTable " + tableID + "," + customerID + ",N'"
+                    + lbCurrentTime + "'";
+                //SqlClass.RunSql(sql, Connection.conn);
+                //CMessageBox.Show("Thêm Thành Công!", "Thông Báo!", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                //Form_AddTable.ReLoadTableM();
+                //this.Close();
+                CMessageBox.Show(sql);
+            }
+        }
+        private void btnDelete_Click(object sender, EventArgs e)
+        {
+            sql = "delete TTable where ID = " + tableID;
+            //SqlClass.RunSqlDel(sql, Connection.conn);
+            //Form_AddTable.ReLoadTableM();
+            CMessageBox.Show(sql);
+            this.Close();
+        }
+        private void rbTake_CheckedChanged(object sender, EventArgs e)
+        {
+            if (rbTake.Checked)
+            {
+                dtpTakeDate.Enabled = false;
+                dtpTakeTime.Enabled = false;
+                lbCurrentTime.Enabled = false;
+            }
+        }
+        private void rbOrder_CheckedChanged(object sender, EventArgs e)
+        {
+            if (rbOrder.Checked)
+            {
+                dtpTakeDate.Enabled = true;
+                dtpTakeTime.Enabled = true;
+                lbCurrentTime.Enabled = true;
+            }
+        }
     }
 }
