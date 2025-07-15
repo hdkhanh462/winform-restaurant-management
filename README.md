@@ -3,7 +3,7 @@
   <p>A management platform for restaurants, supporting table, food, customer, staff, and billing management.</p>
   <div>
     <img src="https://img.shields.io/badge/-.NET-512BD4?logo=dotnet&logoColor=white" alt="dotnet">
-    <img src="https://img.shields.io/badge/-CSharp-239120?logo=csharp&logoColor=white" alt="C#">
+    <img src="https://img.shields.io/badge/-CSharp-239120?logo=sharp&logoColor=white" alt="C#">
     <img src="https://img.shields.io/badge/-SQL Server-CC2927?logo=microsoftsqlserver&logoColor=white" alt="SQL Server">
     <img src="https://img.shields.io/badge/-WinForms-0078D6?logo=windows&logoColor=white" alt="WinForms">
   </div>
